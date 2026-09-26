@@ -1,0 +1,561 @@
+libro,categoria_libro,libro_perfil_confiable,rank,banda_recomendada,subgenero_banda,similitud
+El Senor de los Anillos,Alta fantasia / epica,True,1,Rhapsody of Fire,Power Metal,0.3354
+El Senor de los Anillos,Alta fantasia / epica,True,2,Sabaton,Power Metal,0.3019
+El Senor de los Anillos,Alta fantasia / epica,True,3,DragonForce,Power Metal,0.2952
+El Senor de los Anillos,Alta fantasia / epica,True,4,Blind Guardian,Power Metal,0.2824
+El Senor de los Anillos,Alta fantasia / epica,True,5,Chelsea Wolfe,Gothic Metal,0.175
+Canción de Hielo y Fuego,Alta fantasia / epica,True,1,Cannibal Corpse,Death Metal,0.1706
+Canción de Hielo y Fuego,Alta fantasia / epica,True,2,Rhapsody of Fire,Power Metal,0.1614
+Canción de Hielo y Fuego,Alta fantasia / epica,True,3,At the Gates,Death Metal,0.1475
+Canción de Hielo y Fuego,Alta fantasia / epica,True,4,Sabaton,Power Metal,0.1438
+Canción de Hielo y Fuego,Alta fantasia / epica,True,5,DragonForce,Power Metal,0.1408
+El Nombre del Viento,Alta fantasia / epica,True,1,Suicide Silence,Deathcore,0.2731
+El Nombre del Viento,Alta fantasia / epica,True,2,Dream Theater,Progressive Metal,0.2624
+El Nombre del Viento,Alta fantasia / epica,True,3,Spiritbox,Metalcore,0.0146
+El Nombre del Viento,Alta fantasia / epica,True,4,Jinjer,Metalcore,0.0144
+El Nombre del Viento,Alta fantasia / epica,True,5,Killswitch Engage,Metalcore,0.0134
+El Hobbit,Alta fantasia / epica,True,1,Spiritbox,Metalcore,0.0211
+El Hobbit,Alta fantasia / epica,True,2,Jinjer,Metalcore,0.0209
+El Hobbit,Alta fantasia / epica,True,3,Killswitch Engage,Metalcore,0.0199
+El Hobbit,Alta fantasia / epica,True,4,Whitechapel,Deathcore,0.0198
+El Hobbit,Alta fantasia / epica,True,5,Architects,Metalcore,0.0187
+El Silmarillion,Alta fantasia / epica,True,1,The 1975,Alternative Rock,0.2107
+El Silmarillion,Alta fantasia / epica,True,2,The Cure,Gothic Rock,0.1943
+El Silmarillion,Alta fantasia / epica,True,3,Iron Maiden,Heavy Metal,0.1849
+El Silmarillion,Alta fantasia / epica,True,4,Spiritbox,Metalcore,0.0121
+El Silmarillion,Alta fantasia / epica,True,5,Jinjer,Metalcore,0.0119
+Eragon,Alta fantasia / epica,True,1,Rhapsody of Fire,Power Metal,0.2997
+Eragon,Alta fantasia / epica,True,2,Sabaton,Power Metal,0.2704
+Eragon,Alta fantasia / epica,True,3,DragonForce,Power Metal,0.2647
+Eragon,Alta fantasia / epica,True,4,Blind Guardian,Power Metal,0.2536
+Eragon,Alta fantasia / epica,True,5,Chelsea Wolfe,Gothic Metal,0.1608
+El temor de un hombre sabio,Alta fantasia / epica,True,1,Cannibal Corpse,Death Metal,0.8008
+El temor de un hombre sabio,Alta fantasia / epica,True,2,At the Gates,Death Metal,0.6997
+El temor de un hombre sabio,Alta fantasia / epica,True,3,Death,Death Metal,0.6367
+El temor de un hombre sabio,Alta fantasia / epica,True,4,Amon Amarth,Melodic Death Metal,0.5389
+El temor de un hombre sabio,Alta fantasia / epica,True,5,Behemoth,Blackened Death Metal,0.5023
+Rey de cicatrices,Alta fantasia / epica,False,1,Spiritbox,Metalcore,0.0211
+Rey de cicatrices,Alta fantasia / epica,False,2,Jinjer,Metalcore,0.0209
+Rey de cicatrices,Alta fantasia / epica,False,3,Killswitch Engage,Metalcore,0.0199
+Rey de cicatrices,Alta fantasia / epica,False,4,Whitechapel,Deathcore,0.0198
+Rey de cicatrices,Alta fantasia / epica,False,5,Architects,Metalcore,0.0187
+Mistborn: El imperio final,Alta fantasia / epica,True,1,Rhapsody of Fire,Power Metal,0.7478
+Mistborn: El imperio final,Alta fantasia / epica,True,2,Sabaton,Power Metal,0.6757
+Mistborn: El imperio final,Alta fantasia / epica,True,3,DragonForce,Power Metal,0.6601
+Mistborn: El imperio final,Alta fantasia / epica,True,4,Blind Guardian,Power Metal,0.6323
+Mistborn: El imperio final,Alta fantasia / epica,True,5,Nightwish,Symphonic Metal,0.2683
+El pozo de la ascensión,Alta fantasia / epica,True,1,Iron Maiden,Heavy Metal,0.1777
+El pozo de la ascensión,Alta fantasia / epica,True,2,The 1975,Alternative Rock,0.154
+El pozo de la ascensión,Alta fantasia / epica,True,3,Sabaton,Power Metal,0.1479
+El pozo de la ascensión,Alta fantasia / epica,True,4,Rhapsody of Fire,Power Metal,0.1477
+El pozo de la ascensión,Alta fantasia / epica,True,5,DragonForce,Power Metal,0.1445
+El héroe de las eras,Alta fantasia / epica,True,1,Chelsea Wolfe,Gothic Metal,0.2908
+El héroe de las eras,Alta fantasia / epica,True,2,Spiritbox,Metalcore,0.0172
+El héroe de las eras,Alta fantasia / epica,True,3,Jinjer,Metalcore,0.017
+El héroe de las eras,Alta fantasia / epica,True,4,Killswitch Engage,Metalcore,0.016
+El héroe de las eras,Alta fantasia / epica,True,5,Whitechapel,Deathcore,0.0159
+El camino de los reyes,Alta fantasia / epica,True,1,Rhapsody of Fire,Power Metal,0.4938
+El camino de los reyes,Alta fantasia / epica,True,2,Cannibal Corpse,Death Metal,0.4858
+El camino de los reyes,Alta fantasia / epica,True,3,Sabaton,Power Metal,0.4424
+El camino de los reyes,Alta fantasia / epica,True,4,DragonForce,Power Metal,0.4315
+El camino de los reyes,Alta fantasia / epica,True,5,At the Gates,Death Metal,0.4203
+El archivo de las tormentas,Alta fantasia / epica,True,1,The 1975,Alternative Rock,0.1484
+El archivo de las tormentas,Alta fantasia / epica,True,2,The Cure,Gothic Rock,0.1379
+El archivo de las tormentas,Alta fantasia / epica,True,3,Iron Maiden,Heavy Metal,0.1333
+El archivo de las tormentas,Alta fantasia / epica,True,4,Chelsea Wolfe,Gothic Metal,0.1121
+El archivo de las tormentas,Alta fantasia / epica,True,5,Candlemass,Doom Metal / Stoner,0.0682
+La rueda del tiempo,Alta fantasia / epica,True,1,Candlemass,Doom Metal / Stoner,0.175
+La rueda del tiempo,Alta fantasia / epica,True,2,Spiritbox,Metalcore,0.0188
+La rueda del tiempo,Alta fantasia / epica,True,3,Jinjer,Metalcore,0.0187
+La rueda del tiempo,Alta fantasia / epica,True,4,Killswitch Engage,Metalcore,0.0176
+La rueda del tiempo,Alta fantasia / epica,True,5,Whitechapel,Deathcore,0.0176
+El priorato del naranjo,Alta fantasia / epica,False,1,Spiritbox,Metalcore,0.0211
+El priorato del naranjo,Alta fantasia / epica,False,2,Jinjer,Metalcore,0.0209
+El priorato del naranjo,Alta fantasia / epica,False,3,Killswitch Engage,Metalcore,0.0199
+El priorato del naranjo,Alta fantasia / epica,False,4,Whitechapel,Deathcore,0.0198
+El priorato del naranjo,Alta fantasia / epica,False,5,Architects,Metalcore,0.0187
+Trono de Cristal,Romantasy (fantasia romantica),True,1,Spiritbox,Metalcore,0.0211
+Trono de Cristal,Romantasy (fantasia romantica),True,2,Jinjer,Metalcore,0.0209
+Trono de Cristal,Romantasy (fantasia romantica),True,3,Killswitch Engage,Metalcore,0.0199
+Trono de Cristal,Romantasy (fantasia romantica),True,4,Whitechapel,Deathcore,0.0198
+Trono de Cristal,Romantasy (fantasia romantica),True,5,Architects,Metalcore,0.0187
+Una Corte de Rosas y Espinas,Romantasy (fantasia romantica),True,1,Candlemass,Doom Metal / Stoner,0.4269
+Una Corte de Rosas y Espinas,Romantasy (fantasia romantica),True,2,Sleep,Doom Metal / Stoner,0.3136
+Una Corte de Rosas y Espinas,Romantasy (fantasia romantica),True,3,Electric Wizard,Doom Metal / Stoner,0.2974
+Una Corte de Rosas y Espinas,Romantasy (fantasia romantica),True,4,Black Sabbath,Heavy Metal,0.2428
+Una Corte de Rosas y Espinas,Romantasy (fantasia romantica),True,5,Paradise Lost,Gothic Metal,0.1758
+Cuarto Ala,Romantasy (fantasia romantica),False,1,Spiritbox,Metalcore,0.0211
+Cuarto Ala,Romantasy (fantasia romantica),False,2,Jinjer,Metalcore,0.0209
+Cuarto Ala,Romantasy (fantasia romantica),False,3,Killswitch Engage,Metalcore,0.0199
+Cuarto Ala,Romantasy (fantasia romantica),False,4,Whitechapel,Deathcore,0.0198
+Cuarto Ala,Romantasy (fantasia romantica),False,5,Architects,Metalcore,0.0187
+Una corte de niebla y furia,Romantasy (fantasia romantica),True,1,Rhapsody of Fire,Power Metal,0.2997
+Una corte de niebla y furia,Romantasy (fantasia romantica),True,2,Sabaton,Power Metal,0.2704
+Una corte de niebla y furia,Romantasy (fantasia romantica),True,3,DragonForce,Power Metal,0.2647
+Una corte de niebla y furia,Romantasy (fantasia romantica),True,4,Blind Guardian,Power Metal,0.2536
+Una corte de niebla y furia,Romantasy (fantasia romantica),True,5,Chelsea Wolfe,Gothic Metal,0.1608
+Una corte de alas y ruina,Romantasy (fantasia romantica),True,1,Candlemass,Doom Metal / Stoner,0.2143
+Una corte de alas y ruina,Romantasy (fantasia romantica),True,2,Rhapsody of Fire,Power Metal,0.1951
+Una corte de alas y ruina,Romantasy (fantasia romantica),True,3,Sabaton,Power Metal,0.1746
+Una corte de alas y ruina,Romantasy (fantasia romantica),True,4,DragonForce,Power Metal,0.171
+Una corte de alas y ruina,Romantasy (fantasia romantica),True,5,Blind Guardian,Power Metal,0.1634
+Reina de sombras,Romantasy (fantasia romantica),True,1,Candlemass,Doom Metal / Stoner,0.175
+Reina de sombras,Romantasy (fantasia romantica),True,2,Spiritbox,Metalcore,0.0188
+Reina de sombras,Romantasy (fantasia romantica),True,3,Jinjer,Metalcore,0.0187
+Reina de sombras,Romantasy (fantasia romantica),True,4,Killswitch Engage,Metalcore,0.0176
+Reina de sombras,Romantasy (fantasia romantica),True,5,Whitechapel,Deathcore,0.0176
+Fourth Wing,Romantasy (fantasia romantica),True,1,Cannibal Corpse,Death Metal,0.8008
+Fourth Wing,Romantasy (fantasia romantica),True,2,At the Gates,Death Metal,0.6997
+Fourth Wing,Romantasy (fantasia romantica),True,3,Death,Death Metal,0.6367
+Fourth Wing,Romantasy (fantasia romantica),True,4,Amon Amarth,Melodic Death Metal,0.5389
+Fourth Wing,Romantasy (fantasia romantica),True,5,Behemoth,Blackened Death Metal,0.5023
+Iron Flame,Romantasy (fantasia romantica),True,1,The 1975,Alternative Rock,0.2107
+Iron Flame,Romantasy (fantasia romantica),True,2,The Cure,Gothic Rock,0.1943
+Iron Flame,Romantasy (fantasia romantica),True,3,Iron Maiden,Heavy Metal,0.1849
+Iron Flame,Romantasy (fantasia romantica),True,4,Spiritbox,Metalcore,0.0121
+Iron Flame,Romantasy (fantasia romantica),True,5,Jinjer,Metalcore,0.0119
+Onyx Storm,Romantasy (fantasia romantica),True,1,Rhapsody of Fire,Power Metal,0.7478
+Onyx Storm,Romantasy (fantasia romantica),True,2,Sabaton,Power Metal,0.6757
+Onyx Storm,Romantasy (fantasia romantica),True,3,DragonForce,Power Metal,0.6601
+Onyx Storm,Romantasy (fantasia romantica),True,4,Blind Guardian,Power Metal,0.6323
+Onyx Storm,Romantasy (fantasia romantica),True,5,Nightwish,Symphonic Metal,0.2683
+Powerless,Romantasy (fantasia romantica),True,1,Spiritbox,Metalcore,0.0211
+Powerless,Romantasy (fantasia romantica),True,2,Jinjer,Metalcore,0.0209
+Powerless,Romantasy (fantasia romantica),True,3,Killswitch Engage,Metalcore,0.0199
+Powerless,Romantasy (fantasia romantica),True,4,Whitechapel,Deathcore,0.0198
+Powerless,Romantasy (fantasia romantica),True,5,Architects,Metalcore,0.0187
+Reckless,Romantasy (fantasia romantica),True,1,Candlemass,Doom Metal / Stoner,0.1264
+Reckless,Romantasy (fantasia romantica),True,2,The 1975,Alternative Rock,0.1182
+Reckless,Romantasy (fantasia romantica),True,3,The Cure,Gothic Rock,0.1108
+Reckless,Romantasy (fantasia romantica),True,4,Iron Maiden,Heavy Metal,0.1088
+Reckless,Romantasy (fantasia romantica),True,5,Spiritbox,Metalcore,0.0135
+Divine Rivals,Romantasy (fantasia romantica),True,1,Spiritbox,Metalcore,0.0211
+Divine Rivals,Romantasy (fantasia romantica),True,2,Jinjer,Metalcore,0.0209
+Divine Rivals,Romantasy (fantasia romantica),True,3,Killswitch Engage,Metalcore,0.0199
+Divine Rivals,Romantasy (fantasia romantica),True,4,Whitechapel,Deathcore,0.0198
+Divine Rivals,Romantasy (fantasia romantica),True,5,Architects,Metalcore,0.0187
+Ruthless Vows,Romantasy (fantasia romantica),True,1,Spiritbox,Metalcore,0.0211
+Ruthless Vows,Romantasy (fantasia romantica),True,2,Jinjer,Metalcore,0.0209
+Ruthless Vows,Romantasy (fantasia romantica),True,3,Killswitch Engage,Metalcore,0.0199
+Ruthless Vows,Romantasy (fantasia romantica),True,4,Whitechapel,Deathcore,0.0198
+Ruthless Vows,Romantasy (fantasia romantica),True,5,Architects,Metalcore,0.0187
+Érase una vez un corazón roto,Romantasy (fantasia romantica),True,1,Spiritbox,Metalcore,0.0211
+Érase una vez un corazón roto,Romantasy (fantasia romantica),True,2,Jinjer,Metalcore,0.0209
+Érase una vez un corazón roto,Romantasy (fantasia romantica),True,3,Killswitch Engage,Metalcore,0.0199
+Érase una vez un corazón roto,Romantasy (fantasia romantica),True,4,Whitechapel,Deathcore,0.0198
+Érase una vez un corazón roto,Romantasy (fantasia romantica),True,5,Architects,Metalcore,0.0187
+La balada del príncipe roto,Romantasy (fantasia romantica),False,1,Spiritbox,Metalcore,0.0211
+La balada del príncipe roto,Romantasy (fantasia romantica),False,2,Jinjer,Metalcore,0.0209
+La balada del príncipe roto,Romantasy (fantasia romantica),False,3,Killswitch Engage,Metalcore,0.0199
+La balada del príncipe roto,Romantasy (fantasia romantica),False,4,Whitechapel,Deathcore,0.0198
+La balada del príncipe roto,Romantasy (fantasia romantica),False,5,Architects,Metalcore,0.0187
+La vida invisible de Addie LaRue,Romantasy (fantasia romantica),True,1,Sleep Token,Alternative Metal,0.2921
+La vida invisible de Addie LaRue,Romantasy (fantasia romantica),True,2,Florence + The Machine,Alternative Rock,0.2396
+La vida invisible de Addie LaRue,Romantasy (fantasia romantica),True,3,The 1975,Alternative Rock,0.2097
+La vida invisible de Addie LaRue,Romantasy (fantasia romantica),True,4,Spiritbox,Metalcore,0.0111
+La vida invisible de Addie LaRue,Romantasy (fantasia romantica),True,5,Jinjer,Metalcore,0.0109
+Stardust,Romantasy (fantasia romantica),True,1,Spiritbox,Metalcore,0.0211
+Stardust,Romantasy (fantasia romantica),True,2,Jinjer,Metalcore,0.0209
+Stardust,Romantasy (fantasia romantica),True,3,Killswitch Engage,Metalcore,0.0199
+Stardust,Romantasy (fantasia romantica),True,4,Whitechapel,Deathcore,0.0198
+Stardust,Romantasy (fantasia romantica),True,5,Architects,Metalcore,0.0187
+Carry On,Romantasy (fantasia romantica),True,1,Spiritbox,Metalcore,0.0211
+Carry On,Romantasy (fantasia romantica),True,2,Jinjer,Metalcore,0.0209
+Carry On,Romantasy (fantasia romantica),True,3,Killswitch Engage,Metalcore,0.0199
+Carry On,Romantasy (fantasia romantica),True,4,Whitechapel,Deathcore,0.0198
+Carry On,Romantasy (fantasia romantica),True,5,Architects,Metalcore,0.0187
+Sombra y Hueso,Fantasia oscura / gotica,True,1,Spiritbox,Metalcore,0.0211
+Sombra y Hueso,Fantasia oscura / gotica,True,2,Jinjer,Metalcore,0.0209
+Sombra y Hueso,Fantasia oscura / gotica,True,3,Killswitch Engage,Metalcore,0.0199
+Sombra y Hueso,Fantasia oscura / gotica,True,4,Whitechapel,Deathcore,0.0198
+Sombra y Hueso,Fantasia oscura / gotica,True,5,Architects,Metalcore,0.0187
+Drácula,Fantasia oscura / gotica,True,1,Spiritbox,Metalcore,0.0211
+Drácula,Fantasia oscura / gotica,True,2,Jinjer,Metalcore,0.0209
+Drácula,Fantasia oscura / gotica,True,3,Killswitch Engage,Metalcore,0.0199
+Drácula,Fantasia oscura / gotica,True,4,Whitechapel,Deathcore,0.0198
+Drácula,Fantasia oscura / gotica,True,5,Architects,Metalcore,0.0187
+Vicious,Fantasia oscura / gotica,True,1,Rhapsody of Fire,Power Metal,0.4938
+Vicious,Fantasia oscura / gotica,True,2,Cannibal Corpse,Death Metal,0.4858
+Vicious,Fantasia oscura / gotica,True,3,Sabaton,Power Metal,0.4424
+Vicious,Fantasia oscura / gotica,True,4,DragonForce,Power Metal,0.4315
+Vicious,Fantasia oscura / gotica,True,5,At the Gates,Death Metal,0.4203
+Berserk,Fantasia oscura / gotica,True,1,Dimmu Borgir,Black Metal,0.4082
+Berserk,Fantasia oscura / gotica,True,2,Mayhem,Black Metal,0.4025
+Berserk,Fantasia oscura / gotica,True,3,Emperor,Black Metal,0.3797
+Berserk,Fantasia oscura / gotica,True,4,Cannibal Corpse,Death Metal,0.3091
+Berserk,Fantasia oscura / gotica,True,5,At the Gates,Death Metal,0.2683
+The Witcher,Fantasia oscura / gotica,True,1,Spiritbox,Metalcore,0.0211
+The Witcher,Fantasia oscura / gotica,True,2,Jinjer,Metalcore,0.0209
+The Witcher,Fantasia oscura / gotica,True,3,Killswitch Engage,Metalcore,0.0199
+The Witcher,Fantasia oscura / gotica,True,4,Whitechapel,Deathcore,0.0198
+The Witcher,Fantasia oscura / gotica,True,5,Architects,Metalcore,0.0187
+La novena casa,Fantasia oscura / gotica,True,1,Ghost,Occult Rock,0.6369
+La novena casa,Fantasia oscura / gotica,True,2,The 1975,Alternative Rock,0.1119
+La novena casa,Fantasia oscura / gotica,True,3,The Cure,Gothic Rock,0.1044
+La novena casa,Fantasia oscura / gotica,True,4,Iron Maiden,Heavy Metal,0.1024
+La novena casa,Fantasia oscura / gotica,True,5,Spiritbox,Metalcore,0.0072
+Hell Bent,Fantasia oscura / gotica,True,1,The 1975,Alternative Rock,0.2107
+Hell Bent,Fantasia oscura / gotica,True,2,The Cure,Gothic Rock,0.1943
+Hell Bent,Fantasia oscura / gotica,True,3,Iron Maiden,Heavy Metal,0.1849
+Hell Bent,Fantasia oscura / gotica,True,4,Spiritbox,Metalcore,0.0121
+Hell Bent,Fantasia oscura / gotica,True,5,Jinjer,Metalcore,0.0119
+El océano al final del camino,Fantasia oscura / gotica,True,1,Cannibal Corpse,Death Metal,0.3115
+El océano al final del camino,Fantasia oscura / gotica,True,2,Rhapsody of Fire,Power Metal,0.3099
+El océano al final del camino,Fantasia oscura / gotica,True,3,Sabaton,Power Metal,0.2773
+El océano al final del camino,Fantasia oscura / gotica,True,4,DragonForce,Power Metal,0.2708
+El océano al final del camino,Fantasia oscura / gotica,True,5,At the Gates,Death Metal,0.2697
+Elric de Melniboné,Fantasia oscura / gotica,True,1,Spiritbox,Metalcore,0.0211
+Elric de Melniboné,Fantasia oscura / gotica,True,2,Jinjer,Metalcore,0.0209
+Elric de Melniboné,Fantasia oscura / gotica,True,3,Killswitch Engage,Metalcore,0.0199
+Elric de Melniboné,Fantasia oscura / gotica,True,4,Whitechapel,Deathcore,0.0198
+Elric de Melniboné,Fantasia oscura / gotica,True,5,Architects,Metalcore,0.0187
+The Poppy War,Fantasia oscura / gotica,True,1,Chelsea Wolfe,Gothic Metal,0.1616
+The Poppy War,Fantasia oscura / gotica,True,2,Sleep Token,Alternative Metal,0.1495
+The Poppy War,Fantasia oscura / gotica,True,3,Florence + The Machine,Alternative Rock,0.1224
+The Poppy War,Fantasia oscura / gotica,True,4,Candlemass,Doom Metal / Stoner,0.097
+The Poppy War,Fantasia oscura / gotica,True,5,The 1975,Alternative Rock,0.0815
+La guerra de la amapola,Fantasia oscura / gotica,False,1,Spiritbox,Metalcore,0.0211
+La guerra de la amapola,Fantasia oscura / gotica,False,2,Jinjer,Metalcore,0.0209
+La guerra de la amapola,Fantasia oscura / gotica,False,3,Killswitch Engage,Metalcore,0.0199
+La guerra de la amapola,Fantasia oscura / gotica,False,4,Whitechapel,Deathcore,0.0198
+La guerra de la amapola,Fantasia oscura / gotica,False,5,Architects,Metalcore,0.0187
+Coraline,Fantasia oscura / gotica,True,1,Spiritbox,Metalcore,0.0211
+Coraline,Fantasia oscura / gotica,True,2,Jinjer,Metalcore,0.0209
+Coraline,Fantasia oscura / gotica,True,3,Killswitch Engage,Metalcore,0.0199
+Coraline,Fantasia oscura / gotica,True,4,Whitechapel,Deathcore,0.0198
+Coraline,Fantasia oscura / gotica,True,5,Architects,Metalcore,0.0187
+A Darker Shade of Magic,Fantasia oscura / gotica,True,1,Dimmu Borgir,Black Metal,0.575
+A Darker Shade of Magic,Fantasia oscura / gotica,True,2,Mayhem,Black Metal,0.567
+A Darker Shade of Magic,Fantasia oscura / gotica,True,3,Emperor,Black Metal,0.5349
+A Darker Shade of Magic,Fantasia oscura / gotica,True,4,Rhapsody of Fire,Power Metal,0.4582
+A Darker Shade of Magic,Fantasia oscura / gotica,True,5,Sabaton,Power Metal,0.4114
+The Locked Tomb,Fantasia oscura / gotica,True,1,Cannibal Corpse,Death Metal,0.8008
+The Locked Tomb,Fantasia oscura / gotica,True,2,At the Gates,Death Metal,0.6997
+The Locked Tomb,Fantasia oscura / gotica,True,3,Death,Death Metal,0.6367
+The Locked Tomb,Fantasia oscura / gotica,True,4,Amon Amarth,Melodic Death Metal,0.5389
+The Locked Tomb,Fantasia oscura / gotica,True,5,Behemoth,Blackened Death Metal,0.5023
+Gideon the Ninth,Fantasia oscura / gotica,True,1,Candlemass,Doom Metal / Stoner,0.175
+Gideon the Ninth,Fantasia oscura / gotica,True,2,Spiritbox,Metalcore,0.0188
+Gideon the Ninth,Fantasia oscura / gotica,True,3,Jinjer,Metalcore,0.0187
+Gideon the Ninth,Fantasia oscura / gotica,True,4,Killswitch Engage,Metalcore,0.0176
+Gideon the Ninth,Fantasia oscura / gotica,True,5,Whitechapel,Deathcore,0.0176
+Mexican Gothic,Fantasia oscura / gotica,True,1,Candlemass,Doom Metal / Stoner,0.4011
+Mexican Gothic,Fantasia oscura / gotica,True,2,Paradise Lost,Gothic Metal,0.3422
+Mexican Gothic,Fantasia oscura / gotica,True,3,Type O Negative,Gothic Metal,0.3065
+Mexican Gothic,Fantasia oscura / gotica,True,4,Chelsea Wolfe,Gothic Metal,0.3035
+Mexican Gothic,Fantasia oscura / gotica,True,5,Sleep,Doom Metal / Stoner,0.2886
+The Hazel Wood,Fantasia oscura / gotica,True,1,Chelsea Wolfe,Gothic Metal,0.2908
+The Hazel Wood,Fantasia oscura / gotica,True,2,Spiritbox,Metalcore,0.0172
+The Hazel Wood,Fantasia oscura / gotica,True,3,Jinjer,Metalcore,0.017
+The Hazel Wood,Fantasia oscura / gotica,True,4,Killswitch Engage,Metalcore,0.016
+The Hazel Wood,Fantasia oscura / gotica,True,5,Whitechapel,Deathcore,0.0159
+Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,True,1,Breaking Benjamin,Alternative Metal,0.5474
+Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,True,2,Deftones,Alternative Metal,0.5377
+Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,True,3,Linkin Park,Alternative Metal,0.5179
+Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,True,4,Sleep Token,Alternative Metal,0.5126
+Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,True,5,The Maine,Alternative Rock,0.4537
+Piranesi,Fantasia oscura / gotica,True,1,The 1975,Alternative Rock,0.2383
+Piranesi,Fantasia oscura / gotica,True,2,The Cure,Gothic Rock,0.1873
+Piranesi,Fantasia oscura / gotica,True,3,Iron Maiden,Heavy Metal,0.1632
+Piranesi,Fantasia oscura / gotica,True,4,Deftones,Alternative Metal,0.0788
+Piranesi,Fantasia oscura / gotica,True,5,Breaking Benjamin,Alternative Metal,0.0761
+Outlander,Romance historico / gotico,True,1,Iron Maiden,Heavy Metal,0.4025
+Outlander,Romance historico / gotico,True,2,The Cure,Gothic Rock,0.2379
+Outlander,Romance historico / gotico,True,3,Judas Priest,Heavy Metal,0.2343
+Outlander,Romance historico / gotico,True,4,Suicide Silence,Deathcore,0.1116
+Outlander,Romance historico / gotico,True,5,Dream Theater,Progressive Metal,0.1069
+Jane Eyre,Romance historico / gotico,True,1,Spiritbox,Metalcore,0.0211
+Jane Eyre,Romance historico / gotico,True,2,Jinjer,Metalcore,0.0209
+Jane Eyre,Romance historico / gotico,True,3,Killswitch Engage,Metalcore,0.0199
+Jane Eyre,Romance historico / gotico,True,4,Whitechapel,Deathcore,0.0198
+Jane Eyre,Romance historico / gotico,True,5,Architects,Metalcore,0.0187
+Un día de diciembre,Romance historico / gotico,False,1,Spiritbox,Metalcore,0.0211
+Un día de diciembre,Romance historico / gotico,False,2,Jinjer,Metalcore,0.0209
+Un día de diciembre,Romance historico / gotico,False,3,Killswitch Engage,Metalcore,0.0199
+Un día de diciembre,Romance historico / gotico,False,4,Whitechapel,Deathcore,0.0198
+Un día de diciembre,Romance historico / gotico,False,5,Architects,Metalcore,0.0187
+Cazadores de Sombras: Ciudad de Hueso,Fantasia urbana,False,1,Spiritbox,Metalcore,0.0211
+Cazadores de Sombras: Ciudad de Hueso,Fantasia urbana,False,2,Jinjer,Metalcore,0.0209
+Cazadores de Sombras: Ciudad de Hueso,Fantasia urbana,False,3,Killswitch Engage,Metalcore,0.0199
+Cazadores de Sombras: Ciudad de Hueso,Fantasia urbana,False,4,Whitechapel,Deathcore,0.0198
+Cazadores de Sombras: Ciudad de Hueso,Fantasia urbana,False,5,Architects,Metalcore,0.0187
+The Infernal Devices,Fantasia urbana,True,1,Rhapsody of Fire,Power Metal,0.513
+The Infernal Devices,Fantasia urbana,True,2,Sabaton,Power Metal,0.4631
+The Infernal Devices,Fantasia urbana,True,3,DragonForce,Power Metal,0.4527
+The Infernal Devices,Fantasia urbana,True,4,Blind Guardian,Power Metal,0.4336
+The Infernal Devices,Fantasia urbana,True,5,Nightwish,Symphonic Metal,0.1832
+Cazadores de sombras,Fantasia urbana,False,1,Spiritbox,Metalcore,0.0211
+Cazadores de sombras,Fantasia urbana,False,2,Jinjer,Metalcore,0.0209
+Cazadores de sombras,Fantasia urbana,False,3,Killswitch Engage,Metalcore,0.0199
+Cazadores de sombras,Fantasia urbana,False,4,Whitechapel,Deathcore,0.0198
+Cazadores de sombras,Fantasia urbana,False,5,Architects,Metalcore,0.0187
+Ciudad de hueso,Fantasia urbana,False,1,Spiritbox,Metalcore,0.0211
+Ciudad de hueso,Fantasia urbana,False,2,Jinjer,Metalcore,0.0209
+Ciudad de hueso,Fantasia urbana,False,3,Killswitch Engage,Metalcore,0.0199
+Ciudad de hueso,Fantasia urbana,False,4,Whitechapel,Deathcore,0.0198
+Ciudad de hueso,Fantasia urbana,False,5,Architects,Metalcore,0.0187
+Seis de cuervos,Fantasia urbana,True,1,Within Temptation,Symphonic Metal,0.2344
+Seis de cuervos,Fantasia urbana,True,2,Suicide Silence,Deathcore,0.1854
+Seis de cuervos,Fantasia urbana,True,3,Dream Theater,Progressive Metal,0.1782
+Seis de cuervos,Fantasia urbana,True,4,Spiritbox,Metalcore,0.0139
+Seis de cuervos,Fantasia urbana,True,5,Jinjer,Metalcore,0.0138
+Mitología Nórdica,Mitologia (nordica / celta / griega),True,1,The 1975,Alternative Rock,0.2107
+Mitología Nórdica,Mitologia (nordica / celta / griega),True,2,The Cure,Gothic Rock,0.1943
+Mitología Nórdica,Mitologia (nordica / celta / griega),True,3,Iron Maiden,Heavy Metal,0.1849
+Mitología Nórdica,Mitologia (nordica / celta / griega),True,4,Spiritbox,Metalcore,0.0121
+Mitología Nórdica,Mitologia (nordica / celta / griega),True,5,Jinjer,Metalcore,0.0119
+La canción de Aquiles,Mitologia (nordica / celta / griega),True,1,Spiritbox,Metalcore,0.0211
+La canción de Aquiles,Mitologia (nordica / celta / griega),True,2,Jinjer,Metalcore,0.0209
+La canción de Aquiles,Mitologia (nordica / celta / griega),True,3,Killswitch Engage,Metalcore,0.0199
+La canción de Aquiles,Mitologia (nordica / celta / griega),True,4,Whitechapel,Deathcore,0.0198
+La canción de Aquiles,Mitologia (nordica / celta / griega),True,5,Architects,Metalcore,0.0187
+Circe,Mitologia (nordica / celta / griega),True,1,Rhapsody of Fire,Power Metal,0.4414
+Circe,Mitologia (nordica / celta / griega),True,2,Sabaton,Power Metal,0.3981
+Circe,Mitologia (nordica / celta / griega),True,3,DragonForce,Power Metal,0.3891
+Circe,Mitologia (nordica / celta / griega),True,4,Blind Guardian,Power Metal,0.3726
+Circe,Mitologia (nordica / celta / griega),True,5,Ghost,Occult Rock,0.357
+Percy Jackson,Mitologia (nordica / celta / griega),True,1,Spiritbox,Metalcore,0.0211
+Percy Jackson,Mitologia (nordica / celta / griega),True,2,Jinjer,Metalcore,0.0209
+Percy Jackson,Mitologia (nordica / celta / griega),True,3,Killswitch Engage,Metalcore,0.0199
+Percy Jackson,Mitologia (nordica / celta / griega),True,4,Whitechapel,Deathcore,0.0198
+Percy Jackson,Mitologia (nordica / celta / griega),True,5,Architects,Metalcore,0.0187
+El ladrón del rayo,Mitologia (nordica / celta / griega),True,1,Spiritbox,Metalcore,0.0211
+El ladrón del rayo,Mitologia (nordica / celta / griega),True,2,Jinjer,Metalcore,0.0209
+El ladrón del rayo,Mitologia (nordica / celta / griega),True,3,Killswitch Engage,Metalcore,0.0199
+El ladrón del rayo,Mitologia (nordica / celta / griega),True,4,Whitechapel,Deathcore,0.0198
+El ladrón del rayo,Mitologia (nordica / celta / griega),True,5,Architects,Metalcore,0.0187
+Héroes del Olimpo,Mitologia (nordica / celta / griega),True,1,The 1975,Alternative Rock,0.2107
+Héroes del Olimpo,Mitologia (nordica / celta / griega),True,2,The Cure,Gothic Rock,0.1943
+Héroes del Olimpo,Mitologia (nordica / celta / griega),True,3,Iron Maiden,Heavy Metal,0.1849
+Héroes del Olimpo,Mitologia (nordica / celta / griega),True,4,Spiritbox,Metalcore,0.0121
+Héroes del Olimpo,Mitologia (nordica / celta / griega),True,5,Jinjer,Metalcore,0.0119
+Gods of Jade and Shadow,Mitologia (nordica / celta / griega),True,1,Cannibal Corpse,Death Metal,0.6466
+Gods of Jade and Shadow,Mitologia (nordica / celta / griega),True,2,At the Gates,Death Metal,0.5647
+Gods of Jade and Shadow,Mitologia (nordica / celta / griega),True,3,Death,Death Metal,0.5136
+Gods of Jade and Shadow,Mitologia (nordica / celta / griega),True,4,Amon Amarth,Melodic Death Metal,0.4344
+Gods of Jade and Shadow,Mitologia (nordica / celta / griega),True,5,Behemoth,Blackened Death Metal,0.4039
+El príncipe cruel,Fae Fantasy,True,1,Korpiklaani,Folk Metal,0.2869
+El príncipe cruel,Fae Fantasy,True,2,Eluveitie,Folk Metal,0.2508
+El príncipe cruel,Fae Fantasy,True,3,Dimmu Borgir,Black Metal,0.2479
+El príncipe cruel,Fae Fantasy,True,4,Mayhem,Black Metal,0.2443
+El príncipe cruel,Fae Fantasy,True,5,Wintersun,Folk Metal,0.2415
+El rey malvado,Fae Fantasy,False,1,Spiritbox,Metalcore,0.0211
+El rey malvado,Fae Fantasy,False,2,Jinjer,Metalcore,0.0209
+El rey malvado,Fae Fantasy,False,3,Killswitch Engage,Metalcore,0.0199
+El rey malvado,Fae Fantasy,False,4,Whitechapel,Deathcore,0.0198
+El rey malvado,Fae Fantasy,False,5,Architects,Metalcore,0.0187
+La reina de nada,Fae Fantasy,False,1,Spiritbox,Metalcore,0.0211
+La reina de nada,Fae Fantasy,False,2,Jinjer,Metalcore,0.0209
+La reina de nada,Fae Fantasy,False,3,Killswitch Engage,Metalcore,0.0199
+La reina de nada,Fae Fantasy,False,4,Whitechapel,Deathcore,0.0198
+La reina de nada,Fae Fantasy,False,5,Architects,Metalcore,0.0187
+Las crónicas de Narnia,Fantasia clasica / juvenil,True,1,The 1975,Alternative Rock,0.178
+Las crónicas de Narnia,Fantasia clasica / juvenil,True,2,The Cure,Gothic Rock,0.1646
+Las crónicas de Narnia,Fantasia clasica / juvenil,True,3,Iron Maiden,Heavy Metal,0.1578
+Las crónicas de Narnia,Fantasia clasica / juvenil,True,4,AC/DC,Hard Rock / Rock clasico,0.0454
+Las crónicas de Narnia,Fantasia clasica / juvenil,True,5,Led Zeppelin,Hard Rock / Rock clasico,0.0445
+La brújula dorada,Fantasia clasica / juvenil,True,1,Candlemass,Doom Metal / Stoner,0.175
+La brújula dorada,Fantasia clasica / juvenil,True,2,Spiritbox,Metalcore,0.0188
+La brújula dorada,Fantasia clasica / juvenil,True,3,Jinjer,Metalcore,0.0187
+La brújula dorada,Fantasia clasica / juvenil,True,4,Killswitch Engage,Metalcore,0.0176
+La brújula dorada,Fantasia clasica / juvenil,True,5,Whitechapel,Deathcore,0.0176
+El castillo ambulante,Fantasia clasica / juvenil,True,1,Spiritbox,Metalcore,0.0211
+El castillo ambulante,Fantasia clasica / juvenil,True,2,Jinjer,Metalcore,0.0209
+El castillo ambulante,Fantasia clasica / juvenil,True,3,Killswitch Engage,Metalcore,0.0199
+El castillo ambulante,Fantasia clasica / juvenil,True,4,Whitechapel,Deathcore,0.0198
+El castillo ambulante,Fantasia clasica / juvenil,True,5,Architects,Metalcore,0.0187
+Alicia en el País de las Maravillas,Fantasia clasica / juvenil,False,1,Spiritbox,Metalcore,0.0211
+Alicia en el País de las Maravillas,Fantasia clasica / juvenil,False,2,Jinjer,Metalcore,0.0209
+Alicia en el País de las Maravillas,Fantasia clasica / juvenil,False,3,Killswitch Engage,Metalcore,0.0199
+Alicia en el País de las Maravillas,Fantasia clasica / juvenil,False,4,Whitechapel,Deathcore,0.0198
+Alicia en el País de las Maravillas,Fantasia clasica / juvenil,False,5,Architects,Metalcore,0.0187
+A través del espejo,Fantasia clasica / juvenil,True,1,Spiritbox,Metalcore,0.0211
+A través del espejo,Fantasia clasica / juvenil,True,2,Jinjer,Metalcore,0.0209
+A través del espejo,Fantasia clasica / juvenil,True,3,Killswitch Engage,Metalcore,0.0199
+A través del espejo,Fantasia clasica / juvenil,True,4,Whitechapel,Deathcore,0.0198
+A través del espejo,Fantasia clasica / juvenil,True,5,Architects,Metalcore,0.0187
+Caraval,Fantasia clasica / juvenil,True,1,Spiritbox,Metalcore,0.0211
+Caraval,Fantasia clasica / juvenil,True,2,Jinjer,Metalcore,0.0209
+Caraval,Fantasia clasica / juvenil,True,3,Killswitch Engage,Metalcore,0.0199
+Caraval,Fantasia clasica / juvenil,True,4,Whitechapel,Deathcore,0.0198
+Caraval,Fantasia clasica / juvenil,True,5,Architects,Metalcore,0.0187
+El circo de la noche,Fantasia clasica / juvenil,True,1,Dimmu Borgir,Black Metal,0.835
+El circo de la noche,Fantasia clasica / juvenil,True,2,Mayhem,Black Metal,0.824
+El circo de la noche,Fantasia clasica / juvenil,True,3,Emperor,Black Metal,0.7796
+El circo de la noche,Fantasia clasica / juvenil,True,4,Agalloch,Post-Metal / Atmospheric,0.256
+El circo de la noche,Fantasia clasica / juvenil,True,5,Alcest,Post-Metal / Atmospheric,0.1404
+El mar sin estrellas,Fantasia clasica / juvenil,True,1,Spiritbox,Metalcore,0.0211
+El mar sin estrellas,Fantasia clasica / juvenil,True,2,Jinjer,Metalcore,0.0209
+El mar sin estrellas,Fantasia clasica / juvenil,True,3,Killswitch Engage,Metalcore,0.0199
+El mar sin estrellas,Fantasia clasica / juvenil,True,4,Whitechapel,Deathcore,0.0198
+El mar sin estrellas,Fantasia clasica / juvenil,True,5,Architects,Metalcore,0.0187
+La primera ley,Grimdark,True,1,Spiritbox,Metalcore,0.0211
+La primera ley,Grimdark,True,2,Jinjer,Metalcore,0.0209
+La primera ley,Grimdark,True,3,Killswitch Engage,Metalcore,0.0199
+La primera ley,Grimdark,True,4,Whitechapel,Deathcore,0.0198
+La primera ley,Grimdark,True,5,Architects,Metalcore,0.0187
+Malaz: El libro de los caídos,Grimdark,True,1,Candlemass,Doom Metal / Stoner,0.1408
+Malaz: El libro de los caídos,Grimdark,True,2,Chelsea Wolfe,Gothic Metal,0.1046
+Malaz: El libro de los caídos,Grimdark,True,3,Iron Maiden,Heavy Metal,0.0449
+Malaz: El libro de los caídos,Grimdark,True,4,The Cure,Gothic Rock,0.0408
+Malaz: El libro de los caídos,Grimdark,True,5,The 1975,Alternative Rock,0.0408
+La compañía negra,Grimdark,True,1,Dimmu Borgir,Black Metal,0.7946
+La compañía negra,Grimdark,True,2,Mayhem,Black Metal,0.784
+La compañía negra,Grimdark,True,3,Emperor,Black Metal,0.7413
+La compañía negra,Grimdark,True,4,Agalloch,Post-Metal / Atmospheric,0.2366
+La compañía negra,Grimdark,True,5,Alcest,Post-Metal / Atmospheric,0.1253
+Babel,Dark Academia,True,1,Rhapsody of Fire,Power Metal,0.2809
+Babel,Dark Academia,True,2,Sabaton,Power Metal,0.253
+Babel,Dark Academia,True,3,DragonForce,Power Metal,0.2476
+Babel,Dark Academia,True,4,Blind Guardian,Power Metal,0.2371
+Babel,Dark Academia,True,5,Iron Maiden,Heavy Metal,0.1828
+Ninth House,Dark Academia,True,1,Ghost,Occult Rock,0.3469
+Ninth House,Dark Academia,True,2,Chelsea Wolfe,Gothic Metal,0.2321
+Ninth House,Dark Academia,True,3,Iron Maiden,Heavy Metal,0.0408
+Ninth House,Dark Academia,True,4,The Cure,Gothic Rock,0.0366
+Ninth House,Dark Academia,True,5,The 1975,Alternative Rock,0.0366
+Entrevista con el vampiro,Gotico clasico / vampiros,True,1,Deep Purple,Hard Rock / Rock clasico,0.3668
+Entrevista con el vampiro,Gotico clasico / vampiros,True,2,AC/DC,Hard Rock / Rock clasico,0.3457
+Entrevista con el vampiro,Gotico clasico / vampiros,True,3,Led Zeppelin,Hard Rock / Rock clasico,0.3415
+Entrevista con el vampiro,Gotico clasico / vampiros,True,4,Rhapsody of Fire,Power Metal,0.1875
+Entrevista con el vampiro,Gotico clasico / vampiros,True,5,Sabaton,Power Metal,0.168
+El vampiro Lestat,Gotico clasico / vampiros,True,1,Deep Purple,Hard Rock / Rock clasico,0.4042
+El vampiro Lestat,Gotico clasico / vampiros,True,2,AC/DC,Hard Rock / Rock clasico,0.3822
+El vampiro Lestat,Gotico clasico / vampiros,True,3,Led Zeppelin,Hard Rock / Rock clasico,0.3778
+El vampiro Lestat,Gotico clasico / vampiros,True,4,Suicide Silence,Deathcore,0.1194
+El vampiro Lestat,Gotico clasico / vampiros,True,5,Dream Theater,Progressive Metal,0.1143
+Las brujas de Mayfair,Gotico clasico / vampiros,True,1,Deep Purple,Hard Rock / Rock clasico,0.3152
+Las brujas de Mayfair,Gotico clasico / vampiros,True,2,AC/DC,Hard Rock / Rock clasico,0.2974
+Las brujas de Mayfair,Gotico clasico / vampiros,True,3,Led Zeppelin,Hard Rock / Rock clasico,0.2939
+Las brujas de Mayfair,Gotico clasico / vampiros,True,4,The 1975,Alternative Rock,0.1221
+Las brujas de Mayfair,Gotico clasico / vampiros,True,5,The Cure,Gothic Rock,0.1131
+Carmilla,Gotico clasico / vampiros,True,1,Deep Purple,Hard Rock / Rock clasico,0.3577
+Carmilla,Gotico clasico / vampiros,True,2,AC/DC,Hard Rock / Rock clasico,0.3379
+Carmilla,Gotico clasico / vampiros,True,3,Led Zeppelin,Hard Rock / Rock clasico,0.3339
+Carmilla,Gotico clasico / vampiros,True,4,Chelsea Wolfe,Gothic Metal,0.1059
+Carmilla,Gotico clasico / vampiros,True,5,Lacuna Coil,Gothic Metal,0.099
+El retrato de Dorian Gray,Gotico clasico / vampiros,True,1,Deep Purple,Hard Rock / Rock clasico,0.4042
+El retrato de Dorian Gray,Gotico clasico / vampiros,True,2,AC/DC,Hard Rock / Rock clasico,0.3822
+El retrato de Dorian Gray,Gotico clasico / vampiros,True,3,Led Zeppelin,Hard Rock / Rock clasico,0.3778
+El retrato de Dorian Gray,Gotico clasico / vampiros,True,4,Suicide Silence,Deathcore,0.1194
+El retrato de Dorian Gray,Gotico clasico / vampiros,True,5,Dream Theater,Progressive Metal,0.1143
+Frankenstein,Gotico clasico / vampiros,True,1,Deep Purple,Hard Rock / Rock clasico,0.4655
+Frankenstein,Gotico clasico / vampiros,True,2,AC/DC,Hard Rock / Rock clasico,0.4406
+Frankenstein,Gotico clasico / vampiros,True,3,Led Zeppelin,Hard Rock / Rock clasico,0.4356
+Frankenstein,Gotico clasico / vampiros,True,4,Spiritbox,Metalcore,0.0029
+Frankenstein,Gotico clasico / vampiros,True,5,Jinjer,Metalcore,0.0027
+El castillo de Otranto,Gotico clasico / vampiros,True,1,Deep Purple,Hard Rock / Rock clasico,0.4064
+El castillo de Otranto,Gotico clasico / vampiros,True,2,AC/DC,Hard Rock / Rock clasico,0.3831
+El castillo de Otranto,Gotico clasico / vampiros,True,3,Led Zeppelin,Hard Rock / Rock clasico,0.3784
+El castillo de Otranto,Gotico clasico / vampiros,True,4,The 69 Eyes,Gothic Rock,0.2656
+El castillo de Otranto,Gotico clasico / vampiros,True,5,HIM,Gothic Rock,0.2632
+Vampire Academy,Gotico clasico / vampiros,True,1,Deep Purple,Hard Rock / Rock clasico,0.4655
+Vampire Academy,Gotico clasico / vampiros,True,2,AC/DC,Hard Rock / Rock clasico,0.4406
+Vampire Academy,Gotico clasico / vampiros,True,3,Led Zeppelin,Hard Rock / Rock clasico,0.4356
+Vampire Academy,Gotico clasico / vampiros,True,4,Spiritbox,Metalcore,0.0029
+Vampire Academy,Gotico clasico / vampiros,True,5,Jinjer,Metalcore,0.0027
+A Dowry of Blood,Gotico clasico / vampiros,True,1,Cannibal Corpse,Death Metal,0.389
+A Dowry of Blood,Gotico clasico / vampiros,True,2,At the Gates,Death Metal,0.339
+A Dowry of Blood,Gotico clasico / vampiros,True,3,Death,Death Metal,0.3079
+A Dowry of Blood,Gotico clasico / vampiros,True,4,Deep Purple,Hard Rock / Rock clasico,0.2988
+A Dowry of Blood,Gotico clasico / vampiros,True,5,AC/DC,Hard Rock / Rock clasico,0.2804
+Los juegos del hambre,Distopia juvenil,True,1,Cannibal Corpse,Death Metal,0.3342
+Los juegos del hambre,Distopia juvenil,True,2,At the Gates,Death Metal,0.29
+Los juegos del hambre,Distopia juvenil,True,3,Alcest,Post-Metal / Atmospheric,0.2835
+Los juegos del hambre,Distopia juvenil,True,4,Sleeping With Sirens,Post-Hardcore,0.2742
+Los juegos del hambre,Distopia juvenil,True,5,Death,Death Metal,0.2626
+En llamas,Distopia juvenil,True,1,Spiritbox,Metalcore,0.0211
+En llamas,Distopia juvenil,True,2,Jinjer,Metalcore,0.0209
+En llamas,Distopia juvenil,True,3,Killswitch Engage,Metalcore,0.0199
+En llamas,Distopia juvenil,True,4,Whitechapel,Deathcore,0.0198
+En llamas,Distopia juvenil,True,5,Architects,Metalcore,0.0187
+Sinsajo,Distopia juvenil,True,1,Spiritbox,Metalcore,0.0211
+Sinsajo,Distopia juvenil,True,2,Jinjer,Metalcore,0.0209
+Sinsajo,Distopia juvenil,True,3,Killswitch Engage,Metalcore,0.0199
+Sinsajo,Distopia juvenil,True,4,Whitechapel,Deathcore,0.0198
+Sinsajo,Distopia juvenil,True,5,Architects,Metalcore,0.0187
+Divergente,Distopia juvenil,True,1,Spiritbox,Metalcore,0.0211
+Divergente,Distopia juvenil,True,2,Jinjer,Metalcore,0.0209
+Divergente,Distopia juvenil,True,3,Killswitch Engage,Metalcore,0.0199
+Divergente,Distopia juvenil,True,4,Whitechapel,Deathcore,0.0198
+Divergente,Distopia juvenil,True,5,Architects,Metalcore,0.0187
+Maze Runner,Distopia juvenil,True,1,Chelsea Wolfe,Gothic Metal,0.2105
+Maze Runner,Distopia juvenil,True,2,The 1975,Alternative Rock,0.117
+Maze Runner,Distopia juvenil,True,3,The Cure,Gothic Rock,0.1095
+Maze Runner,Distopia juvenil,True,4,Iron Maiden,Heavy Metal,0.1075
+Maze Runner,Distopia juvenil,True,5,Spiritbox,Metalcore,0.0123
+Ready Player One,Distopia juvenil,True,1,Sabaton,Power Metal,0.5552
+Ready Player One,Distopia juvenil,True,2,Rhapsody of Fire,Power Metal,0.5226
+Ready Player One,Distopia juvenil,True,3,All Time Low,Pop Punk,0.4754
+Ready Player One,Distopia juvenil,True,4,DragonForce,Power Metal,0.4544
+Ready Player One,Distopia juvenil,True,5,Blind Guardian,Power Metal,0.4328
+Scott Pilgrim,Distopia juvenil,True,1,Royal Blood,Alternative Rock,0.6439
+Scott Pilgrim,Distopia juvenil,True,2,Muse,Alternative Rock,0.6435
+Scott Pilgrim,Distopia juvenil,True,3,AC/DC,Hard Rock / Rock clasico,0.5056
+Scott Pilgrim,Distopia juvenil,True,4,The Maine,Alternative Rock,0.5003
+Scott Pilgrim,Distopia juvenil,True,5,Led Zeppelin,Hard Rock / Rock clasico,0.4982
+Las ventajas de ser invisible,Romance juvenil / coming-of-age,False,1,Spiritbox,Metalcore,0.0211
+Las ventajas de ser invisible,Romance juvenil / coming-of-age,False,2,Jinjer,Metalcore,0.0209
+Las ventajas de ser invisible,Romance juvenil / coming-of-age,False,3,Killswitch Engage,Metalcore,0.0199
+Las ventajas de ser invisible,Romance juvenil / coming-of-age,False,4,Whitechapel,Deathcore,0.0198
+Las ventajas de ser invisible,Romance juvenil / coming-of-age,False,5,Architects,Metalcore,0.0187
+Heartstopper,Romance juvenil / coming-of-age,True,1,Deep Purple,Hard Rock / Rock clasico,0.4145
+Heartstopper,Romance juvenil / coming-of-age,True,2,AC/DC,Hard Rock / Rock clasico,0.3911
+Heartstopper,Romance juvenil / coming-of-age,True,3,Led Zeppelin,Hard Rock / Rock clasico,0.3864
+Heartstopper,Romance juvenil / coming-of-age,True,4,System of a Down,Nu Metal,0.2527
+Heartstopper,Romance juvenil / coming-of-age,True,5,Disturbed,Alternative Metal,0.2
+A todos los chicos de los que me enamoré,Romance juvenil / coming-of-age,False,1,Spiritbox,Metalcore,0.0211
+A todos los chicos de los que me enamoré,Romance juvenil / coming-of-age,False,2,Jinjer,Metalcore,0.0209
+A todos los chicos de los que me enamoré,Romance juvenil / coming-of-age,False,3,Killswitch Engage,Metalcore,0.0199
+A todos los chicos de los que me enamoré,Romance juvenil / coming-of-age,False,4,Whitechapel,Deathcore,0.0198
+A todos los chicos de los que me enamoré,Romance juvenil / coming-of-age,False,5,Architects,Metalcore,0.0187
+Eleanor & Park,Romance juvenil / coming-of-age,True,1,Spiritbox,Metalcore,0.0211
+Eleanor & Park,Romance juvenil / coming-of-age,True,2,Jinjer,Metalcore,0.0209
+Eleanor & Park,Romance juvenil / coming-of-age,True,3,Killswitch Engage,Metalcore,0.0199
+Eleanor & Park,Romance juvenil / coming-of-age,True,4,Whitechapel,Deathcore,0.0198
+Eleanor & Park,Romance juvenil / coming-of-age,True,5,Architects,Metalcore,0.0187
+Nettle & Bone,Fantasia de cuento de hadas,True,1,Spiritbox,Metalcore,0.0211
+Nettle & Bone,Fantasia de cuento de hadas,True,2,Jinjer,Metalcore,0.0209
+Nettle & Bone,Fantasia de cuento de hadas,True,3,Killswitch Engage,Metalcore,0.0199
+Nettle & Bone,Fantasia de cuento de hadas,True,4,Whitechapel,Deathcore,0.0198
+Nettle & Bone,Fantasia de cuento de hadas,True,5,Architects,Metalcore,0.0187
+Uprooted,Fantasia de cuento de hadas,True,1,Spiritbox,Metalcore,0.0211
+Uprooted,Fantasia de cuento de hadas,True,2,Jinjer,Metalcore,0.0209
+Uprooted,Fantasia de cuento de hadas,True,3,Killswitch Engage,Metalcore,0.0199
+Uprooted,Fantasia de cuento de hadas,True,4,Whitechapel,Deathcore,0.0198
+Uprooted,Fantasia de cuento de hadas,True,5,Architects,Metalcore,0.0187
+Spinning Silver,Fantasia de cuento de hadas,True,1,Rhapsody of Fire,Power Metal,0.3823
+Spinning Silver,Fantasia de cuento de hadas,True,2,Sabaton,Power Metal,0.3451
+Spinning Silver,Fantasia de cuento de hadas,True,3,DragonForce,Power Metal,0.3376
+Spinning Silver,Fantasia de cuento de hadas,True,4,Blind Guardian,Power Metal,0.3234
+Spinning Silver,Fantasia de cuento de hadas,True,5,Nightwish,Symphonic Metal,0.1379
+A Deadly Education,Fantasia de cuento de hadas,False,1,Spiritbox,Metalcore,0.0211
+A Deadly Education,Fantasia de cuento de hadas,False,2,Jinjer,Metalcore,0.0209
+A Deadly Education,Fantasia de cuento de hadas,False,3,Killswitch Engage,Metalcore,0.0199
+A Deadly Education,Fantasia de cuento de hadas,False,4,Whitechapel,Deathcore,0.0198
+A Deadly Education,Fantasia de cuento de hadas,False,5,Architects,Metalcore,0.0187
+The Bear and the Nightingale,Fantasia de cuento de hadas,True,1,The 1975,Alternative Rock,0.2107
+The Bear and the Nightingale,Fantasia de cuento de hadas,True,2,The Cure,Gothic Rock,0.1943
+The Bear and the Nightingale,Fantasia de cuento de hadas,True,3,Iron Maiden,Heavy Metal,0.1849
+The Bear and the Nightingale,Fantasia de cuento de hadas,True,4,Spiritbox,Metalcore,0.0121
+The Bear and the Nightingale,Fantasia de cuento de hadas,True,5,Jinjer,Metalcore,0.0119
+The Once and Future Witches,Fantasia de cuento de hadas,True,1,Rhapsody of Fire,Power Metal,0.3869
+The Once and Future Witches,Fantasia de cuento de hadas,True,2,Sabaton,Power Metal,0.3491
+The Once and Future Witches,Fantasia de cuento de hadas,True,3,DragonForce,Power Metal,0.3414
+The Once and Future Witches,Fantasia de cuento de hadas,True,4,Blind Guardian,Power Metal,0.327
+The Once and Future Witches,Fantasia de cuento de hadas,True,5,Nightwish,Symphonic Metal,0.1384
+The Invisible Life of Addie LaRue,Fantasia de cuento de hadas,True,1,Sleep Token,Alternative Metal,0.2921
+The Invisible Life of Addie LaRue,Fantasia de cuento de hadas,True,2,Florence + The Machine,Alternative Rock,0.2396
+The Invisible Life of Addie LaRue,Fantasia de cuento de hadas,True,3,The 1975,Alternative Rock,0.2097
+The Invisible Life of Addie LaRue,Fantasia de cuento de hadas,True,4,Spiritbox,Metalcore,0.0111
+The Invisible Life of Addie LaRue,Fantasia de cuento de hadas,True,5,Jinjer,Metalcore,0.0109
+La casa en el mar más azul,Cozy Fantasy / sobrenatural,True,1,Spiritbox,Metalcore,0.0211
+La casa en el mar más azul,Cozy Fantasy / sobrenatural,True,2,Jinjer,Metalcore,0.0209
+La casa en el mar más azul,Cozy Fantasy / sobrenatural,True,3,Killswitch Engage,Metalcore,0.0199
+La casa en el mar más azul,Cozy Fantasy / sobrenatural,True,4,Whitechapel,Deathcore,0.0198
+La casa en el mar más azul,Cozy Fantasy / sobrenatural,True,5,Architects,Metalcore,0.0187
+Under the Whispering Door,Cozy Fantasy / sobrenatural,True,1,Cannibal Corpse,Death Metal,0.6466
+Under the Whispering Door,Cozy Fantasy / sobrenatural,True,2,At the Gates,Death Metal,0.5647
+Under the Whispering Door,Cozy Fantasy / sobrenatural,True,3,Death,Death Metal,0.5136
+Under the Whispering Door,Cozy Fantasy / sobrenatural,True,4,Amon Amarth,Melodic Death Metal,0.4344
+Under the Whispering Door,Cozy Fantasy / sobrenatural,True,5,Behemoth,Blackened Death Metal,0.4039

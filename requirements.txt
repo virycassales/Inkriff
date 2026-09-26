@@ -1,0 +1,12 @@
+# Dependencias para correr la app y los notebooks localmente.
+# La app sola (Hugging Face Spaces) usa app/requirements.txt.
+gradio>=4.0
+pandas
+numpy
+requests
+openai
+sentence-transformers
+scikit-learn
+matplotlib
+wordcloud
+jupyter

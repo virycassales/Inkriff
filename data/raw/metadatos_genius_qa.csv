@@ -1,0 +1,82 @@
+banda_buscada,titulo_top,artista_genius,genius_id,pageviews,similitud_artista,revisar
+Led Zeppelin,Stairway to Heaven,Led Zeppelin,1061,2491260,1.0,False
+AC/DC,T.N.T.,AC/DC,132510,958763,1.0,False
+Deep Purple,Smoke on the Water,Deep Purple,108068,309948,1.0,False
+Iron Maiden,The Number of the Beast,Iron Maiden,111259,349418,1.0,False
+Judas Priest,You’ve Got Another Thing Comin’,Judas Priest,151447,166826,1.0,False
+Black Sabbath,War Pigs,Black Sabbath,74304,1525981,1.0,False
+Avenged Sevenfold,A Little Piece of Heaven,Avenged Sevenfold,75240,542116,1.0,False
+Blind Guardian,The Bard’s Song - In the Forest,Blind Guardian,492522,63938,1.0,False
+DragonForce,Through the Fire and Flames,DragonForce,398002,274983,1.0,False
+Sabaton,The Last Stand,Sabaton,2841408,213617,1.0,False
+Rhapsody of Fire,Dawn of Victory,Rhapsody of Fire,1165572,27851,1.0,False
+Nightwish,Ghost Love Score,Nightwish,348693,98751,1.0,False
+Epica,Crimson Bow and Arrow,Epica,3404764,22833,1.0,False
+Within Temptation,The Reckoning,Within Temptation,3945687,41164,1.0,False
+Kamelot,March of Mephisto,Kamelot,1549748,21914,1.0,False
+Eluveitie,Epona,Eluveitie,3128871,26626,1.0,False
+Korpiklaani,Vodka,Korpiklaani,507792,48865,1.0,False
+Wintersun,Loneliness (Winter),Wintersun,3179707,16579,1.0,False
+Type O Negative,I Don’t Wanna Be Me,Type O Negative,1575973,172784,1.0,False
+Paradise Lost,Paradise Lost,Gemitaiz,3624957,83613,0.19047619047619047,True
+Lacuna Coil,Our Truth,Lacuna Coil,922483,17544,1.0,False
+Evanescence,Bring Me to Life,Evanescence,67202,3542115,1.0,False
+Chelsea Wolfe,16 Psyche,Chelsea Wolfe,3127899,47316,1.0,False
+Dream Theater,Octavarium,Dream Theater,396606,97753,1.0,False
+Opeth,Ghost of Perdition,Opeth,1015520,82427,1.0,False
+Tool,Forty Six & 2,Tool,185197,852241,1.0,False
+Gojira,Flying Whales,Gojira,743117,129003,1.0,False
+Death,Do I Wanna Know?,Arctic Monkeys,154314,7989268,0.10526315789473684,True
+Cannibal Corpse,I Cum Blood,Cannibal Corpse,465772,180348,1.0,False
+At the Gates,Slaughter of the Soul,At the Gates,690553,26211,1.0,False
+Mayhem,Freezing Moon,Mayhem,690950,295469,1.0,False
+Emperor,Emperor’s New Clothes,Panic! at the Disco,2334971,725583,0.16,True
+Dimmu Borgir,Gateways,Dimmu Borgir,417054,50474,1.0,False
+Killswitch Engage,My Curse,Killswitch Engage,366848,83379,1.0,False
+Bring Me The Horizon,Drown,Bring Me The Horizon,548384,512330,1.0,False
+Architects,Doomsday,Architects,3225078,263833,1.0,False
+Spiritbox,Circle with Me,Spiritbox,6724453,130967,1.0,False
+Jinjer,Pisces,Jinjer,2829366,264320,1.0,False
+Suicide Silence,You Only Live Once,Suicide Silence,95582,87081,1.0,False
+Whitechapel,Hickory Creek,Whitechapel,4059738,57893,1.0,False
+Lorna Shore,Pain Remains I: Dancing Like Flames,Lorna Shore,8237315,177486,1.0,False
+Slipknot,Snuff,Slipknot,73687,969531,1.0,False
+Korn,Freak On a Leash,Korn,64234,712565,1.0,False
+System of a Down,Chop Suey!,System of a Down,88430,2041748,1.0,False
+Electric Wizard,Funeralopolis,Electric Wizard,86895,104492,1.0,False
+Sleep,Hate Sleeping Alone,Drake,58634,1374918,0.2,True
+Candlemass,Solitude,Candlemass,1486029,26314,1.0,False
+Alcest,Sapphire,Alcest,4810763,88476,1.0,False
+Agalloch,In the Shadow of Our Pale Companion,Agalloch,484463,36460,1.0,False
+Amon Amarth,Twilight of the Thunder God,Amon Amarth,171117,60996,1.0,False
+Behemoth,O Father O Satan O Sun!,Behemoth,433423,115421,1.0,False
+Pierce the Veil,A Match into Water,Pierce the Veil,117965,678718,1.0,False
+Sleeping With Sirens,King for a Day,Pierce the Veil,76926,624672,0.4,True
+Sleep Token,Caramel,Sleep Token,11672769,1002614,1.0,False
+Deftones,Sextape,Deftones,81221,692646,1.0,False
+Bad Omens,THE DEATH OF PEACE OF MIND,Bad Omens,7374958,241578,1.0,False
+Breaking Benjamin,The Diary of Jane,Breaking Benjamin,79054,431572,1.0,False
+Disturbed,The Sound of Silence,Disturbed,2282530,604684,1.0,False
+Linkin Park,In the End,Linkin Park,49719,3094295,1.0,False
+My Chemical Romance,Welcome to the Black Parade,My Chemical Romance,133519,1582290,1.0,False
+Fall Out Boy,"Sugar, We’re Goin Down",Fall Out Boy,79158,1241300,1.0,False
+The Wonder Years,Cigarettes & Saints,The Wonder Years,2269015,135256,1.0,False
+Sum 41,In Too Deep,Sum 41,96086,832982,1.0,False
+All Time Low,All Time Low,Jon Bellion,749215,1108142,0.34782608695652173,True
+Paramore,Still into You,Paramore,135048,3529777,1.0,False
+Blink-182,I Miss You,blink-182,61981,5287100,1.0,False
+Neck Deep,Wish You Were Here,Neck Deep,3183587,475008,1.0,False
+Simple Plan,Perfect,Simple Plan,328220,777804,1.0,False
+Mayday Parade,Jamie All Over,Mayday Parade,188165,220784,1.0,False
+The Maine,Black Butterflies and Déjà Vu,The Maine,3008619,104983,1.0,False
+The 1975,Somebody Else,The 1975,2364153,1974937,1.0,False
+Florence + The Machine,Florida!!!,Taylor Swift,10291434,2043548,0.3125,True
+The Smashing Pumpkins,Bullet with Butterfly Wings,The Smashing Pumpkins,57016,1398459,1.0,False
+Muse,Supermassive Black Hole,Muse,79045,302584,1.0,False
+The Pretty Reckless,Make Me Wanna Die,The Pretty Reckless,238268,94486,1.0,False
+Royal Blood,Out of the Black,Royal Blood,508707,128245,1.0,False
+The Cure,the cure,Olivia Rodrigo,13580520,2277703,0.18181818181818182,True
+HIM,Him & I,G-Eazy,3205434,3377388,0.0,True
+The 69 Eyes,Wasting the Dawn,The 69 Eyes,451355,9462,1.0,False
+Ghost,Ghost Town,Kanye West,3756523,3103170,0.26666666666666666,True
+Green Day,Boulevard of Broken Dreams,Green Day,63759,1523165,1.0,False

@@ -1,0 +1,7 @@
+gradio>=4.0
+pandas
+numpy
+requests
+openai
+sentence-transformers
+scikit-learn

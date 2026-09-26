@@ -1,0 +1,113 @@
+titulo_buscado,categoria_semilla,titulo,autor,anio,fuente,similitud_titulo,revisar
+El Senor de los Anillos,Alta fantasia / epica,The Fellowship of the Ring,"J.R.R. Tolkien, Editorial Editorial World, Robert Robert Thompson",1954.0,Open Library,0.24489795918367346,True
+Canción de Hielo y Fuego,Alta fantasia / epica,A Feast for Crows,George R. R. Martin,2005.0,Open Library,0.24390243902439024,True
+El Nombre del Viento,Alta fantasia / epica,The Name of the Wind,"Patrick Rothfuss, Marc Simonetti",2007.0,Open Library,0.35,False
+El Hobbit,Alta fantasia / epica,The Hobbit,J.R.R. Tolkien,1937.0,Open Library,0.8421052631578947,False
+El Silmarillion,Alta fantasia / epica,The Silmarillion,"J.R.R. Tolkien, Christopher Tolkien",1977.0,Open Library,0.9032258064516129,False
+Eragon,Alta fantasia / epica,Eragon,Christopher Paolini,2000.0,Open Library,1.0,False
+El temor de un hombre sabio,Alta fantasia / epica,The Wise Man’s Fear,Patrick Rothfuss,2011.0,Open Library,0.3111111111111111,False
+Rey de cicatrices,Alta fantasia / epica,Cicatrices,Werner Mackenbach,2004.0,Open Library,0.7407407407407407,False
+Mistborn: El imperio final,Alta fantasia / epica,The Final Empire,Brandon Sanderson,2001.0,Open Library,0.3902439024390244,False
+El pozo de la ascensión,Alta fantasia / epica,The Well of Ascension,Brandon Sanderson,2007.0,Open Library,0.6363636363636364,False
+El héroe de las eras,Alta fantasia / epica,The Hero of Ages,Brandon Sanderson,2008.0,Open Library,0.4444444444444444,False
+El camino de los reyes,Alta fantasia / epica,The Way of Kings,Brandon Sanderson,2010.0,Open Library,0.3157894736842105,False
+El archivo de las tormentas,Alta fantasia / epica,Wind and Truth,Brandon Sanderson,2024.0,Open Library,0.34146341463414637,False
+La rueda del tiempo,Alta fantasia / epica,The Gathering Storm,"Robert Jordan, Brandon Sanderson",2009.0,Open Library,0.21052631578947367,True
+El priorato del naranjo,Alta fantasia / epica,El priorato del naranjo,"Samantha Shannon, Jorge Rizzo",2019.0,Open Library,1.0,False
+Trono de Cristal,Romantasy (fantasia romantica),Throne of Glass,Sarah J. Maas,2012.0,Open Library,0.45161290322580644,False
+Una Corte de Rosas y Espinas,Romantasy (fantasia romantica),A Court of Thorns and Roses,Sarah J. Maas,2013.0,Open Library,0.509090909090909,False
+Cuarto Ala,Romantasy (fantasia romantica),El Inca Garcilaso de la Vega,Hernán Amat Olazabal,2012.0,Open Library,0.3684210526315789,False
+Una corte de niebla y furia,Romantasy (fantasia romantica),Una corte de niebla y furia,Sarah J. Maas,2014.0,Open Library,1.0,False
+Una corte de alas y ruina,Romantasy (fantasia romantica),A Court of Wings and Ruin,Sarah J. Maas,2017.0,Open Library,0.56,False
+Reina de sombras,Romantasy (fantasia romantica),Queen of Shadows,Sarah J. Maas,2015.0,Open Library,0.4375,False
+Fourth Wing,Romantasy (fantasia romantica),Fourth Wing,Rebecca Yarros,2023.0,Open Library,1.0,False
+Iron Flame,Romantasy (fantasia romantica),Iron Flame,Rebecca Yarros,2023.0,Open Library,1.0,False
+Onyx Storm,Romantasy (fantasia romantica),Alas de ónix,Rebecca Yarros,2025.0,Open Library,0.2727272727272727,False
+Powerless,Romantasy (fantasia romantica),Powerless,Lauren Roberts,2023.0,Open Library,1.0,False
+Reckless,Romantasy (fantasia romantica),Reckless,Lauren Roberts,2024.0,Open Library,1.0,False
+Divine Rivals,Romantasy (fantasia romantica),Divine Rivals,Rebecca Ross,2023.0,Open Library,1.0,False
+Ruthless Vows,Romantasy (fantasia romantica),Ruthless Vows,Rebecca Ross,2023.0,Open Library,1.0,False
+Érase una vez un corazón roto,Romantasy (fantasia romantica),Once Upon a Broken Heart,Stephanie Garber,2021.0,Open Library,0.33962264150943394,False
+La balada del príncipe roto,Romantasy (fantasia romantica),,,,,0.0,True
+La vida invisible de Addie LaRue,Romantasy (fantasia romantica),The Invisible Life of Addie LaRue,V. E. Schwab,2015.0,Open Library,0.7384615384615385,False
+Stardust,Romantasy (fantasia romantica),Stardust,Neil Gaiman,1997.0,Open Library,1.0,False
+Carry On,Romantasy (fantasia romantica),Carry On,Rainbow Rowell,2015.0,Open Library,1.0,False
+Sombra y Hueso,Fantasia oscura / gotica,Shadow and Bone,Leigh Bardugo,2012.0,Open Library,0.27586206896551724,False
+Drácula,Fantasia oscura / gotica,Dracula,Bram Stoker,1897.0,Open Library,1.0,False
+Vicious,Fantasia oscura / gotica,Vicious,V. E. Schwab,2013.0,Open Library,1.0,False
+Berserk,Fantasia oscura / gotica,ベルセルク 1,三浦建太郎,1990.0,Open Library,0.0,True
+The Witcher,Fantasia oscura / gotica,Ostatnie Życzenie,Andrzej Sapkowski,1993.0,Open Library,0.35714285714285715,False
+La novena casa,Fantasia oscura / gotica,Ninth House,Leigh Bardugo,2019.0,Open Library,0.24,True
+Hell Bent,Fantasia oscura / gotica,Hell Bent,Leigh Bardugo,2023.0,Open Library,1.0,False
+El océano al final del camino,Fantasia oscura / gotica,The Ocean at the End of the Lane,Neil Gaiman,2013.0,Open Library,0.39344262295081966,False
+Elric de Melniboné,Fantasia oscura / gotica,Elric of Melniboné,Michael Moorcock,1972.0,Open Library,0.8888888888888888,False
+The Poppy War,Fantasia oscura / gotica,The Poppy War,R. F. Kuang,2018.0,Open Library,1.0,False
+La guerra de la amapola,Fantasia oscura / gotica,La guerra de la amapola,R. F. Kuang,2023.0,Open Library,1.0,False
+Coraline,Fantasia oscura / gotica,Coraline,Neil Gaiman,2001.0,Open Library,1.0,False
+A Darker Shade of Magic,Fantasia oscura / gotica,A Darker Shade of Magic,V. E. Schwab,2015.0,Open Library,1.0,False
+The Locked Tomb,Fantasia oscura / gotica,Into the Mummy's Tomb,"John Richard Stephens, Arthur Edward Pearse Brome Weigall, Louisa May Alcott, Arthur Conan Doyle, Tennessee Williams, H.P. Lovecraft, Howard Carter, A. C. Mace, Agatha Christie, Mark Twain, H. Rider Haggard, Edgar Allan Poe, Ray Bradbury, Elizabeth Peters, Sax Rohmer, Anne Rice, Bram Stoker",2001.0,Open Library,0.5,False
+Gideon the Ninth,Fantasia oscura / gotica,Gideon the Ninth,Tamsyn Muir,2019.0,Open Library,1.0,False
+Mexican Gothic,Fantasia oscura / gotica,Mexican Gothic,Silvia Moreno-Garcia,2020.0,Open Library,1.0,False
+The Hazel Wood,Fantasia oscura / gotica,The Hazel Wood,Melissa Albert,2017.0,Open Library,1.0,False
+Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,Jonathan Strange and Mr. Norrell,Susanna Clarke,2001.0,Open Library,0.8181818181818182,False
+Piranesi,Fantasia oscura / gotica,Piranesi,Susanna Clarke,2020.0,Open Library,1.0,False
+Outlander,Romance historico / gotico,Outlander,Diana Gabaldon,1991.0,Open Library,1.0,False
+Jane Eyre,Romance historico / gotico,Jane Eyre,Charlotte Brontë,1847.0,Open Library,1.0,False
+Un día de diciembre,Romance historico / gotico,Un día de diciembre,Josie Silver,2020.0,Open Library,1.0,False
+Cazadores de Sombras: Ciudad de Hueso,Fantasia urbana,Ciudad de hueso. Cazadores de sombras 1,"Cassandra Clare, Gemma Gallart",2013.0,Open Library,0.5675675675675675,False
+The Infernal Devices,Fantasia urbana,Clockwork Angel,Cassandra Clare,2010.0,Open Library,0.11428571428571428,True
+Cazadores de sombras,Fantasia urbana,Cazadores de sombras,"Cassandra Clare, Patricia Nunes Martínez",2013.0,Open Library,1.0,False
+Ciudad de hueso,Fantasia urbana,Ciudad de Hueso : Cazadores de sombras,"Cassandra Clare, Gemma Gallart Álvarez",2019.0,Open Library,0.5882352941176471,False
+Seis de cuervos,Fantasia urbana,Six of Crows,Leigh Bardugo,2015.0,Open Library,0.5925925925925926,False
+Mitología Nórdica,Mitologia (nordica / celta / griega),Norse Mythology,"Neil Gaiman, Anna Llisterri",2016.0,Open Library,0.375,False
+La canción de Aquiles,Mitologia (nordica / celta / griega),The Song of Achilles,Madeline Miller,2011.0,Open Library,0.4878048780487805,False
+Circe,Mitologia (nordica / celta / griega),Circe,Madeline Miller,2018.0,Open Library,1.0,False
+Percy Jackson,Mitologia (nordica / celta / griega),The Lightning Thief,Rick Riordan,2005.0,Open Library,0.1875,True
+El ladrón del rayo,Mitologia (nordica / celta / griega),The Lightning Thief,Rick Riordan,2005.0,Open Library,0.32432432432432434,False
+Héroes del Olimpo,Mitologia (nordica / celta / griega),The Lost Hero,Rick Riordan,2010.0,Open Library,0.26666666666666666,False
+Gods of Jade and Shadow,Mitologia (nordica / celta / griega),Gods of Jade and Shadow,Silvia Moreno-Garcia,2019.0,Open Library,1.0,False
+El príncipe cruel,Fae Fantasy,The Cruel Prince,Holly Black,2018.0,Open Library,0.5454545454545454,False
+El rey malvado,Fae Fantasy,El rey malvado,"Holly Black, Jaime Valero",2019.0,Open Library,1.0,False
+La reina de nada,Fae Fantasy,La reina de nada,Holly Black,2020.0,Open Library,1.0,False
+Las crónicas de Narnia,Fantasia clasica / juvenil,The Last Battle,C. S. Lewis,1956.0,Open Library,0.32432432432432434,False
+La brújula dorada,Fantasia clasica / juvenil,Northern Lights,Philip Pullman,1995.0,Open Library,0.125,True
+El castillo ambulante,Fantasia clasica / juvenil,Howl's Moving Castle,Diana Wynne Jones,1986.0,Open Library,0.3902439024390244,False
+Alicia en el País de las Maravillas,Fantasia clasica / juvenil,Alicia en el país de las maravillas,Lewis Carroll,2016.0,Open Library,1.0,False
+A través del espejo,Fantasia clasica / juvenil,Through the Looking-Glass,Lewis Carroll,1865.0,Open Library,0.22727272727272727,True
+Caraval,Fantasia clasica / juvenil,Caraval,Stephanie Garber,2000.0,Open Library,1.0,False
+El circo de la noche,Fantasia clasica / juvenil,The Night Circus,Erin Morgenstern,2011.0,Open Library,0.3333333333333333,False
+El mar sin estrellas,Fantasia clasica / juvenil,Alice's Adventures in Wonderland,Lewis Carroll,1865.0,Open Library,0.38461538461538464,False
+La primera ley,Grimdark,Last Argument of Kings,Joe Abercrombie,2008.0,Open Library,0.3888888888888889,False
+Malaz: El libro de los caídos,Grimdark,"Deadhouse Gates (The Malazan Book of the Fallen, Book 2)",Steven Erikson,2000.0,Open Library,0.345679012345679,False
+La compañía negra,Grimdark,The Black Company,Glen Cook,1984.0,Open Library,0.5294117647058824,False
+Babel,Dark Academia,Babel,R. F. Kuang,2022.0,Open Library,1.0,False
+Ninth House,Dark Academia,Ninth House,Leigh Bardugo,2019.0,Open Library,1.0,False
+Entrevista con el vampiro,Gotico clasico / vampiros,Interview With the Vampire,Anne Rice,1672.0,Open Library,0.5882352941176471,False
+El vampiro Lestat,Gotico clasico / vampiros,The Vampire Lestat,Anne Rice,1986.0,Open Library,0.8571428571428571,False
+Las brujas de Mayfair,Gotico clasico / vampiros,Taltos,Anne Rice,1994.0,Open Library,0.14814814814814814,True
+Carmilla,Gotico clasico / vampiros,Carmilla,Sheridan Le Fanu,1871.0,Open Library,1.0,False
+El retrato de Dorian Gray,Gotico clasico / vampiros,The Picture of Dorian Gray,Oscar Wilde,1890.0,Open Library,0.6666666666666666,False
+Frankenstein,Gotico clasico / vampiros,"Frankenstein; or, The Modern Prometheus",Mary Shelley,1818.0,Open Library,0.4897959183673469,False
+El castillo de Otranto,Gotico clasico / vampiros,The Castle of Otranto,Horace Walpole,1764.0,Open Library,0.7441860465116279,False
+Vampire Academy,Gotico clasico / vampiros,Vampire Academy,"Richelle Mead, Richelle Mead",2007.0,Open Library,1.0,False
+A Dowry of Blood,Gotico clasico / vampiros,A Dowry of Blood,S. T. Gibson,2021.0,Open Library,1.0,False
+Los juegos del hambre,Distopia juvenil,The Hunger Games,Suzanne Collins,2008.0,Open Library,0.32432432432432434,False
+En llamas,Distopia juvenil,Pedro Páramo,Juan Rulfo,1955.0,Open Library,0.38095238095238093,False
+Sinsajo,Distopia juvenil,Mockingjay,Suzanne Collins,2010.0,Open Library,0.35294117647058826,False
+Divergente,Distopia juvenil,Divergent,Veronica Roth,2010.0,Open Library,0.9473684210526315,False
+Maze Runner,Distopia juvenil,The Maze Runner,James Dashner,2009.0,Open Library,0.8461538461538461,False
+Ready Player One,Distopia juvenil,Ready Player One,Ernest Cline,2008.0,Open Library,1.0,False
+Scott Pilgrim,Distopia juvenil,Scott Pilgrim's Precious Little Life,Bryan Lee O'Malley,2004.0,Open Library,0.5306122448979592,False
+Las ventajas de ser invisible,Romance juvenil / coming-of-age,Las Ventajas de Ser Invisible,"Stephen Chbosky, Vanesa Perez-Sauquillo",2013.0,Open Library,1.0,False
+Heartstopper,Romance juvenil / coming-of-age,"Heartstopper, Volume 1",Alice Oseman,2018.0,Open Library,0.7272727272727273,False
+A todos los chicos de los que me enamoré,Romance juvenil / coming-of-age,A Todos Los Chicos De Los Que Me Enamore,Jenny Han,2013.0,Open Library,1.0,False
+Eleanor & Park,Romance juvenil / coming-of-age,Eleanor & Park,Rainbow Rowell,2012.0,Open Library,1.0,False
+Nettle & Bone,Fantasia de cuento de hadas,Nettle & Bone,T. Kingfisher,2022.0,Open Library,1.0,False
+Uprooted,Fantasia de cuento de hadas,Uprooted,Naomi Novik,2015.0,Open Library,1.0,False
+Spinning Silver,Fantasia de cuento de hadas,Spinning Silver,Naomi Novik,2018.0,Open Library,1.0,False
+A Deadly Education,Fantasia de cuento de hadas,A Deadly Education,Naomi Novik,2020.0,Open Library,1.0,False
+The Bear and the Nightingale,Fantasia de cuento de hadas,The Bear and the Nightingale,Katherine Arden,2017.0,Open Library,1.0,False
+The Once and Future Witches,Fantasia de cuento de hadas,The Once and Future Witches,Alix E. Harrow,2020.0,Open Library,1.0,False
+The Invisible Life of Addie LaRue,Fantasia de cuento de hadas,The Invisible Life of Addie LaRue,V. E. Schwab,2015.0,Open Library,1.0,False
+La casa en el mar más azul,Cozy Fantasy / sobrenatural,The house in the Cerulean Sea,T. J. Klune,2019.0,Open Library,0.2545454545454545,False
+Under the Whispering Door,Cozy Fantasy / sobrenatural,Under the Whispering Door,T. J. Klune,2021.0,Open Library,1.0,False

@@ -1,0 +1,82 @@
+banda,subgenero_semilla,mbid,pais,tags_top,spotify_url
+Led Zeppelin,Hard Rock / Rock clasico,678d88b2-87b0-403b-b63d-5da7465aecc3,GB,"['hard rock', 'rock', 'blues rock', 'classic rock', 'folk rock']",https://open.spotify.com/artist/36QJpDe2go2KgaRleHCDTp
+AC/DC,Hard Rock / Rock clasico,66c662b6-6e2f-4930-8610-912e24c63ed1,AU,"['hard rock', 'rock', 'blues rock', 'classic rock', 'rock and roll']",https://open.spotify.com/artist/711MCceyCBcFnzjGY4Q7Un
+Deep Purple,Hard Rock / Rock clasico,79491354-3d83-40e3-9d8e-7592d58d790a,GB,"['hard rock', 'rock', 'heavy metal', 'progressive rock', 'blues rock']",https://open.spotify.com/artist/568ZhdwyaiCyOGJRtNYhWf
+Iron Maiden,Heavy Metal,ca891d65-d9b0-4258-89f7-e6ba29d83767,GB,"['heavy metal', 'nwobhm', 'metal', 'new wave of british heavy metal', 'british']",https://open.spotify.com/artist/6mdiAmATAx73kdxrNrnlao
+Judas Priest,Heavy Metal,6b335658-22c8-485d-93de-0bc29a1d0349,GB,"['heavy metal', 'nwobhm', 'british', 'metal', 'hard rock']",https://open.spotify.com/artist/2tRsMl4eGxwoNabM08Dm4I
+Black Sabbath,Heavy Metal,5182c1d9-c7d2-4dad-afa0-ccfeada921a8,GB,"['heavy metal', 'hard rock', 'traditional doom metal', 'metal', 'proto doom']",https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ
+Avenged Sevenfold,Heavy Metal,24e1b53c-3085-4581-8472-0b0088d2508c,US,"['metal', 'hard rock', 'alternative metal', 'heavy metal', 'melodic metalcore']",https://open.spotify.com/artist/0nmQIMXWTXfhgOBdNzhGOs
+Blind Guardian,Power Metal,7fa7fc04-1011-4876-8095-ecd232edea87,DE,"['power metal', 'metal', 'speed metal', 'german', 'progressive metal']",https://open.spotify.com/artist/7jxJ25p0pPjk0MStloN6o6
+DragonForce,Power Metal,ef58d4c9-0d40-42ba-bfab-9186c1483edd,GB,"['power metal', 'heavy metal', 'metal', 'speed metal']",https://open.spotify.com/artist/2pH3wEn4eYlMMIIQyKPbVR
+Sabaton,Power Metal,39a31de6-763d-48b6-a45c-f7cfad58ffd8,SE,"['power metal', 'heavy metal', 'swedish', 'metal', 'pop metal']",https://open.spotify.com/artist/3o2dn2O0FCVsWDFSh8qxgG
+Rhapsody of Fire,Power Metal,4e0dffde-ad2d-45b7-9c75-d57ce55de061,IT,"['power metal', 'symphonic metal']",https://open.spotify.com/artist/0zQfrabOFYf36Ikb6PXcCY
+Nightwish,Symphonic Metal,00a9f935-ba93-4fc8-a33a-993abe9c936b,FI,"['symphonic metal', 'power metal', 'finnish', 'metal', 'symphonic power metal']",https://open.spotify.com/artist/2NPduAUeLVsfIauhRwuft1
+Epica,Symphonic Metal,21985b14-1b0d-44fe-b357-310b29bba510,NL,"['symphonic metal', 'metal', 'female fronted', 'power metal', 'gothic metal']",https://open.spotify.com/artist/5HA5aLY3jJV7eimXWkRBBp
+Within Temptation,Symphonic Metal,eace2373-31c8-4aba-9a5c-7bce22dd140a,NL,"['symphonic metal', 'gothic metal', 'metal', 'dutch']",https://open.spotify.com/artist/3hE8S8ohRErocpkY7uJW4a
+Kamelot,Symphonic Metal,2449300a-6ca7-45da-8102-22789d256475,US,"['power metal', 'progressive metal', 'symphonic metal', 'metal', 'symphonic power metal']",https://open.spotify.com/artist/7gTbq5nTZGQIUgjEGXQpOS
+Eluveitie,Folk Metal,8000598a-5edb-401c-8e6d-36b167feaf38,CH,"['folk metal', 'melodic death metal', 'celtic metal']",https://open.spotify.com/artist/5X0N2k3qMnI8kSrGJT3kfT
+Korpiklaani,Folk Metal,50eec634-7c42-41ee-9b1f-b41d9ca28b26,FI,"['folk metal', 'metal', 'finnish']",https://open.spotify.com/artist/521Yl3LUvD7G9dMRO4fpCy
+Wintersun,Folk Metal,c054ea6b-c585-41eb-ae7e-4b0ca43308ff,FI,"['melodic death metal', 'finland', 'finlandia', 'folk metal', 'metal']",https://open.spotify.com/artist/6ui6SwChan7c1KYBQCqGKV
+Type O Negative,Gothic Metal,a63df8c3-28e4-41db-bac2-c6c6e8ff8f28,US,"['gothic metal', 'doom metal', 'heavy metal', 'metal']",https://open.spotify.com/artist/0blJzvevdXrp21YeI2vbco
+Paradise Lost,Gothic Metal,10bf95b6-30e3-44f1-817f-45762cdc0de0,GB,"['gothic metal', 'doom metal', 'death-doom metal', 'metal', 'death metal']",https://open.spotify.com/artist/0gIo6kGl4KsCeIbqtZVHYp
+Lacuna Coil,Gothic Metal,6fea1339-260c-40fe-bb7a-ace5c8438955,IT,"['gothic metal', 'alternative metal', 'female fronted']",https://open.spotify.com/artist/4OAddazJM576euUnFSvXSL
+Evanescence,Gothic Metal,f4a31f0a-51dd-4fa7-986d-3095c40c5ed9,US,"['alternative metal', 'metal', 'symphonic metal', 'alternative rock', 'symphonic rock']",https://open.spotify.com/artist/5nGIFgo0shDenQYSE0Sn7c
+Chelsea Wolfe,Gothic Metal,60e8e938-365e-4429-a141-4c79eb49588d,US,"['singer-songwriter', 'alternative rock', 'gothic rock', 'rock', 'dark wave']",https://open.spotify.com/artist/6ZK2nrW8aCTg8Bid7I7N10
+Dream Theater,Progressive Metal,28503ab7-8bf2-4666-a7bd-2644bfc7cb1d,US,"['progressive metal', 'metal', 'american', 'heavy metal', 'progressive']",https://open.spotify.com/artist/2aaLAng2L2aWD2FClzwiep
+Opeth,Progressive Metal,c14b4180-dc87-481e-b17a-64e4150f90f6,SE,"['progressive metal', 'progressive death metal', 'progressive rock', 'death metal', 'metal']",https://open.spotify.com/artist/0ybFZ2Ab08V8hueghSXm6E
+Tool,Progressive Metal,66fc5bf8-daa4-4241-b378-9bc9077939d2,US,"['progressive metal', 'alternative metal', 'progressive rock', 'rock', 'metal']",https://open.spotify.com/artist/2yEwvVSSSUkcLeSTNyHKh8
+Gojira,Progressive Metal,1c5efd53-d6b6-4d63-9d22-a15025cf5f07,FR,"['progressive metal', 'death metal', 'progressive death metal', 'groove metal', 'metal']",https://open.spotify.com/artist/0GDGKpJFhVpcjIGF8N6Ewt
+Death,Death Metal,ce7bba8b-026b-4aa6-bddb-f98ed6d595e4,GB,"['grindcore', 'deathgrind', 'death metal', 'metal', 'crust punk']",https://open.spotify.com/artist/3UqRgrDIQ208yNGiWKRMNt
+Cannibal Corpse,Death Metal,af8e4cc5-ef54-458d-a194-7b210acf638f,US,['death metal'],https://open.spotify.com/artist/0yLwGBQiBqhXOvmTfH2A7n
+At the Gates,Death Metal,35f92c4a-69d0-4ed1-ab9e-05259db89d14,SE,"['melodic death metal', 'death metal', 'metal', 'gothenburg metal']",https://open.spotify.com/artist/6YXarbjg36ODFPez0PnOlD
+Mayhem,Black Metal,c5f9e699-7b0d-4030-86dd-7acc8250d147,NO,"['black metal', 'norwegian', 'metal']",https://open.spotify.com/artist/0dR10i73opHXuRuLbgxltM
+Emperor,Black Metal,d9951785-7906-4daf-9a60-21753bf64aa9,NO,"['black metal', 'symphonic black metal', 'metal', 'symphonic metal', 'norwegian']",https://open.spotify.com/artist/1X5GZczoeLgB3KlIX1MRFo
+Dimmu Borgir,Black Metal,17167af8-c1da-45cc-bba2-9d23f068b7a3,NO,"['symphonic black metal', 'black metal', 'melodic black metal', 'metal', 'norwegian']",https://open.spotify.com/artist/6e8ISIsI7UQZPyEorefAhK
+Killswitch Engage,Metalcore,8295ee00-0096-461d-95c7-c2263d2a4c6d,US,"['metalcore', 'melodic metalcore', 'metal', 'heavy metal', 'alternative metal']",https://open.spotify.com/artist/37394IP6uhnjIpsawpMu4l
+Bring Me The Horizon,Metalcore,074e3847-f67f-49f9-81f1-8c8cea147e8e,GB,"['metalcore', 'alternative rock', 'alternative metal', 'deathcore', 'pop rock']",https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF
+Architects,Metalcore,05dffdbe-dc6e-4c8d-a075-50a09c4cb45c,GB,"['metalcore', 'metal', 'alternative metal', 'djent', 'rock and indie']",https://open.spotify.com/artist/3ZztVuWxHzNpl0THurTFCv
+Spiritbox,Metalcore,9c935736-7530-41e4-b776-1dbcf534c061,CA,"['metalcore', 'progressive metal', 'djent', 'progressive metalcore']",https://open.spotify.com/artist/4MzJMcHQBl9SIYSjwWn8QW
+Jinjer,Metalcore,51b37017-859c-465e-8810-2d2dd41a401e,UA,"['progressive metal', 'groove metal', 'metalcore', 'metal', 'djent']",https://open.spotify.com/artist/7o6cOczXTB8ioTAAJTbESf
+Suicide Silence,Deathcore,4fd53e84-ffa1-4434-9146-3fab25ece7e0,US,"['deathcore', 'american', 'metalcore']",https://open.spotify.com/artist/6HZr7Fs2VfV1PYHIwo8Ylc
+Whitechapel,Deathcore,56ba013c-610e-4d9b-98ed-c2ccff977a9e,US,"['deathcore', 'metal', 'alternative metal']",https://open.spotify.com/artist/5274obTQJjzjyycRyJlfml
+Lorna Shore,Deathcore,e86fc1f5-d632-44b2-8aea-38f83aadffe8,US,"['deathcore', 'blackened deathcore', 'symphonic deathcore', 'death metal', 'progressive deathcore']",https://open.spotify.com/artist/6vXYoy8ouRVib302zxaxFF
+Slipknot,Nu Metal,a466c2a2-6517-42fb-a160-1087c3bafd9f,US,"['nu metal', 'alternative metal', 'metal', 'alternative rock', 'heavy metal']",https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8
+Korn,Nu Metal,ac865b2e-bba8-4f5a-8756-dd40d5e39f46,US,"['nu metal', 'alternative metal', 'metal', 'alternative rock', 'rock']",https://open.spotify.com/artist/3RNrq3jvMZxD9ZyoOZbQOD
+System of a Down,Nu Metal,cc0b7089-c08d-4c10-b6b0-873582c17fd6,US,"['alternative metal', 'alternative rock', 'nu metal', 'heavy metal', 'hard rock']",https://open.spotify.com/artist/5eAWCfyUhZtHHtBdNk56l1
+Electric Wizard,Doom Metal / Stoner,da7d57e6-0619-4f0f-8d15-d0b4195c3f55,GB,"['doom metal', 'stoner metal', 'heavy psych', 'metal', 'stoner rock']",https://open.spotify.com/artist/4htjQW3lgIwL6fEJlTOez4
+Sleep,Doom Metal / Stoner,6fc69ec6-3e59-4ff7-849d-b5da932abe4d,US,"['doom metal', 'stoner metal', 'stoner rock', 'sludge metal', 'stoner doom']",https://open.spotify.com/artist/4Mt6w4tDGiPgV5q6JWPlrI
+Candlemass,Doom Metal / Stoner,7dba6614-d0bd-4950-8b7b-841b31c413c2,SE,"['doom metal', 'epic doom metal', 'heavy metal', 'traditional doom metal', 'metal']",https://open.spotify.com/artist/7zDtfSB0AOZWhpuAHZIOw5
+Alcest,Post-Metal / Atmospheric,dd77b8da-cdc7-46b8-8a7f-10894ca0490e,FR,"['blackgaze', 'shoegaze', 'post-metal', 'black metal']",https://open.spotify.com/artist/0d5ZwMtCer8dQdOPAgWhe7
+Agalloch,Post-Metal / Atmospheric,3d46727d-9367-47b8-8b8b-f7b6767f7d57,US,"['atmospheric black metal', 'folk metal', 'doom metal', 'black metal', 'metal']",https://open.spotify.com/artist/3Meu28o8P5z9Zjm6NTGihT
+Amon Amarth,Melodic Death Metal,5b687684-ad34-4a9f-b425-0e7aa81fbd38,SE,"['melodic death metal', 'death metal', 'metal', 'viking metal', 'viking']",https://open.spotify.com/artist/3pulcT2wt7FEG10lQlqDJL
+Behemoth,Blackened Death Metal,69632f9c-31eb-43d5-a864-e73ac72efc66,PL,"['black metal', 'blackened death metal', 'death metal', 'metal']",https://open.spotify.com/artist/1MK0sGeyTNkbefYGj673e9
+Pierce the Veil,Post-Hardcore,8ed919fb-eaee-45a1-ba99-b3ede9ca5f1d,US,"['post-hardcore', 'easycore', 'melodic hardcore', 'millennial', 'rock']",https://open.spotify.com/artist/4iJLPqClelZOBCBifm8Fzv
+Sleeping With Sirens,Post-Hardcore,3267d5a3-c72c-4c3b-bafe-ec8a569c0b74,US,"['post-hardcore', 'alternative rock', 'pop punk', 'acoustic', 'emo pop']",https://open.spotify.com/artist/3N8Hy6xQnQv1F1XCiyGQqA
+Sleep Token,Alternative Metal,775ad383-ac2d-479a-af9d-b561442cb749,GB,"['progressive metal', 'alternative metal', 'alternative pop', 'djent', 'art pop']",https://open.spotify.com/artist/2n2RSaZqBuUUukhbLlpnE6
+Deftones,Alternative Metal,7527f6c2-d762-4b88-b5e2-9244f1e34c46,US,"['alternative metal', 'nu metal', 'alternative rock', 'metal', 'heavy metal']",https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH
+Bad Omens,Alternative Metal,eecada09-acfc-472d-ae55-e9e5a43f12d8,US,"['metalcore', 'alternative metal', 'heavy metal', 'metal', 'post-hardcore']",https://open.spotify.com/artist/3Ri4H12KFyu98LMjSoij5V
+Breaking Benjamin,Alternative Metal,854a1807-025b-42a8-ba8c-2a39717f1d25,US,"['alternative metal', 'post-grunge', 'alternative rock', 'hard rock', 'metal']",https://open.spotify.com/artist/5BtHciL0e0zOP7prIHn3pP
+Disturbed,Alternative Metal,4bb4e4e4-5f66-4509-98af-62dbb90c45c5,US,"['alternative metal', 'nu metal', 'heavy metal', 'metal', 'hard rock']",https://open.spotify.com/artist/3TOqt5oJwL9BE2NG9MEwDa
+Linkin Park,Alternative Metal,f59c5520-5f46-4d2c-b2c4-822eabf53419,US,"['nu metal', 'rock', 'rap rock', 'metal', 'alternative rock']",https://open.spotify.com/artist/6XyY86QOPPrYVGvF9ch6wz
+My Chemical Romance,Emo / Alternative Rock,c07f0676-9143-4217-8a9f-4c26bd636f13,US,"['pop punk', 'alternative rock', 'emo', 'rock', 'alternative']",https://open.spotify.com/artist/7FBcuc1gsnv6Y1nwFtNRCb
+Fall Out Boy,Pop Punk,516cef4d-0718-4007-9939-f9b38af3f784,US,"['pop punk', 'alternative rock', 'pop rock', 'emo pop', 'electropop']",https://open.spotify.com/artist/4UXqAaa6dQYAk18Lv7PEgX
+The Wonder Years,Pop Punk,ae13e1fc-a2b1-4e3c-bfb9-737d3aeb7dab,US,"['pop punk', 'easycore', 'emo', 'emo pop', 'melodic hardcore']",https://open.spotify.com/artist/0nq64XZMWV1s7XHXIkdH7K
+Sum 41,Pop Punk,f2eef649-a6d5-4114-afba-e50ab26254d2,CA,"['pop punk', 'punk rock', 'alternative rock', 'canadian', '2008 universal fire victim']",https://open.spotify.com/artist/0qT79UgT5tY4yudH9VfsdT
+All Time Low,Pop Punk,62162215-b023-4f0e-84bd-1e9412d5b32c,US,"['pop punk', 'power pop', 'powerpop', 'alternative rock', 'emo']",https://open.spotify.com/artist/46gyXjRIvN1NL1eCB8GBxo
+Paramore,Pop Punk,44cf61b8-5197-448a-b82b-cef6ee89fac5,US,"['pop rock', 'rock', 'pop punk', 'alternative rock', 'emo']",https://open.spotify.com/artist/74XFHRwlV6OrjEM0A2NCMF
+Blink-182,Pop Punk,0743b15a-3c32-48c8-ad58-cb325350befa,US,"['pop punk', 'punk rock', 'alternative rock', 'skate punk', 'pop rock']",https://open.spotify.com/artist/6FBDaR13swtiWwGhX1WQsP
+Neck Deep,Pop Punk,c41dd59f-d805-41df-9e0e-83ec0f9f468e,GB,"['pop punk', 'punk', 'alternative rock', 'easycore', 'punk rock']",https://open.spotify.com/artist/2TM0qnbJH4QPhGMCdPt7fH
+Simple Plan,Pop Punk,b345af35-205e-4eca-8006-029e5c20127e,CA,"['pop punk', 'alternative rock']",https://open.spotify.com/artist/2p4FqHnazRucYQHyDCdBrJ
+Mayday Parade,Pop Punk,39076047-fce8-44cc-a388-4f6baba4acb4,US,"['alternative rock', 'emo', 'pop punk', 'emo pop', 'indie rock']",https://open.spotify.com/artist/3WfJ1OtrWI7RViX9DMyEGy
+The Maine,Alternative Rock,7bd47e67-ecd5-49d5-837f-c692df38da4e,US,"['pop rock', 'alternative rock', 'pop punk']",https://open.spotify.com/artist/4o0pNHbyj36LPvukNqEug0
+The 1975,Alternative Rock,5b6ebfe0-f72b-4902-bba9-74c8af0f1af0,GB,"['indie rock', 'pop rock', 'art pop', 'new wave', 'ambient pop']",https://open.spotify.com/artist/3mIj9lX2MWuHmhNCA7LSCW
+Florence + The Machine,Alternative Rock,5fee3020-513b-48c2-b1f7-4681b01db0c6,GB,"['indie rock', 'indie pop', 'art pop', 'alternative rock', 'indie']",https://open.spotify.com/artist/1moxjboGR7GNWYIMWsRjgG
+The Smashing Pumpkins,Alternative Rock,ba0d6274-db14-4ef5-b28d-657ebde1a396,US,"['alternative rock', 'dream pop', 'neo-psychedelia', 'shoegaze', 'grunge']",https://open.spotify.com/artist/40Yq4vzPs9VNUrIBG5Jr2i
+Muse,Alternative Rock,9c9f1380-2516-4fc9-a3e6-f9f61941d090,GB,"['alternative rock', 'rock', 'progressive rock', 'symphonic rock', 'uk']",https://open.spotify.com/artist/12Chz98pHFMPJEknJQMWvI
+The Pretty Reckless,Alternative Rock,54f8c12e-571c-4c5a-9f79-5336b39e84b0,US,"['hard rock', 'alternative rock', 'female fronted', 'rock', 'post-grunge']",https://open.spotify.com/artist/2R57sY41L9XvGPiIgHOaYq
+Royal Blood,Alternative Rock,aa62b28e-b6d4-4086-91d4-e5fac1ed56f3,GB,"['hard rock', 'alternative rock', 'blues rock', 'garage rock', 'indie rock']",https://open.spotify.com/artist/2S5hlvw4CMtMGswFtfdK15
+The Cure,Gothic Rock,69ee3720-a7cb-4402-b48d-a02c366f2bcf,GB,"['post-punk', 'gothic rock', 'new wave', 'alternative rock', 'british']",https://open.spotify.com/artist/7bu3H8JO7d0UbMoVzbo70s
+HIM,Gothic Rock,4cc51547-88ae-49a2-bf7e-0ef65ee7a94c,FI,"['gothic rock', 'alternative rock', 'gothic metal', 'love metal', 'finnish']",https://open.spotify.com/artist/3YJmlspfwWiA0cUOmUqUBT
+The 69 Eyes,Gothic Rock,ba1384a7-8b0e-4ea6-bf0c-f1ec17a06d14,FI,"['gothic rock', 'gothic metal', 'finnish', 'glam metal', 'rock']",https://open.spotify.com/artist/0Z1UczcSjwKNuv4HgdjH3b
+Ghost,Occult Rock,2bcf2e02-5bc3-4c76-bf76-41126cb11444,SE,"['heavy metal', 'hard rock', 'occult rock', 'progressive rock', 'doom metal']",https://open.spotify.com/artist/1Qp56T7n950O3EGMsSl81D
+Green Day,Punk Rock,084308bd-1654-436f-ba03-df6697104e19,US,"['punk rock', 'pop punk', 'alternative rock', 'rock', 'punk']",https://open.spotify.com/artist/7oPftvlwr6VrsViSDV7fJY

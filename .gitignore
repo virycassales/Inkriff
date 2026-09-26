@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# entornos / secretos
+.env
+*.key
+
+# artefactos del sistema
+.DS_Store
+
+# empaquetados generados (se reconstruyen con scripts/build_chat_app.py)
+*.zip
+
+# salidas intermedias de notebooks (se regeneran)
+piloto_*.csv
+
+# git internals subidos por error desde la web
+*.sample

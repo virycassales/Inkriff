@@ -1,0 +1,406 @@
+banda,subgenero_banda,rank,libro_recomendado,categoria_libro,similitud
+Led Zeppelin,Hard Rock / Rock clasico,1,Heartstopper,Romance juvenil / coming-of-age,0.1411
+Led Zeppelin,Hard Rock / Rock clasico,2,Eleanor & Park,Romance juvenil / coming-of-age,0.1264
+Led Zeppelin,Hard Rock / Rock clasico,3,Coraline,Fantasia oscura / gotica,0.1036
+Led Zeppelin,Hard Rock / Rock clasico,4,Uprooted,Fantasia de cuento de hadas,0.0933
+Led Zeppelin,Hard Rock / Rock clasico,5,Érase una vez un corazón roto,Romantasy (fantasia romantica),0.0921
+AC/DC,Hard Rock / Rock clasico,1,Heartstopper,Romance juvenil / coming-of-age,0.1722
+AC/DC,Hard Rock / Rock clasico,2,Eleanor & Park,Romance juvenil / coming-of-age,0.1459
+AC/DC,Hard Rock / Rock clasico,3,Coraline,Fantasia oscura / gotica,0.1089
+AC/DC,Hard Rock / Rock clasico,4,Uprooted,Fantasia de cuento de hadas,0.1015
+AC/DC,Hard Rock / Rock clasico,5,Maze Runner,Distopia juvenil,0.0904
+Deep Purple,Hard Rock / Rock clasico,1,Coraline,Fantasia oscura / gotica,0.1166
+Deep Purple,Hard Rock / Rock clasico,2,Heartstopper,Romance juvenil / coming-of-age,0.1144
+Deep Purple,Hard Rock / Rock clasico,3,Eleanor & Park,Romance juvenil / coming-of-age,0.0935
+Deep Purple,Hard Rock / Rock clasico,4,Uprooted,Fantasia de cuento de hadas,0.0849
+Deep Purple,Hard Rock / Rock clasico,5,Érase una vez un corazón roto,Romantasy (fantasia romantica),0.0782
+Iron Maiden,Heavy Metal,1,El archivo de las tormentas,Alta fantasia / epica,0.1044
+Iron Maiden,Heavy Metal,2,Frankenstein,Gotico clasico / vampiros,0.0942
+Iron Maiden,Heavy Metal,3,Outlander,Romance historico / gotico,0.0826
+Iron Maiden,Heavy Metal,4,Una corte de alas y ruina,Romantasy (fantasia romantica),0.0807
+Iron Maiden,Heavy Metal,5,Babel,Dark Academia,0.0799
+Judas Priest,Heavy Metal,1,El Senor de los Anillos,Alta fantasia / epica,0.0934
+Judas Priest,Heavy Metal,2,Eragon,Alta fantasia / epica,0.093
+Judas Priest,Heavy Metal,3,Canción de Hielo y Fuego,Alta fantasia / epica,0.0864
+Judas Priest,Heavy Metal,4,Malaz: El libro de los caídos,Grimdark,0.0857
+Judas Priest,Heavy Metal,5,El pozo de la ascensión,Alta fantasia / epica,0.0847
+Black Sabbath,Heavy Metal,1,La rueda del tiempo,Alta fantasia / epica,0.1268
+Black Sabbath,Heavy Metal,2,Malaz: El libro de los caídos,Grimdark,0.1093
+Black Sabbath,Heavy Metal,3,Canción de Hielo y Fuego,Alta fantasia / epica,0.0972
+Black Sabbath,Heavy Metal,4,Percy Jackson,Mitologia (nordica / celta / griega),0.0892
+Black Sabbath,Heavy Metal,5,El ladrón del rayo,Mitologia (nordica / celta / griega),0.0892
+Avenged Sevenfold,Heavy Metal,1,El Senor de los Anillos,Alta fantasia / epica,0.0993
+Avenged Sevenfold,Heavy Metal,2,Berserk,Fantasia oscura / gotica,0.0867
+Avenged Sevenfold,Heavy Metal,3,Canción de Hielo y Fuego,Alta fantasia / epica,0.0726
+Avenged Sevenfold,Heavy Metal,4,Babel,Dark Academia,0.0704
+Avenged Sevenfold,Heavy Metal,5,Héroes del Olimpo,Mitologia (nordica / celta / griega),0.0656
+Blind Guardian,Power Metal,1,Frankenstein,Gotico clasico / vampiros,0.122
+Blind Guardian,Power Metal,2,El camino de los reyes,Alta fantasia / epica,0.0987
+Blind Guardian,Power Metal,3,Babel,Dark Academia,0.0899
+Blind Guardian,Power Metal,4,Sinsajo,Distopia juvenil,0.0884
+Blind Guardian,Power Metal,5,The Bear and the Nightingale,Fantasia de cuento de hadas,0.0796
+DragonForce,Power Metal,1,El camino de los reyes,Alta fantasia / epica,0.1176
+DragonForce,Power Metal,2,El Senor de los Anillos,Alta fantasia / epica,0.1095
+DragonForce,Power Metal,3,La rueda del tiempo,Alta fantasia / epica,0.0982
+DragonForce,Power Metal,4,Sinsajo,Distopia juvenil,0.0972
+DragonForce,Power Metal,5,La primera ley,Grimdark,0.0914
+Sabaton,Power Metal,1,El Senor de los Anillos,Alta fantasia / epica,0.1201
+Sabaton,Power Metal,2,La primera ley,Grimdark,0.106
+Sabaton,Power Metal,3,The Once and Future Witches,Fantasia de cuento de hadas,0.0915
+Sabaton,Power Metal,4,A Darker Shade of Magic,Fantasia oscura / gotica,0.0886
+Sabaton,Power Metal,5,Circe,Mitologia (nordica / celta / griega),0.0867
+Rhapsody of Fire,Power Metal,1,La rueda del tiempo,Alta fantasia / epica,0.0953
+Rhapsody of Fire,Power Metal,2,El Senor de los Anillos,Alta fantasia / epica,0.0923
+Rhapsody of Fire,Power Metal,3,Babel,Dark Academia,0.0812
+Rhapsody of Fire,Power Metal,4,The Once and Future Witches,Fantasia de cuento de hadas,0.0789
+Rhapsody of Fire,Power Metal,5,Circe,Mitologia (nordica / celta / griega),0.0788
+Nightwish,Symphonic Metal,1,Babel,Dark Academia,0.0871
+Nightwish,Symphonic Metal,2,Sombra y Hueso,Fantasia oscura / gotica,0.0798
+Nightwish,Symphonic Metal,3,Percy Jackson,Mitologia (nordica / celta / griega),0.0796
+Nightwish,Symphonic Metal,4,El ladrón del rayo,Mitologia (nordica / celta / griega),0.0796
+Nightwish,Symphonic Metal,5,Héroes del Olimpo,Mitologia (nordica / celta / griega),0.0782
+Epica,Symphonic Metal,1,Carmilla,Gotico clasico / vampiros,0.1154
+Epica,Symphonic Metal,2,Sombra y Hueso,Fantasia oscura / gotica,0.0957
+Epica,Symphonic Metal,3,Frankenstein,Gotico clasico / vampiros,0.0871
+Epica,Symphonic Metal,4,Jane Eyre,Romance historico / gotico,0.0786
+Epica,Symphonic Metal,5,El ladrón del rayo,Mitologia (nordica / celta / griega),0.0742
+Within Temptation,Symphonic Metal,1,Frankenstein,Gotico clasico / vampiros,0.1183
+Within Temptation,Symphonic Metal,2,El castillo de Otranto,Gotico clasico / vampiros,0.1117
+Within Temptation,Symphonic Metal,3,Babel,Dark Academia,0.1073
+Within Temptation,Symphonic Metal,4,Seis de cuervos,Fantasia urbana,0.1009
+Within Temptation,Symphonic Metal,5,El retrato de Dorian Gray,Gotico clasico / vampiros,0.0927
+Kamelot,Symphonic Metal,1,Babel,Dark Academia,0.0795
+Kamelot,Symphonic Metal,2,Héroes del Olimpo,Mitologia (nordica / celta / griega),0.0669
+Kamelot,Symphonic Metal,3,Canción de Hielo y Fuego,Alta fantasia / epica,0.059
+Kamelot,Symphonic Metal,4,La rueda del tiempo,Alta fantasia / epica,0.0582
+Kamelot,Symphonic Metal,5,Frankenstein,Gotico clasico / vampiros,0.0571
+Eluveitie,Folk Metal,1,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.1127
+Eluveitie,Folk Metal,2,Canción de Hielo y Fuego,Alta fantasia / epica,0.1036
+Eluveitie,Folk Metal,3,El Nombre del Viento,Alta fantasia / epica,0.0857
+Eluveitie,Folk Metal,4,La rueda del tiempo,Alta fantasia / epica,0.0799
+Eluveitie,Folk Metal,5,Mitología Nórdica,Mitologia (nordica / celta / griega),0.0794
+Korpiklaani,Folk Metal,1,Reckless,Romantasy (fantasia romantica),0.0939
+Korpiklaani,Folk Metal,2,Mitología Nórdica,Mitologia (nordica / celta / griega),0.0889
+Korpiklaani,Folk Metal,3,El Nombre del Viento,Alta fantasia / epica,0.0771
+Korpiklaani,Folk Metal,4,El archivo de las tormentas,Alta fantasia / epica,0.0751
+Korpiklaani,Folk Metal,5,Malaz: El libro de los caídos,Grimdark,0.0691
+Wintersun,Folk Metal,1,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.1131
+Wintersun,Folk Metal,2,Reckless,Romantasy (fantasia romantica),0.0974
+Wintersun,Folk Metal,3,Trono de Cristal,Romantasy (fantasia romantica),0.0895
+Wintersun,Folk Metal,4,El Nombre del Viento,Alta fantasia / epica,0.0842
+Wintersun,Folk Metal,5,Malaz: El libro de los caídos,Grimdark,0.08
+Type O Negative,Gothic Metal,1,El castillo de Otranto,Gotico clasico / vampiros,0.1614
+Type O Negative,Gothic Metal,2,Drácula,Fantasia oscura / gotica,0.1396
+Type O Negative,Gothic Metal,3,La primera ley,Grimdark,0.1201
+Type O Negative,Gothic Metal,4,Sombra y Hueso,Fantasia oscura / gotica,0.0852
+Type O Negative,Gothic Metal,5,Frankenstein,Gotico clasico / vampiros,0.08
+Paradise Lost,Gothic Metal,1,Drácula,Fantasia oscura / gotica,0.1446
+Paradise Lost,Gothic Metal,2,El castillo de Otranto,Gotico clasico / vampiros,0.1244
+Paradise Lost,Gothic Metal,3,La primera ley,Grimdark,0.122
+Paradise Lost,Gothic Metal,4,Trono de Cristal,Romantasy (fantasia romantica),0.0773
+Paradise Lost,Gothic Metal,5,Una Corte de Rosas y Espinas,Romantasy (fantasia romantica),0.0759
+Lacuna Coil,Gothic Metal,1,Carmilla,Gotico clasico / vampiros,0.1728
+Lacuna Coil,Gothic Metal,2,Drácula,Fantasia oscura / gotica,0.1339
+Lacuna Coil,Gothic Metal,3,El castillo de Otranto,Gotico clasico / vampiros,0.1333
+Lacuna Coil,Gothic Metal,4,The Hazel Wood,Fantasia oscura / gotica,0.1029
+Lacuna Coil,Gothic Metal,5,Frankenstein,Gotico clasico / vampiros,0.1025
+Evanescence,Gothic Metal,1,El castillo de Otranto,Gotico clasico / vampiros,0.1785
+Evanescence,Gothic Metal,2,Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,0.1032
+Evanescence,Gothic Metal,3,Jane Eyre,Romance historico / gotico,0.096
+Evanescence,Gothic Metal,4,Drácula,Fantasia oscura / gotica,0.0942
+Evanescence,Gothic Metal,5,A través del espejo,Fantasia clasica / juvenil,0.0864
+Chelsea Wolfe,Gothic Metal,1,El castillo de Otranto,Gotico clasico / vampiros,0.132
+Chelsea Wolfe,Gothic Metal,2,Carmilla,Gotico clasico / vampiros,0.1273
+Chelsea Wolfe,Gothic Metal,3,Drácula,Fantasia oscura / gotica,0.1177
+Chelsea Wolfe,Gothic Metal,4,El retrato de Dorian Gray,Gotico clasico / vampiros,0.0932
+Chelsea Wolfe,Gothic Metal,5,El vampiro Lestat,Gotico clasico / vampiros,0.0893
+Dream Theater,Progressive Metal,1,Percy Jackson,Mitologia (nordica / celta / griega),0.077
+Dream Theater,Progressive Metal,2,El ladrón del rayo,Mitologia (nordica / celta / griega),0.077
+Dream Theater,Progressive Metal,3,Los juegos del hambre,Distopia juvenil,0.0721
+Dream Theater,Progressive Metal,4,Seis de cuervos,Fantasia urbana,0.0607
+Dream Theater,Progressive Metal,5,El archivo de las tormentas,Alta fantasia / epica,0.06
+Opeth,Progressive Metal,1,Los juegos del hambre,Distopia juvenil,0.0897
+Opeth,Progressive Metal,2,A Dowry of Blood,Gotico clasico / vampiros,0.0779
+Opeth,Progressive Metal,3,La primera ley,Grimdark,0.0747
+Opeth,Progressive Metal,4,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.0742
+Opeth,Progressive Metal,5,Fourth Wing,Romantasy (fantasia romantica),0.0738
+Tool,Progressive Metal,1,Coraline,Fantasia oscura / gotica,0.0618
+Tool,Progressive Metal,2,Los juegos del hambre,Distopia juvenil,0.0484
+Tool,Progressive Metal,3,Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,0.0388
+Tool,Progressive Metal,4,Scott Pilgrim,Distopia juvenil,0.0378
+Tool,Progressive Metal,5,A Dowry of Blood,Gotico clasico / vampiros,0.0374
+Gojira,Progressive Metal,1,Los juegos del hambre,Distopia juvenil,0.0829
+Gojira,Progressive Metal,2,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.0776
+Gojira,Progressive Metal,3,Fourth Wing,Romantasy (fantasia romantica),0.0748
+Gojira,Progressive Metal,4,La compañía negra,Grimdark,0.0733
+Gojira,Progressive Metal,5,A Dowry of Blood,Gotico clasico / vampiros,0.0718
+Death,Death Metal,1,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.1334
+Death,Death Metal,2,La primera ley,Grimdark,0.1101
+Death,Death Metal,3,El príncipe cruel,Fae Fantasy,0.1055
+Death,Death Metal,4,El héroe de las eras,Alta fantasia / epica,0.1033
+Death,Death Metal,5,Sinsajo,Distopia juvenil,0.1031
+Cannibal Corpse,Death Metal,1,El príncipe cruel,Fae Fantasy,0.1182
+Cannibal Corpse,Death Metal,2,La primera ley,Grimdark,0.1119
+Cannibal Corpse,Death Metal,3,El héroe de las eras,Alta fantasia / epica,0.1078
+Cannibal Corpse,Death Metal,4,Percy Jackson,Mitologia (nordica / celta / griega),0.1075
+Cannibal Corpse,Death Metal,5,El ladrón del rayo,Mitologia (nordica / celta / griega),0.1075
+At the Gates,Death Metal,1,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.1403
+At the Gates,Death Metal,2,El príncipe cruel,Fae Fantasy,0.0973
+At the Gates,Death Metal,3,Fourth Wing,Romantasy (fantasia romantica),0.0952
+At the Gates,Death Metal,4,Trono de Cristal,Romantasy (fantasia romantica),0.0919
+At the Gates,Death Metal,5,A Dowry of Blood,Gotico clasico / vampiros,0.0855
+Mayhem,Black Metal,1,Babel,Dark Academia,0.1792
+Mayhem,Black Metal,2,La compañía negra,Grimdark,0.1307
+Mayhem,Black Metal,3,Berserk,Fantasia oscura / gotica,0.127
+Mayhem,Black Metal,4,Frankenstein,Gotico clasico / vampiros,0.1235
+Mayhem,Black Metal,5,Vampire Academy,Gotico clasico / vampiros,0.1048
+Emperor,Black Metal,1,Babel,Dark Academia,0.165
+Emperor,Black Metal,2,Berserk,Fantasia oscura / gotica,0.1015
+Emperor,Black Metal,3,El circo de la noche,Fantasia clasica / juvenil,0.0976
+Emperor,Black Metal,4,La compañía negra,Grimdark,0.0882
+Emperor,Black Metal,5,Frankenstein,Gotico clasico / vampiros,0.0798
+Dimmu Borgir,Black Metal,1,Babel,Dark Academia,0.1526
+Dimmu Borgir,Black Metal,2,Berserk,Fantasia oscura / gotica,0.1263
+Dimmu Borgir,Black Metal,3,La compañía negra,Grimdark,0.1158
+Dimmu Borgir,Black Metal,4,El circo de la noche,Fantasia clasica / juvenil,0.085
+Dimmu Borgir,Black Metal,5,Carmilla,Gotico clasico / vampiros,0.0753
+Killswitch Engage,Metalcore,1,El circo de la noche,Fantasia clasica / juvenil,0.0879
+Killswitch Engage,Metalcore,2,Berserk,Fantasia oscura / gotica,0.086
+Killswitch Engage,Metalcore,3,The Poppy War,Fantasia oscura / gotica,0.0752
+Killswitch Engage,Metalcore,4,El Senor de los Anillos,Alta fantasia / epica,0.0744
+Killswitch Engage,Metalcore,5,Caraval,Fantasia clasica / juvenil,0.0657
+Bring Me The Horizon,Metalcore,1,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.0932
+Bring Me The Horizon,Metalcore,2,El circo de la noche,Fantasia clasica / juvenil,0.09
+Bring Me The Horizon,Metalcore,3,La primera ley,Grimdark,0.0777
+Bring Me The Horizon,Metalcore,4,Fourth Wing,Romantasy (fantasia romantica),0.0737
+Bring Me The Horizon,Metalcore,5,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.0693
+Architects,Metalcore,1,El circo de la noche,Fantasia clasica / juvenil,0.0818
+Architects,Metalcore,2,El camino de los reyes,Alta fantasia / epica,0.0775
+Architects,Metalcore,3,La rueda del tiempo,Alta fantasia / epica,0.0585
+Architects,Metalcore,4,The Poppy War,Fantasia oscura / gotica,0.0454
+Architects,Metalcore,5,Carry On,Romantasy (fantasia romantica),0.0404
+Spiritbox,Metalcore,1,Vampire Academy,Gotico clasico / vampiros,0.0769
+Spiritbox,Metalcore,2,Carry On,Romantasy (fantasia romantica),0.0734
+Spiritbox,Metalcore,3,La rueda del tiempo,Alta fantasia / epica,0.0671
+Spiritbox,Metalcore,4,Vicious,Fantasia oscura / gotica,0.0667
+Spiritbox,Metalcore,5,El vampiro Lestat,Gotico clasico / vampiros,0.0583
+Jinjer,Metalcore,1,El Senor de los Anillos,Alta fantasia / epica,0.1181
+Jinjer,Metalcore,2,El camino de los reyes,Alta fantasia / epica,0.1067
+Jinjer,Metalcore,3,El circo de la noche,Fantasia clasica / juvenil,0.0906
+Jinjer,Metalcore,4,La rueda del tiempo,Alta fantasia / epica,0.0878
+Jinjer,Metalcore,5,The Poppy War,Fantasia oscura / gotica,0.0784
+Suicide Silence,Deathcore,1,Iron Flame,Romantasy (fantasia romantica),0.1153
+Suicide Silence,Deathcore,2,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.1117
+Suicide Silence,Deathcore,3,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.1116
+Suicide Silence,Deathcore,4,Fourth Wing,Romantasy (fantasia romantica),0.1088
+Suicide Silence,Deathcore,5,A Dowry of Blood,Gotico clasico / vampiros,0.1026
+Whitechapel,Deathcore,1,A Dowry of Blood,Gotico clasico / vampiros,0.1083
+Whitechapel,Deathcore,2,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.101
+Whitechapel,Deathcore,3,Fourth Wing,Romantasy (fantasia romantica),0.0989
+Whitechapel,Deathcore,4,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.0984
+Whitechapel,Deathcore,5,El héroe de las eras,Alta fantasia / epica,0.0953
+Lorna Shore,Deathcore,1,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.1701
+Lorna Shore,Deathcore,2,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.1328
+Lorna Shore,Deathcore,3,Fourth Wing,Romantasy (fantasia romantica),0.1304
+Lorna Shore,Deathcore,4,A Dowry of Blood,Gotico clasico / vampiros,0.1288
+Lorna Shore,Deathcore,5,Iron Flame,Romantasy (fantasia romantica),0.1208
+Slipknot,Nu Metal,1,El Senor de los Anillos,Alta fantasia / epica,0.0761
+Slipknot,Nu Metal,2,The Locked Tomb,Fantasia oscura / gotica,0.0633
+Slipknot,Nu Metal,3,Circe,Mitologia (nordica / celta / griega),0.0532
+Slipknot,Nu Metal,4,Eragon,Alta fantasia / epica,0.0508
+Slipknot,Nu Metal,5,Babel,Dark Academia,0.0489
+Korn,Nu Metal,1,Eragon,Alta fantasia / epica,0.0678
+Korn,Nu Metal,2,El Senor de los Anillos,Alta fantasia / epica,0.0667
+Korn,Nu Metal,3,El camino de los reyes,Alta fantasia / epica,0.0653
+Korn,Nu Metal,4,The Locked Tomb,Fantasia oscura / gotica,0.0634
+Korn,Nu Metal,5,El Hobbit,Alta fantasia / epica,0.0556
+System of a Down,Nu Metal,1,El Senor de los Anillos,Alta fantasia / epica,0.0896
+System of a Down,Nu Metal,2,Eragon,Alta fantasia / epica,0.0728
+System of a Down,Nu Metal,3,La primera ley,Grimdark,0.0615
+System of a Down,Nu Metal,4,El camino de los reyes,Alta fantasia / epica,0.0605
+System of a Down,Nu Metal,5,The Locked Tomb,Fantasia oscura / gotica,0.0576
+Electric Wizard,Doom Metal / Stoner,1,Eragon,Alta fantasia / epica,0.123
+Electric Wizard,Doom Metal / Stoner,2,Maze Runner,Distopia juvenil,0.1158
+Electric Wizard,Doom Metal / Stoner,3,The Locked Tomb,Fantasia oscura / gotica,0.1094
+Electric Wizard,Doom Metal / Stoner,4,Coraline,Fantasia oscura / gotica,0.0927
+Electric Wizard,Doom Metal / Stoner,5,Vicious,Fantasia oscura / gotica,0.0857
+Sleep,Doom Metal / Stoner,1,Maze Runner,Distopia juvenil,0.1263
+Sleep,Doom Metal / Stoner,2,Eragon,Alta fantasia / epica,0.1219
+Sleep,Doom Metal / Stoner,3,The Locked Tomb,Fantasia oscura / gotica,0.1212
+Sleep,Doom Metal / Stoner,4,Heartstopper,Romance juvenil / coming-of-age,0.0968
+Sleep,Doom Metal / Stoner,5,Coraline,Fantasia oscura / gotica,0.0933
+Candlemass,Doom Metal / Stoner,1,Mistborn: El imperio final,Alta fantasia / epica,0.1023
+Candlemass,Doom Metal / Stoner,2,El pozo de la ascensión,Alta fantasia / epica,0.1001
+Candlemass,Doom Metal / Stoner,3,Eragon,Alta fantasia / epica,0.0928
+Candlemass,Doom Metal / Stoner,4,Sombra y Hueso,Fantasia oscura / gotica,0.0779
+Candlemass,Doom Metal / Stoner,5,Vicious,Fantasia oscura / gotica,0.0759
+Alcest,Post-Metal / Atmospheric,1,Babel,Dark Academia,0.1149
+Alcest,Post-Metal / Atmospheric,2,Sombra y Hueso,Fantasia oscura / gotica,0.1125
+Alcest,Post-Metal / Atmospheric,3,The Bear and the Nightingale,Fantasia de cuento de hadas,0.1063
+Alcest,Post-Metal / Atmospheric,4,A través del espejo,Fantasia clasica / juvenil,0.0926
+Alcest,Post-Metal / Atmospheric,5,Héroes del Olimpo,Mitologia (nordica / celta / griega),0.0803
+Agalloch,Post-Metal / Atmospheric,1,Sombra y Hueso,Fantasia oscura / gotica,0.1084
+Agalloch,Post-Metal / Atmospheric,2,Babel,Dark Academia,0.0985
+Agalloch,Post-Metal / Atmospheric,3,La compañía negra,Grimdark,0.0877
+Agalloch,Post-Metal / Atmospheric,4,El héroe de las eras,Alta fantasia / epica,0.0836
+Agalloch,Post-Metal / Atmospheric,5,The Bear and the Nightingale,Fantasia de cuento de hadas,0.0673
+Amon Amarth,Melodic Death Metal,1,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.1475
+Amon Amarth,Melodic Death Metal,2,Fourth Wing,Romantasy (fantasia romantica),0.1005
+Amon Amarth,Melodic Death Metal,3,Canción de Hielo y Fuego,Alta fantasia / epica,0.098
+Amon Amarth,Melodic Death Metal,4,A Dowry of Blood,Gotico clasico / vampiros,0.0933
+Amon Amarth,Melodic Death Metal,5,El héroe de las eras,Alta fantasia / epica,0.0853
+Behemoth,Blackened Death Metal,1,La compañía negra,Grimdark,0.13
+Behemoth,Blackened Death Metal,2,El océano al final del camino,Fantasia oscura / gotica,0.1299
+Behemoth,Blackened Death Metal,3,Entrevista con el vampiro,Gotico clasico / vampiros,0.1129
+Behemoth,Blackened Death Metal,4,Berserk,Fantasia oscura / gotica,0.1056
+Behemoth,Blackened Death Metal,5,Drácula,Fantasia oscura / gotica,0.0962
+Pierce the Veil,Post-Hardcore,1,En llamas,Distopia juvenil,0.1096
+Pierce the Veil,Post-Hardcore,2,Ready Player One,Distopia juvenil,0.1004
+Pierce the Veil,Post-Hardcore,3,Scott Pilgrim,Distopia juvenil,0.0951
+Pierce the Veil,Post-Hardcore,4,Vicious,Fantasia oscura / gotica,0.0849
+Pierce the Veil,Post-Hardcore,5,Eleanor & Park,Romance juvenil / coming-of-age,0.0817
+Sleeping With Sirens,Post-Hardcore,1,En llamas,Distopia juvenil,0.1399
+Sleeping With Sirens,Post-Hardcore,2,Ready Player One,Distopia juvenil,0.109
+Sleeping With Sirens,Post-Hardcore,3,Eleanor & Park,Romance juvenil / coming-of-age,0.0975
+Sleeping With Sirens,Post-Hardcore,4,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.0832
+Sleeping With Sirens,Post-Hardcore,5,Entrevista con el vampiro,Gotico clasico / vampiros,0.0766
+Sleep Token,Alternative Metal,1,A través del espejo,Fantasia clasica / juvenil,0.0877
+Sleep Token,Alternative Metal,2,El mar sin estrellas,Fantasia clasica / juvenil,0.0738
+Sleep Token,Alternative Metal,3,El circo de la noche,Fantasia clasica / juvenil,0.0659
+Sleep Token,Alternative Metal,4,A Darker Shade of Magic,Fantasia oscura / gotica,0.0644
+Sleep Token,Alternative Metal,5,Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,0.0582
+Deftones,Alternative Metal,1,The Locked Tomb,Fantasia oscura / gotica,0.0682
+Deftones,Alternative Metal,2,Circe,Mitologia (nordica / celta / griega),0.0606
+Deftones,Alternative Metal,3,A Darker Shade of Magic,Fantasia oscura / gotica,0.0518
+Deftones,Alternative Metal,4,Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,0.0506
+Deftones,Alternative Metal,5,Coraline,Fantasia oscura / gotica,0.0481
+Bad Omens,Alternative Metal,1,Sombra y Hueso,Fantasia oscura / gotica,0.0722
+Bad Omens,Alternative Metal,2,El príncipe cruel,Fae Fantasy,0.0698
+Bad Omens,Alternative Metal,3,El circo de la noche,Fantasia clasica / juvenil,0.0637
+Bad Omens,Alternative Metal,4,A Darker Shade of Magic,Fantasia oscura / gotica,0.0631
+Bad Omens,Alternative Metal,5,Babel,Dark Academia,0.0561
+Breaking Benjamin,Alternative Metal,1,Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,0.0698
+Breaking Benjamin,Alternative Metal,2,The Locked Tomb,Fantasia oscura / gotica,0.0649
+Breaking Benjamin,Alternative Metal,3,Coraline,Fantasia oscura / gotica,0.0446
+Breaking Benjamin,Alternative Metal,4,Piranesi,Fantasia oscura / gotica,0.0424
+Breaking Benjamin,Alternative Metal,5,El vampiro Lestat,Gotico clasico / vampiros,0.0397
+Disturbed,Alternative Metal,1,The Locked Tomb,Fantasia oscura / gotica,0.071
+Disturbed,Alternative Metal,2,El Senor de los Anillos,Alta fantasia / epica,0.0677
+Disturbed,Alternative Metal,3,Eragon,Alta fantasia / epica,0.0653
+Disturbed,Alternative Metal,4,Circe,Mitologia (nordica / celta / griega),0.0576
+Disturbed,Alternative Metal,5,Sombra y Hueso,Fantasia oscura / gotica,0.0475
+Linkin Park,Alternative Metal,1,Circe,Mitologia (nordica / celta / griega),0.0553
+Linkin Park,Alternative Metal,2,El Hobbit,Alta fantasia / epica,0.0532
+Linkin Park,Alternative Metal,3,The Locked Tomb,Fantasia oscura / gotica,0.0482
+Linkin Park,Alternative Metal,4,Eragon,Alta fantasia / epica,0.0476
+Linkin Park,Alternative Metal,5,Una corte de alas y ruina,Romantasy (fantasia romantica),0.0433
+My Chemical Romance,Emo / Alternative Rock,1,En llamas,Distopia juvenil,0.1309
+My Chemical Romance,Emo / Alternative Rock,2,Coraline,Fantasia oscura / gotica,0.1072
+My Chemical Romance,Emo / Alternative Rock,3,Eleanor & Park,Romance juvenil / coming-of-age,0.0943
+My Chemical Romance,Emo / Alternative Rock,4,Piranesi,Fantasia oscura / gotica,0.0809
+My Chemical Romance,Emo / Alternative Rock,5,Heartstopper,Romance juvenil / coming-of-age,0.076
+Fall Out Boy,Pop Punk,1,Ready Player One,Distopia juvenil,0.1682
+Fall Out Boy,Pop Punk,2,En llamas,Distopia juvenil,0.1455
+Fall Out Boy,Pop Punk,3,Eleanor & Park,Romance juvenil / coming-of-age,0.1348
+Fall Out Boy,Pop Punk,4,Heartstopper,Romance juvenil / coming-of-age,0.1314
+Fall Out Boy,Pop Punk,5,Scott Pilgrim,Distopia juvenil,0.1279
+The Wonder Years,Pop Punk,1,En llamas,Distopia juvenil,0.1537
+The Wonder Years,Pop Punk,2,Eleanor & Park,Romance juvenil / coming-of-age,0.1185
+The Wonder Years,Pop Punk,3,Ready Player One,Distopia juvenil,0.1015
+The Wonder Years,Pop Punk,4,Heartstopper,Romance juvenil / coming-of-age,0.0894
+The Wonder Years,Pop Punk,5,Scott Pilgrim,Distopia juvenil,0.0791
+Sum 41,Pop Punk,1,Sinsajo,Distopia juvenil,0.1541
+Sum 41,Pop Punk,2,La brújula dorada,Fantasia clasica / juvenil,0.1405
+Sum 41,Pop Punk,3,Los juegos del hambre,Distopia juvenil,0.1349
+Sum 41,Pop Punk,4,Ready Player One,Distopia juvenil,0.1301
+Sum 41,Pop Punk,5,Scott Pilgrim,Distopia juvenil,0.1286
+All Time Low,Pop Punk,1,Ready Player One,Distopia juvenil,0.1735
+All Time Low,Pop Punk,2,En llamas,Distopia juvenil,0.122
+All Time Low,Pop Punk,3,Scott Pilgrim,Distopia juvenil,0.1142
+All Time Low,Pop Punk,4,Sinsajo,Distopia juvenil,0.1027
+All Time Low,Pop Punk,5,Spinning Silver,Fantasia de cuento de hadas,0.0828
+Paramore,Pop Punk,1,En llamas,Distopia juvenil,0.1331
+Paramore,Pop Punk,2,Ready Player One,Distopia juvenil,0.1312
+Paramore,Pop Punk,3,Eleanor & Park,Romance juvenil / coming-of-age,0.1312
+Paramore,Pop Punk,4,Scott Pilgrim,Distopia juvenil,0.1232
+Paramore,Pop Punk,5,Heartstopper,Romance juvenil / coming-of-age,0.1155
+Blink-182,Pop Punk,1,Scott Pilgrim,Distopia juvenil,0.1241
+Blink-182,Pop Punk,2,En llamas,Distopia juvenil,0.1139
+Blink-182,Pop Punk,3,Heartstopper,Romance juvenil / coming-of-age,0.111
+Blink-182,Pop Punk,4,Ready Player One,Distopia juvenil,0.108
+Blink-182,Pop Punk,5,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.1003
+Neck Deep,Pop Punk,1,Scott Pilgrim,Distopia juvenil,0.126
+Neck Deep,Pop Punk,2,Heartstopper,Romance juvenil / coming-of-age,0.1217
+Neck Deep,Pop Punk,3,Eleanor & Park,Romance juvenil / coming-of-age,0.1089
+Neck Deep,Pop Punk,4,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.0972
+Neck Deep,Pop Punk,5,Ready Player One,Distopia juvenil,0.0908
+Simple Plan,Pop Punk,1,Scott Pilgrim,Distopia juvenil,0.1375
+Simple Plan,Pop Punk,2,Eleanor & Park,Romance juvenil / coming-of-age,0.1121
+Simple Plan,Pop Punk,3,Heartstopper,Romance juvenil / coming-of-age,0.1108
+Simple Plan,Pop Punk,4,Ready Player One,Distopia juvenil,0.1103
+Simple Plan,Pop Punk,5,El mar sin estrellas,Fantasia clasica / juvenil,0.1054
+Mayday Parade,Pop Punk,1,En llamas,Distopia juvenil,0.1389
+Mayday Parade,Pop Punk,2,Ready Player One,Distopia juvenil,0.13
+Mayday Parade,Pop Punk,3,Eleanor & Park,Romance juvenil / coming-of-age,0.1295
+Mayday Parade,Pop Punk,4,Scott Pilgrim,Distopia juvenil,0.1153
+Mayday Parade,Pop Punk,5,Heartstopper,Romance juvenil / coming-of-age,0.1107
+The Maine,Alternative Rock,1,Scott Pilgrim,Distopia juvenil,0.127
+The Maine,Alternative Rock,2,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.1024
+The Maine,Alternative Rock,3,Eleanor & Park,Romance juvenil / coming-of-age,0.0966
+The Maine,Alternative Rock,4,El mar sin estrellas,Fantasia clasica / juvenil,0.0926
+The Maine,Alternative Rock,5,Heartstopper,Romance juvenil / coming-of-age,0.0752
+The 1975,Alternative Rock,1,Scott Pilgrim,Distopia juvenil,0.1309
+The 1975,Alternative Rock,2,A través del espejo,Fantasia clasica / juvenil,0.129
+The 1975,Alternative Rock,3,El mar sin estrellas,Fantasia clasica / juvenil,0.1261
+The 1975,Alternative Rock,4,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.1155
+The 1975,Alternative Rock,5,Ready Player One,Distopia juvenil,0.1066
+Florence + The Machine,Alternative Rock,1,El mar sin estrellas,Fantasia clasica / juvenil,0.1332
+Florence + The Machine,Alternative Rock,2,Stardust,Romantasy (fantasia romantica),0.1179
+Florence + The Machine,Alternative Rock,3,Scott Pilgrim,Distopia juvenil,0.1086
+Florence + The Machine,Alternative Rock,4,El Hobbit,Alta fantasia / epica,0.1021
+Florence + The Machine,Alternative Rock,5,El Silmarillion,Alta fantasia / epica,0.1002
+The Smashing Pumpkins,Alternative Rock,1,Stardust,Romantasy (fantasia romantica),0.1398
+The Smashing Pumpkins,Alternative Rock,2,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.1393
+The Smashing Pumpkins,Alternative Rock,3,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.1358
+The Smashing Pumpkins,Alternative Rock,4,Scott Pilgrim,Distopia juvenil,0.1325
+The Smashing Pumpkins,Alternative Rock,5,La vida invisible de Addie LaRue,Romantasy (fantasia romantica),0.1217
+Muse,Alternative Rock,1,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.0998
+Muse,Alternative Rock,2,Stardust,Romantasy (fantasia romantica),0.095
+Muse,Alternative Rock,3,Érase una vez un corazón roto,Romantasy (fantasia romantica),0.0887
+Muse,Alternative Rock,4,La canción de Aquiles,Mitologia (nordica / celta / griega),0.0842
+Muse,Alternative Rock,5,Coraline,Fantasia oscura / gotica,0.0826
+The Pretty Reckless,Alternative Rock,1,Scott Pilgrim,Distopia juvenil,0.1943
+The Pretty Reckless,Alternative Rock,2,Carmilla,Gotico clasico / vampiros,0.1118
+The Pretty Reckless,Alternative Rock,3,Gods of Jade and Shadow,Mitologia (nordica / celta / griega),0.1081
+The Pretty Reckless,Alternative Rock,4,La vida invisible de Addie LaRue,Romantasy (fantasia romantica),0.1066
+The Pretty Reckless,Alternative Rock,5,Uprooted,Fantasia de cuento de hadas,0.1028
+Royal Blood,Alternative Rock,1,Scott Pilgrim,Distopia juvenil,0.1124
+Royal Blood,Alternative Rock,2,El Hobbit,Alta fantasia / epica,0.0756
+Royal Blood,Alternative Rock,3,Piranesi,Fantasia oscura / gotica,0.0737
+Royal Blood,Alternative Rock,4,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.0736
+Royal Blood,Alternative Rock,5,Maze Runner,Distopia juvenil,0.0726
+The Cure,Gothic Rock,1,El castillo de Otranto,Gotico clasico / vampiros,0.1725
+The Cure,Gothic Rock,2,Stardust,Romantasy (fantasia romantica),0.1636
+The Cure,Gothic Rock,3,Jonathan Strange y el señor Norrell,Fantasia oscura / gotica,0.1433
+The Cure,Gothic Rock,4,Outlander,Romance historico / gotico,0.1276
+The Cure,Gothic Rock,5,Jane Eyre,Romance historico / gotico,0.1263
+HIM,Gothic Rock,1,El castillo de Otranto,Gotico clasico / vampiros,0.1595
+HIM,Gothic Rock,2,Stardust,Romantasy (fantasia romantica),0.1141
+HIM,Gothic Rock,3,Drácula,Fantasia oscura / gotica,0.112
+HIM,Gothic Rock,4,El retrato de Dorian Gray,Gotico clasico / vampiros,0.1018
+HIM,Gothic Rock,5,Outlander,Romance historico / gotico,0.0984
+The 69 Eyes,Gothic Rock,1,El castillo de Otranto,Gotico clasico / vampiros,0.1778
+The 69 Eyes,Gothic Rock,2,Drácula,Fantasia oscura / gotica,0.1363
+The 69 Eyes,Gothic Rock,3,El retrato de Dorian Gray,Gotico clasico / vampiros,0.1301
+The 69 Eyes,Gothic Rock,4,Mexican Gothic,Fantasia oscura / gotica,0.1254
+The 69 Eyes,Gothic Rock,5,Stardust,Romantasy (fantasia romantica),0.1146
+Ghost,Occult Rock,1,La casa en el mar más azul,Cozy Fantasy / sobrenatural,0.1539
+Ghost,Occult Rock,2,Drácula,Fantasia oscura / gotica,0.1177
+Ghost,Occult Rock,3,Circe,Mitologia (nordica / celta / griega),0.0955
+Ghost,Occult Rock,4,La brújula dorada,Fantasia clasica / juvenil,0.0932
+Ghost,Occult Rock,5,El Senor de los Anillos,Alta fantasia / epica,0.0887
+Green Day,Punk Rock,1,Heartstopper,Romance juvenil / coming-of-age,0.1059
+Green Day,Punk Rock,2,Scott Pilgrim,Distopia juvenil,0.1035
+Green Day,Punk Rock,3,Eleanor & Park,Romance juvenil / coming-of-age,0.102
+Green Day,Punk Rock,4,Under the Whispering Door,Cozy Fantasy / sobrenatural,0.1018
+Green Day,Punk Rock,5,En llamas,Distopia juvenil,0.0803
