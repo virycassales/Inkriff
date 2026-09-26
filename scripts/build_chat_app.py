@@ -182,7 +182,7 @@ def get_modelo_embeddings():
 # 2. Busqueda en vivo de metadatos (misma logica que inkriff_extraccion_completa.ipynb /
 # inkriff_eda_ingenieria.ipynb, reusada aqui para bandas/libros que no estan en el catalogo).
 # =========================================================================================
-MB_HEADERS = {"User-Agent": "InkriffChat/0.1 (contacto: tu_correo@ejemplo.com)"}
+MB_HEADERS = {"User-Agent": "InkriffChat/0.1 (https://github.com/virycassales/Inkriff)"}
 MB_BASE = "https://musicbrainz.org/ws/2"
 
 
@@ -976,5 +976,9 @@ with open("app.py", "w", encoding="utf-8") as f:
 print("Archivo generado: app.py")
 
 with open("requirements.txt", "w", encoding="utf-8") as f:
-    f.write("gradio>=4.0\npandas\nnumpy\nrequests\nopenai\nsentence-transformers\nscikit-learn\n")
+    f.write(
+        "# torch en version CPU (mas ligera; los Spaces gratuitos no tienen GPU)\n"
+        "--extra-index-url https://download.pytorch.org/whl/cpu\n"
+        "gradio==6.28.0\npandas\nnumpy\nrequests\nopenai\nsentence-transformers\nscikit-learn\n"
+    )
 print("Archivo generado: requirements.txt")

@@ -165,7 +165,7 @@ def get_modelo_embeddings():
 # 2. Busqueda en vivo de metadatos (misma logica que inkriff_extraccion_completa.ipynb /
 # inkriff_eda_ingenieria.ipynb, reusada aqui para bandas/libros que no estan en el catalogo).
 # =========================================================================================
-MB_HEADERS = {"User-Agent": "InkriffChat/0.1 (contacto: tu_correo@ejemplo.com)"}
+MB_HEADERS = {"User-Agent": "InkriffChat/0.1 (https://github.com/virycassales/Inkriff)"}
 MB_BASE = "https://musicbrainz.org/ws/2"
 
 

@@ -19,7 +19,7 @@ Todo pasa por un **chat conversacional** (LLM + *function calling*). Cada recome
 - [Requisitos previos](#requisitos-previos)
 - [Puesta en marcha](#puesta-en-marcha)
   - [Opción A: Local (make)](#opción-a-local-make)
-  - [Opción B: Hugging Face Spaces](#opción-b-hugging-face-spaces)
+  - [Opción B: Hugging Face Spaces (automático desde GitHub)](#opción-b-hugging-face-spaces-automático-desde-github)
   - [Opción C: Google Colab (notebooks)](#opción-c-google-colab-notebooks)
 - [Configuración de entorno (.env)](#configuración-de-entorno-env)
 - [Herramientas del chat](#herramientas-del-chat)
@@ -208,11 +208,26 @@ $env:OPENAI_API_KEY="tu-api-key"
 cd app; python app.py
 ```
 
-### Opción B: Hugging Face Spaces
+### Opción B: Hugging Face Spaces (automático desde GitHub)
 
-1. Crea un Space nuevo (SDK: **Gradio**).
-2. Sube **el contenido** de `app/` (los archivos sueltos, no la carpeta).
-3. En *Settings → Repository secrets* agrega `OPENAI_API_KEY` (y opcionalmente `GROQ_API_KEY` como respaldo).
+La app se publica **gratis** en un Space de Hugging Face (CPU basic: 2 vCPU, 16 GB RAM, suficiente para este proyecto). Dos *workflows* de GitHub Actions lo hacen solos:
+
+| Workflow | Cuándo corre | Qué hace |
+|----------|--------------|----------|
+| `Regenerar modelo` (`modelo.yml`) | Cuando cambian los datos de entrada o el script de modelado, o a mano | Ejecuta el notebook 4 en los servidores de GitHub, verifica que los embeddings tengan 384 dims y hace commit de `recomendaciones_*.csv`, `.npz` y el notebook con resultados |
+| `Desplegar en Hugging Face` (`deploy-hf.yml`) | Cuando cambia `app/` o termina `Regenerar modelo` | Crea el Space si no existe, guarda las API keys como *secrets* y sube `app/` |
+
+**Configuración (una sola vez)**, en GitHub → *Settings → Secrets and variables → Actions → New repository secret*:
+
+| Secret | Obligatorio | De dónde sale |
+|--------|:-:|---------------|
+| `HF_TOKEN` | ✅ | [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) → *Create new token* → tipo **Write** |
+| `OPENAI_API_KEY` | uno de los dos | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
+| `GROQ_API_KEY` | uno de los dos | [console.groq.com/keys](https://console.groq.com/keys) (gratis) |
+
+El Space queda en `https://huggingface.co/spaces/<tu-usuario-hf>/inkriff`. Para usar otro nombre, crea la *variable* (no secret) `HF_SPACE` con el valor `usuario/nombre`.
+
+Despliegue manual sin Actions: `HF_TOKEN=hf_xxx python scripts/deploy_hf.py`.
 
 ### Opción C: Google Colab (notebooks)
 
@@ -220,8 +235,7 @@ Para reproducir el pipeline completo desde cero:
 
 1. Abre los notebooks de `notebooks/` en Colab, **en el orden de la tabla de [Componentes](#pipeline-notebooks-notebooks)**.
 2. En cada uno, sube a la sesión los CSVs que lee con `pd.read_csv` (están en `data/raw/` y `data/processed/`). Los notebooks los buscan en la carpeta actual.
-3. El notebook 4 necesita Colab porque descarga el modelo `paraphrase-multilingual-MiniLM-L12-v2`.
-4. Copia los archivos que produce el notebook 4 a `data/processed/` y ejecuta `make sync-app` para actualizar `app/`.
+3. El notebook 4 descarga el modelo `paraphrase-multilingual-MiniLM-L12-v2`. **No hace falta correrlo en Colab**: el workflow `Regenerar modelo` lo ejecuta en GitHub (pestaña *Actions → Regenerar modelo → Run workflow*).
 
 ---
 
@@ -269,7 +283,9 @@ Inkriff/
 ├── Makefile                  # setup, run, notebooks, app, sync-app, clean
 ├── requirements.txt          # dependencias para notebooks + app
 ├── .env.example              # plantilla de configuración (copiar a .env)
+├── .github/workflows/        # modelo.yml (regenera el modelo) · deploy-hf.yml (publica en HF)
 ├── app/                      # ✅ app de chat lista para desplegar
+│   ├── README.md             #    configuración del Space de Hugging Face
 │   ├── app.py                #    generado por scripts/build_chat_app.py
 │   ├── requirements.txt
 │   ├── embeddings_referencia.npz
@@ -335,7 +351,10 @@ Inkriff/
 | `RateLimitError` / cuota agotada de OpenAI | Crédito agotado | La app cambia sola a Groq si hay `GROQ_API_KEY`; o usa `INKRIFF_LLM_PROVEEDOR=groq` |
 | Groq devuelve `400 Tool choice is none` | Faltaban las herramientas en la última ronda | Ya corregido: `tools` va en todas las rondas (ver `generar_respuesta_completa`) |
 | `FileNotFoundError: *.csv` | La app no encuentra sus datos | Ejecuta la app **desde `app/`**, o corre `make sync-app` |
-| Error de dimensiones al buscar un ítem fuera del catálogo | `embeddings_referencia.npz` no viene del modelo MiniLM (384 dims) | Regenera el `.npz` con el notebook 4 en Colab y ejecuta `make sync-app` |
+| Error de dimensiones al buscar un ítem fuera del catálogo | `embeddings_referencia.npz` no viene del modelo MiniLM (384 dims) | Corre *Actions → Regenerar modelo*; el workflow verifica las 384 dims |
+| El workflow de despliegue termina con el aviso "Falta el secret HF_TOKEN" | No se ha configurado el token | Agrega `HF_TOKEN` en los secrets del repo y vuelve a correrlo |
+| El Space dice *Building* varios minutos | La primera vez instala torch y descarga el modelo | Es normal (~5-10 min); después arranca rápido |
+| El Space dice *Runtime error* por falta de API key | No se pasaron `OPENAI_API_KEY` / `GROQ_API_KEY` | Agrégalas como secrets en GitHub y vuelve a correr el despliegue |
 | MusicBrainz devuelve 503 | Límite de ~1 req/s | Ya hay reintento con *backoff* exponencial; espera y reintenta |
 | CSV con acentos rotos (`�`) | Exportado desde Excel sin elegir "CSV UTF-8" | Guarda como **CSV UTF-8**; ver `scripts/build_pares_final.py` |
 

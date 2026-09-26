@@ -1,0 +1,54 @@
+# Publica app/ como Space de Hugging Face (gratis, CPU basic).
+# Requiere el secret HF_TOKEN en Settings → Secrets and variables → Actions.
+name: Desplegar en Hugging Face
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - app/**
+      - scripts/deploy_hf.py
+      - .github/workflows/deploy-hf.yml
+  workflow_run:                # después de regenerar el modelo
+    workflows: [Regenerar modelo]
+    types: [completed]
+
+concurrency:
+  group: deploy-hf
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      HF_SPACE: ${{ vars.HF_SPACE }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main              # la versión más nueva, incluido el commit del modelo
+
+      - name: ¿Hay HF_TOKEN?
+        id: token
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "::warning::Falta el secret HF_TOKEN; no se despliega. Ver README > Despliegue."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.token.outputs.ok == 'true'
+        with:
+          python-version: "3.11"
+
+      - name: Desplegar
+        if: steps.token.outputs.ok == 'true'
+        run: |
+          pip install huggingface_hub
+          python scripts/deploy_hf.py

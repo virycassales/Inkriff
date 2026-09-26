@@ -1,4 +1,6 @@
-gradio>=4.0
+# torch en version CPU (mas ligera; los Spaces gratuitos no tienen GPU)
+--extra-index-url https://download.pytorch.org/whl/cpu
+gradio==6.28.0
 pandas
 numpy
 requests

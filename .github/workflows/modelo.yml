@@ -1,0 +1,71 @@
+# Regenera el modelo de similitud (notebook 4) en los servidores de GitHub, que sí
+# pueden descargar el modelo de Hugging Face. Reemplaza correr el notebook en Colab.
+name: Regenerar modelo
+
+on:
+  workflow_dispatch:           # botón "Run workflow" en la pestaña Actions
+  push:
+    branches: [main]
+    paths:
+      - data/raw/bandas_completo.csv
+      - data/processed/libros_con_sinopsis.csv
+      - data/processed/pares_semilla_final.csv
+      - scripts/build_notebook_modelado.py
+      - .github/workflows/modelo.yml
+
+permissions:
+  contents: write
+
+jobs:
+  modelo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias (torch CPU)
+        run: |
+          pip install --extra-index-url https://download.pytorch.org/whl/cpu \
+            torch sentence-transformers scikit-learn pandas numpy matplotlib \
+            jupyter nbconvert ipykernel
+
+      - name: Ejecutar notebook de modelado
+        run: |
+          mkdir -p _corrida && cd _corrida
+          cp ../data/raw/bandas_completo.csv \
+             ../data/processed/libros_con_sinopsis.csv \
+             ../data/processed/pares_semilla_final.csv .
+          python ../scripts/build_notebook_modelado.py
+          jupyter nbconvert --to notebook --execute --inplace \
+            --ExecutePreprocessor.timeout=1800 inkriff_modelado_similitud.ipynb
+
+      - name: Verificar embeddings (MiniLM = 384 dimensiones)
+        run: |
+          python -c "
+          import numpy as np
+          d = np.load('_corrida/embeddings_referencia.npz')
+          dims = d['emb_bandas'].shape[1]
+          print('emb_bandas', d['emb_bandas'].shape, '| emb_libros', d['emb_libros'].shape)
+          assert dims == 384, f'Se esperaban 384 dimensiones y salieron {dims}'
+          "
+
+      - name: Copiar resultados al repo
+        run: |
+          cp _corrida/recomendaciones_banda_a_libro.csv _corrida/recomendaciones_libro_a_banda.csv \
+             _corrida/embeddings_referencia.npz data/processed/
+          cp _corrida/inkriff_modelado_similitud.ipynb notebooks/   # con resultados visibles
+          make sync-app
+          rm -rf _corrida
+
+      - name: Commit si hubo cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed notebooks app
+          git diff --cached --quiet && echo "Sin cambios" && exit 0
+          git commit -m "Regenerar modelo: embeddings MiniLM (384 dims) y recomendaciones"
+          git push

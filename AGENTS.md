@@ -28,6 +28,8 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 | **D8** | LLM: OpenAI como principal y Groq como respaldo automático | Se cumple el plan (OpenAI) sin quedarse sin servicio si se agota la cuota |
 | **D9** | 3 herramientas separadas (`libros_para_banda`, `bandas_para_libro`, `canciones_de_banda`) en vez de una con parámetro `tipo` | Con una sola, el LLM llamaba "bandas" a resultados que eran libros (bug real con Bad Omens) |
 | **D10** | Gradio en un solo proceso, sin backend/frontend separados ni base de datos | Cabe en *free tier* y alcanza para el alcance académico |
+| **D12** | Hosting en Hugging Face Spaces (CPU basic, gratis), **no Vercel** | Vercel solo corre funciones serverless cortas (~250 MB); el chat necesita un proceso persistente y torch + el modelo MiniLM |
+| **D13** | El modelo se regenera con GitHub Actions (`modelo.yml`) en vez de Colab | Reproducible, sin subir archivos a mano, y verifica las 384 dims antes de hacer commit |
 | **D11** | Ítems fuera del catálogo: búsqueda en vivo + embedding al vuelo con el **mismo** modelo y la **misma** corrección | Así una búsqueda en vivo es comparable con el catálogo precalculado |
 
 ---
@@ -59,7 +61,10 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 | 4.9 | Groq devuelve `400 Tool choice is none, but model called a tool` | Mandar `tools=..., tool_choice="auto"` en **todas** las rondas |
 | 4.10 | Un `<iframe>` de Spotify cortado a la mitad rompe el efecto de máquina de escribir | Los embeds se pegan completos al final del mensaje |
 | 4.11 | El modelo de embeddings no se descarga en entornos sin salida a huggingface.co | Correr el notebook 4 en Colab |
-| 4.12 | `embeddings_referencia.npz` tiene que tener **384 dims** (MiniLM). Si tiene otra dimensión, la búsqueda en vivo falla | Regenerarlo con el notebook 4 en Colab y ejecutar `make sync-app` |
+| 4.12 | `embeddings_referencia.npz` tiene que tener **384 dims** (MiniLM). Si tiene otra dimensión, la búsqueda en vivo falla | `modelo.yml` lo regenera y falla si las dims no son 384 |
+| 4.13 | La app usa la API de **Gradio 6** (`theme`/`css` en `launch()`) | `sdk_version: 6.28.0` en `app/README.md` y `gradio==6.28.0` en requirements |
+| 4.14 | torch desde PyPI trae CUDA (~2 GB) y alarga el build del Space | `--extra-index-url .../whl/cpu` en `app/requirements.txt` |
+| 4.15 | `make notebooks` sobreescribe el notebook 4 ejecutado (con resultados) por uno vacío | Después de regenerar, corre *Actions → Regenerar modelo* |
 
 ---
 
@@ -67,5 +72,6 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 
 - [ ] Conseguir sinopsis de los 15 libros que no la tienen.
 - [ ] Ampliar los 105 pares de evaluación.
-- [ ] Verificar que `app/embeddings_referencia.npz` y `recomendaciones_*.csv` vengan de la corrida real en Colab (ver 4.12).
+- [ ] Primera corrida de `Regenerar modelo` y comparar contra `recomendaciones_*_real.csv` (la corrida de Colab que usa el documento de metodología); si coinciden, borrar los `*_real.csv`.
+- [ ] Reconstruir las pestañas Catálogo y Sugerir y los links de compra (la versión que las tenía no llegó al repo).
 - [ ] Presentación y video final del Diplomado.
