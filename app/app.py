@@ -9,12 +9,15 @@ y, opcional pero recomendado, GROQ_API_KEY (gratis, en https://console.groq.com/
 respaldo automatico si algo falla con OpenAI. Si solo quieres usar la gratuita, define
 INKRIFF_LLM_PROVEEDOR=groq y basta con GROQ_API_KEY.
 """
+import csv
 import json
 import os
 import re
 import time
 import unicodedata
+from datetime import datetime, timezone
 from difflib import SequenceMatcher
+from urllib.parse import quote_plus
 
 import numpy as np
 import pandas as pd
@@ -82,6 +85,41 @@ rec_libro_a_banda = pd.read_csv("recomendaciones_libro_a_banda.csv")
 libros["tiene_sinopsis"] = libros["sinopsis"].fillna("").str.strip().str.len() > 0
 
 SPOTIFY_POR_BANDA = dict(zip(bandas["banda"], bandas["spotify_url"]))
+LIBROS_INFO_POR_TITULO = libros.set_index("titulo_buscado")[
+    ["titulo", "autor", "anio_num", "categoria_semilla", "sinopsis"]
+].to_dict("index")
+
+
+def _primer_autor(autor_crudo):
+    """El campo 'autor' a veces trae varios nombres pegados con comas (residuo de metadatos
+    de Open Library, por ejemplo editoriales o ilustradores) -- para mostrar en tarjetas y
+    armar la busqueda de compra basta con el primer nombre."""
+    if not isinstance(autor_crudo, str) or not autor_crudo.strip():
+        return None
+    return autor_crudo.split(",")[0].strip()
+
+
+# Links de BUSQUEDA (no de producto exacto -- no tenemos ISBN/ID de catalogo de cada tienda)
+# por libro, para poder comprarlo directo desde la recomendacion. Patrones verificados contra
+# cada sitio real en septiembre 2026.
+TIENDAS_LIBROS = {
+    "Amazon México": "https://www.amazon.com.mx/s?k={q}",
+    "Gandhi": "https://www.gandhi.com.mx/catalogsearch/result/?q={q}",
+    "El Sótano": "https://www.elsotano.com/buscar?SotK={q}",
+    "Sanborns": "https://www.sanborns.com.mx/resultados?query={q}",
+    "Porrúa": "https://porrua.mx/catalogsearch/result/?q={q}",
+}
+
+
+def generar_links_compra(titulo, autor=None):
+    """Un link por tienda que busca el libro (titulo + autor) directo en esa tienda -- no es
+    un link al producto exacto (no tenemos ISBN ni ID de catalogo de cada tienda), pero deja
+    comprarlo en un clic sin salir del chat."""
+    if not titulo:
+        return {}
+    consulta = f"{titulo} {autor}".strip() if autor else titulo
+    q = quote_plus(consulta)
+    return {tienda: patron.format(q=q) for tienda, patron in TIENDAS_LIBROS.items()}
 
 
 def spotify_embed_html(spotify_url):
@@ -243,7 +281,11 @@ def recomendar_libros_para_banda(nombre_banda):
     if match:
         fila = rec_banda_a_libro[rec_banda_a_libro["banda"] == match].sort_values("rank")
         recomendaciones = [
-            {"nombre": r["libro_recomendado"], "categoria": r["categoria_libro"]}
+            {
+                "nombre": r["libro_recomendado"],
+                "categoria": r["categoria_libro"],
+                "autor": _primer_autor(LIBROS_INFO_POR_TITULO.get(r["libro_recomendado"], {}).get("autor")),
+            }
             for _, r in fila.iterrows()
         ]
         return {"encontrado": True, "fuente": "catalogo", "tipo_resultado": "libros", "nombre_resuelto": match, "recomendaciones": recomendaciones}
@@ -259,7 +301,11 @@ def recomendar_libros_para_banda(nombre_banda):
     candidatos = np.where(libros["tiene_sinopsis"].values)[0]
     orden = candidatos[np.argsort(-corregida[candidatos])][:5]
     recomendaciones = [
-        {"nombre": libros.iloc[i]["titulo_buscado"], "categoria": libros.iloc[i]["categoria_semilla"]}
+        {
+            "nombre": libros.iloc[i]["titulo_buscado"],
+            "categoria": libros.iloc[i]["categoria_semilla"],
+            "autor": _primer_autor(libros.iloc[i].get("autor")),
+        }
         for i in orden
     ]
     return {"encontrado": True, "fuente": "en_vivo", "tipo_resultado": "libros", "nombre_resuelto": nombre_banda, "generos_encontrados": tags[:5], "recomendaciones": recomendaciones}
@@ -526,16 +572,26 @@ def _construir_tarjetas(resultado):
     icono = "📚" if tipo == "libros" else "🎸"
     etiqueta_campo = "categoria" if tipo == "libros" else "subgenero"
     titulo_seccion = "Libros recomendados" if tipo == "libros" else "Bandas recomendadas"
-    filas = "".join(
-        f'<div class="inkriff-card">'
-        f'<span class="inkriff-card-rank">{i + 1}</span>'
-        f'<span class="inkriff-card-icon">{icono}</span>'
-        f'<span class="inkriff-card-nombre">{_escapar_html(rec.get("nombre"))}</span>'
-        f'<span class="inkriff-badge inkriff-badge-{tipo}">{_escapar_html(rec.get(etiqueta_campo) or "")}</span>'
-        f'</div>'
-        for i, rec in enumerate(recomendaciones)
-    )
-    return f'<div class="inkriff-cards"><div class="inkriff-cards-titulo">{titulo_seccion}</div>{filas}</div>'
+    filas = []
+    for i, rec in enumerate(recomendaciones):
+        links_html = ""
+        if tipo == "libros":
+            links = generar_links_compra(rec.get("nombre"), rec.get("autor"))
+            if links:
+                botones = "".join(
+                    f'<a class="inkriff-buy-link" href="{url}" target="_blank" rel="noopener">{_escapar_html(tienda)}</a>'
+                    for tienda, url in links.items()
+                )
+                links_html = f'<div class="inkriff-buy-links">{botones}</div>'
+        filas.append(
+            f'<div class="inkriff-card">'
+            f'<span class="inkriff-card-rank">{i + 1}</span>'
+            f'<span class="inkriff-card-icon">{icono}</span>'
+            f'<span class="inkriff-card-nombre">{_escapar_html(rec.get("nombre"))}</span>'
+            f'<span class="inkriff-badge inkriff-badge-{tipo}">{_escapar_html(rec.get(etiqueta_campo) or "")}</span>'
+            f'</div>{links_html}'
+        )
+    return f'<div class="inkriff-cards"><div class="inkriff-cards-titulo">{titulo_seccion}</div>{"".join(filas)}</div>'
 
 
 def _construir_embeds(candidatos_embed):
@@ -640,6 +696,165 @@ def responder_chat(mensaje, historial):
 
 
 # =========================================================================================
+# 4.5 Catalogo navegable -- "top 50" de bandas y de libros. Aclaracion honesta: para BANDAS
+# si tenemos una senal real de popularidad externa (pageviews de Genius), asi que ese top 50
+# es "popularidad real". Para LIBROS no capturamos ningun dato de popularidad externa (rating,
+# ediciones, etc.) durante la extraccion -- en vez de inventar un criterio, se ordenan por
+# cuantas bandas del catalogo los recomiendan (frecuencia de recomendacion dentro de Inkriff),
+# que es un "top" honesto con los datos que sí tenemos. Se construye una sola vez al importar
+# (catalogo fijo, no cambia en cada request) y se muestra como links de escucha/compra en vez
+# de reproductores embebidos -- 50 iframes de Spotify a la vez serian muy pesados.
+# =========================================================================================
+FRECUENCIA_RECOMENDACION_LIBRO = rec_banda_a_libro["libro_recomendado"].value_counts()
+
+
+def _top1_libro_de_banda(banda):
+    fila = rec_banda_a_libro[rec_banda_a_libro["banda"] == banda].sort_values("rank")
+    return fila.iloc[0]["libro_recomendado"] if not fila.empty else None
+
+
+def _top1_banda_de_libro(titulo):
+    fila = rec_libro_a_banda[rec_libro_a_banda["libro"] == titulo].sort_values("rank")
+    return fila.iloc[0]["banda_recomendada"] if not fila.empty else None
+
+
+def _construir_catalogo_bandas(top_n=50):
+    top = bandas.sort_values("pageviews", ascending=False).head(top_n)
+    tarjetas = []
+    for i, (_, fila) in enumerate(top.iterrows(), start=1):
+        nombre = fila["banda"]
+        libro_top = _top1_libro_de_banda(nombre)
+        combina = (
+            f'<div class="inkriff-catalog-combina">📚 Combina con: <strong>{_escapar_html(libro_top)}</strong></div>'
+            if libro_top else ""
+        )
+        spotify_url = fila.get("spotify_url")
+        link_spotify = (
+            f'<a class="inkriff-buy-link" href="{spotify_url}" target="_blank" rel="noopener">🎧 Escuchar en Spotify</a>'
+            if isinstance(spotify_url, str) and "open.spotify.com" in spotify_url else ""
+        )
+        subgenero_txt = _escapar_html(fila.get("subgenero_semilla") or "")
+        pais_txt = _escapar_html(fila.get("pais") or "")
+        tarjetas.append(f"""<div class="inkriff-catalog-card">
+<div class="inkriff-catalog-rank">#{i}</div>
+<div class="inkriff-catalog-info">
+<div class="inkriff-catalog-nombre">{_escapar_html(nombre)}</div>
+<div class="inkriff-catalog-meta">{subgenero_txt} · {pais_txt}</div>
+{combina}
+<div class="inkriff-buy-links">{link_spotify}</div>
+</div>
+</div>""")
+    return '<div class="inkriff-catalog-grid">' + "".join(tarjetas) + '</div>'
+
+
+def _construir_catalogo_libros(top_n=50):
+    orden_titulos = FRECUENCIA_RECOMENDACION_LIBRO.index.tolist()[:top_n]
+    tarjetas = []
+    for i, titulo in enumerate(orden_titulos, start=1):
+        info = LIBROS_INFO_POR_TITULO.get(titulo, {})
+        autor = _primer_autor(info.get("autor"))
+        anio = info.get("anio_num")
+        anio_txt = f" ({int(anio)})" if pd.notna(anio) else ""
+        sinopsis = (info.get("sinopsis") or "").strip()
+        sinopsis_html = (
+            f'<details class="inkriff-catalog-sinopsis"><summary>Ver sinopsis</summary><p>{_escapar_html(sinopsis)}</p></details>'
+            if sinopsis else ""
+        )
+        banda_top = _top1_banda_de_libro(titulo)
+        combina = (
+            f'<div class="inkriff-catalog-combina">🎸 Combina con: <strong>{_escapar_html(banda_top)}</strong></div>'
+            if banda_top else ""
+        )
+        botones = "".join(
+            f'<a class="inkriff-buy-link" href="{url}" target="_blank" rel="noopener">{_escapar_html(tienda)}</a>'
+            for tienda, url in generar_links_compra(titulo, autor).items()
+        )
+        autor_txt = _escapar_html(autor or "")
+        tarjetas.append(f"""<div class="inkriff-catalog-card">
+<div class="inkriff-catalog-rank">#{i}</div>
+<div class="inkriff-catalog-info">
+<div class="inkriff-catalog-nombre">{_escapar_html(titulo)}{anio_txt}</div>
+<div class="inkriff-catalog-meta">{autor_txt}</div>
+{combina}
+{sinopsis_html}
+<div class="inkriff-buy-links">{botones}</div>
+</div>
+</div>""")
+    return '<div class="inkriff-catalog-grid">' + "".join(tarjetas) + '</div>'
+
+
+CATALOGO_BANDAS_HTML = _construir_catalogo_bandas()
+CATALOGO_LIBROS_HTML = _construir_catalogo_libros()
+
+
+# =========================================================================================
+# 4.6 Sugerencias de la comunidad -- sin cuentas ni login (se decidio asi a proposito: un
+# sistema de usuarios de verdad necesitaria autenticacion propia y una base de datos externa
+# persistente, porque el plan gratis de Hugging Face Spaces borra los archivos locales cada
+# vez que la app se reinicia). Cualquiera puede mandar una sugerencia; queda guardada en un
+# CSV local y, si se conecta un Hugging Face Dataset (variables INKRIFF_DATASET_ID + HF_TOKEN
+# como secrets del Space), tambien se sube ahi para que sobreviva a un reinicio del Space --
+# es opcional, sin esas variables la app funciona igual, solo que sin esa persistencia extra.
+# =========================================================================================
+RUTA_SUGERENCIAS_LOCAL = "sugerencias_usuarios.csv"
+MAX_LARGO_CAMPO_CORTO = 300
+MAX_LARGO_NOTA = 1000
+
+
+def _guardar_en_dataset_hf(fila):
+    """Best-effort: si no esta configurado un Hugging Face Dataset de respaldo, no hace nada
+    (la sugerencia igual ya quedo guardada localmente) -- nunca truena la app por esto."""
+    dataset_id = os.environ.get("INKRIFF_DATASET_ID")
+    token = os.environ.get("HF_TOKEN")
+    if not dataset_id or not token:
+        return False
+    try:
+        from huggingface_hub import HfApi
+        api = HfApi(token=token)
+        marca = fila["timestamp"].replace(":", "-")
+        api.upload_file(
+            path_or_fileobj=json.dumps(fila, ensure_ascii=False, indent=2).encode("utf-8"),
+            path_in_repo=f"sugerencias/{marca}_{fila['tipo']}.json",
+            repo_id=dataset_id,
+            repo_type="dataset",
+        )
+        return True
+    except Exception:
+        return False
+
+
+def guardar_sugerencia(tipo, nombre, combina_con, nota):
+    nombre = (nombre or "").strip()
+    combina_con = (combina_con or "").strip()
+    nota = (nota or "").strip()
+    if not nombre:
+        return "Escribe el nombre de la banda o el libro que quieres sugerir."
+    if len(nombre) > MAX_LARGO_CAMPO_CORTO or len(combina_con) > MAX_LARGO_CAMPO_CORTO:
+        return "Ese campo es demasiado largo -- intenta resumirlo."
+    if len(nota) > MAX_LARGO_NOTA:
+        return "Tu nota es demasiado larga -- intenta resumirla un poco."
+    fila = {
+        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "tipo": tipo or "Banda",
+        "nombre": nombre,
+        "combina_con": combina_con,
+        "nota": nota,
+    }
+    try:
+        existe = os.path.exists(RUTA_SUGERENCIAS_LOCAL)
+        with open(RUTA_SUGERENCIAS_LOCAL, "a", newline="", encoding="utf-8") as f:
+            escritor = csv.DictWriter(f, fieldnames=list(fila.keys()))
+            if not existe:
+                escritor.writeheader()
+            escritor.writerow(fila)
+    except Exception as e:
+        return f"No pude guardar tu sugerencia: {type(e).__name__}: {e}"
+    persistio = _guardar_en_dataset_hf(fila)
+    extra = " Ya quedó también respaldada en la nube." if persistio else ""
+    return f'¡Gracias! Guardamos tu sugerencia de {fila["tipo"].lower()} "{nombre}".{extra} La revisaremos para agregarla al catálogo.'
+
+
+# =========================================================================================
 # 5. Tema visual e interfaz -- paleta "metal se encuentra con fantasia" (violeta/oro sobre
 # fondo casi negro), la misma en modo claro y oscuro del navegador para que la marca se vea
 # igual siempre, mas tarjetas de recomendacion y reproductores con estilo propio via CSS.
@@ -741,6 +956,27 @@ CSS_INKRIFF = """
     text-align: center; color: #a89cc8; font-size: 0.82em; margin-top: 6px;
     padding-top: 14px; border-top: 1px solid #3a2f52;
 }
+.inkriff-buy-links { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 4px 4px; }
+.inkriff-buy-link {
+    font-size: 0.72em; padding: 4px 10px; border-radius: 999px; font-weight: 600;
+    background: #221c33; color: #d4af37 !important; border: 1px solid #3a2f52;
+    text-decoration: none !important; white-space: nowrap;
+}
+.inkriff-buy-link:hover { background: #2c2440; border-color: #d4af37; }
+.inkriff-catalog-caption { color: #a89cc8; font-size: 0.85em; margin: -4px 0 14px 2px; }
+.inkriff-catalog-grid { display: flex; flex-direction: column; gap: 10px; }
+.inkriff-catalog-card {
+    display: flex; gap: 12px; padding: 12px 14px; border-radius: 14px;
+    background: linear-gradient(135deg, #1a1625, #241c38); border: 1px solid #3a2f52;
+}
+.inkriff-catalog-rank { font-weight: 800; color: #d4af37; font-size: 1.1em; flex-shrink: 0; width: 2.2em; }
+.inkriff-catalog-info { flex: 1; min-width: 0; }
+.inkriff-catalog-nombre { font-weight: 700; color: #f3f1f7; font-size: 1.02em; }
+.inkriff-catalog-meta { color: #a89cc8; font-size: 0.82em; margin-top: 2px; }
+.inkriff-catalog-combina { color: #2dd4bf; font-size: 0.85em; margin-top: 6px; }
+.inkriff-catalog-sinopsis { margin-top: 6px; font-size: 0.85em; color: #d8d2e6; }
+.inkriff-catalog-sinopsis summary { cursor: pointer; color: #a89cc8; font-weight: 600; }
+.inkriff-catalog-sinopsis p { margin: 6px 0 0 0; line-height: 1.5; }
 footer { display: none !important; }
 """
 
@@ -792,6 +1028,28 @@ with gr.Blocks(title="Inkriff") as demo:
                 # ese HTML lo construye nuestro propio codigo (nunca texto libre del usuario ni
                 # del LLM), asi que es seguro desactivar el sanitizado.
                 chatbot=gr.Chatbot(sanitize_html=False, show_label=False),
+            )
+        with gr.Tab("Catálogo"):
+            with gr.Tabs():
+                with gr.Tab("🎸 Top 50 bandas"):
+                    gr.HTML('<div class="inkriff-catalog-caption">Ordenadas por popularidad real (actividad en Genius).</div>')
+                    gr.HTML(CATALOGO_BANDAS_HTML)
+                with gr.Tab("📚 Top 50 libros"):
+                    gr.HTML('<div class="inkriff-catalog-caption">Ordenados por cuántas bandas del catálogo los recomiendan (no tenemos datos de popularidad externa de libros).</div>')
+                    gr.HTML(CATALOGO_LIBROS_HTML)
+        with gr.Tab("Sugerir"):
+            gr.Markdown("### ¿Conoces una banda o un libro que debería estar en Inkriff?")
+            gr.Markdown("Mándanoslo y lo revisamos para agregarlo al catálogo -- no necesitas crear ninguna cuenta.")
+            tipo_sugerencia = gr.Radio(["Banda", "Libro"], value="Banda", label="¿Qué quieres sugerir?")
+            nombre_sugerencia = gr.Textbox(label="Nombre de la banda o del libro")
+            combina_sugerencia = gr.Textbox(label="¿Con qué banda o libro combina? (opcional)")
+            nota_sugerencia = gr.Textbox(label="Cuéntanos por qué combinan (opcional)", lines=3)
+            boton_sugerencia = gr.Button("Enviar sugerencia", variant="primary")
+            resultado_sugerencia = gr.Markdown()
+            boton_sugerencia.click(
+                fn=guardar_sugerencia,
+                inputs=[tipo_sugerencia, nombre_sugerencia, combina_sugerencia, nota_sugerencia],
+                outputs=resultado_sugerencia,
             )
 
 

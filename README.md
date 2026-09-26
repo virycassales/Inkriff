@@ -7,6 +7,15 @@ Plataforma de **recomendación bidireccional** entre música **rock/metal** y li
 
 Todo pasa por un **chat conversacional** (LLM + *function calling*). Cada recomendación viene con una **explicación en lenguaje natural** de por qué encaja, nunca con un score solo.
 
+La app tiene cuatro pestañas:
+
+| Pestaña | Qué hace |
+|---------|----------|
+| **Inicio** | Portada con la descripción del proyecto |
+| **Chat** | El recomendador conversacional, con reproductor de Spotify para las bandas y links de compra para los libros |
+| **Catálogo** | Top 50 bandas (por popularidad en Genius) y top 50 libros (por cuántas bandas del catálogo los recomiendan), con sinopsis, con qué combinan y dónde escucharlos o comprarlos |
+| **Sugerir** | Formulario sin cuenta para proponer una banda o un libro nuevo para el catálogo |
+
 > ⚠️ **Inkriff es un proyecto académico**: presentado como una empresa ficticia de IA, y **no es un producto comercial**. No reproduce ni redistribuye letras de canciones ni texto de libros; solo usa metadatos, tags y sinopsis públicas.
 
 ---
@@ -54,7 +63,7 @@ flowchart LR
 
     subgraph App["③ APP DE CHAT · Gradio"]
         direction TB
-        UI[Chat] --> LLM[LLM con function calling<br/>OpenAI → respaldo Groq]
+        UI[Chat · Catálogo · Sugerir] --> LLM[LLM con function calling<br/>OpenAI → respaldo Groq]
         LLM --> TOOLS[3 herramientas]
         TOOLS --> SPOT[Reproductor Spotify]
         TOOLS -.fuera del catálogo.-> LIVE[Búsqueda en vivo]
@@ -118,6 +127,9 @@ Se corren **en este orden**. Cada notebook lee los CSVs que dejó el anterior.
 | Catálogo | *Fuzzy match* (`SequenceMatcher` ≥ 0.82) contra 81 bandas y 112 libros, con respuesta instantánea |
 | Búsqueda en vivo | MusicBrainz / Open Library / Google Books con reintento exponencial; embedding al vuelo con el **mismo** modelo y la **misma** corrección de hubness |
 | Spotify | Reproductor embebido: se reescribe el link público a `/embed/`, sin API key |
+| Links de compra | Búsqueda del libro en Amazon México, Gandhi, El Sótano, Sanborns y Porrúa. Son links de **búsqueda**, no del producto exacto (no hay ISBN por tienda) |
+| Catálogo Top 50 | HTML precalculado al arrancar. La popularidad de libros es interna (frecuencia de recomendación); no hay un dato externo de popularidad |
+| Sugerencias | Se guardan en `sugerencias_usuarios.csv` y, si hay Dataset configurado, también en un Dataset **privado** de Hugging Face (sobrevive a reinicios del Space) |
 
 ### Scripts (`scripts/`)
 
@@ -215,7 +227,7 @@ La app se publica **gratis** en un Space de Hugging Face (CPU basic: 2 vCPU, 16 
 | Workflow | Cuándo corre | Qué hace |
 |----------|--------------|----------|
 | `Regenerar modelo` (`modelo.yml`) | Cuando cambian los datos de entrada o el script de modelado, o a mano | Ejecuta el notebook 4 en los servidores de GitHub, verifica que los embeddings tengan 384 dims y hace commit de `recomendaciones_*.csv`, `.npz` y el notebook con resultados |
-| `Desplegar en Hugging Face` (`deploy-hf.yml`) | Cuando cambia `app/` o termina `Regenerar modelo` | Crea el Space si no existe, guarda las API keys como *secrets* y sube `app/` |
+| `Desplegar en Hugging Face` (`deploy-hf.yml`) | Cuando cambia `app/` o termina `Regenerar modelo` | Crea el Space si no existe, guarda las API keys como *secrets*, crea el Dataset privado `inkriff-sugerencias` y sube `app/` |
 
 **Configuración (una sola vez)**, en GitHub → *Settings → Secrets and variables → Actions → New repository secret*:
 
@@ -250,6 +262,8 @@ Copia `.env.example` a `.env`.
 | `INKRIFF_LLM_PROVEEDOR` | `openai` | Pon `groq` para usar solo la opción gratuita |
 | `INKRIFF_LLM_MODELO_OPENAI` | `gpt-4o-mini` | |
 | `INKRIFF_LLM_MODELO_GROQ` | `openai/gpt-oss-20b` | |
+| `INKRIFF_DATASET_ID` | — | Dataset de HF para guardar sugerencias (`usuario/inkriff-sugerencias`); lo configura solo el despliegue |
+| `HF_TOKEN` | — | Solo para escribir en ese Dataset |
 
 > 🔒 `.env` está en `.gitignore`. **Nunca subas API keys al repositorio.**
 

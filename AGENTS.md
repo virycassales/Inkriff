@@ -29,6 +29,7 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 | **D9** | 3 herramientas separadas (`libros_para_banda`, `bandas_para_libro`, `canciones_de_banda`) en vez de una con parámetro `tipo` | Con una sola, el LLM llamaba "bandas" a resultados que eran libros (bug real con Bad Omens) |
 | **D10** | Gradio en un solo proceso, sin backend/frontend separados ni base de datos | Cabe en *free tier* y alcanza para el alcance académico |
 | **D12** | Hosting en Hugging Face Spaces (CPU basic, gratis), **no Vercel** | Vercel solo corre funciones serverless cortas (~250 MB); el chat necesita un proceso persistente y torch + el modelo MiniLM |
+| **D14** | Las sugerencias se guardan en un Dataset **privado** de HF, además del CSV local | El disco del Space se borra al reiniciar; el Dataset persiste y no expone datos de quien sugiere |
 | **D13** | El modelo se regenera con GitHub Actions (`modelo.yml`) en vez de Colab | Reproducible, sin subir archivos a mano, y verifica las 384 dims antes de hacer commit |
 | **D11** | Ítems fuera del catálogo: búsqueda en vivo + embedding al vuelo con el **mismo** modelo y la **misma** corrección | Así una búsqueda en vivo es comparable con el catálogo precalculado |
 
@@ -73,5 +74,5 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 - [ ] Conseguir sinopsis de los 15 libros que no la tienen.
 - [ ] Ampliar los 105 pares de evaluación.
 - [x] Primera corrida de `Regenerar modelo`: reproduce al 100% la corrida de Colab del documento de metodología (MRR combinado 0.160 contra 0.133 sin corregir). Se borraron los `*_real.csv` duplicados.
-- [ ] Reconstruir las pestañas Catálogo y Sugerir y los links de compra (la versión que las tenía no llegó al repo).
+- [x] Pestañas Catálogo y Sugerir y links de compra integradas en `scripts/build_chat_app.py` a partir del notebook final.
 - [ ] Presentación y video final del Diplomado.

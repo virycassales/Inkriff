@@ -21,3 +21,6 @@ piloto_*.csv
 
 # carpeta temporal del workflow de modelado
 _corrida/
+
+# sugerencias capturadas localmente por la app
+sugerencias_usuarios.csv
