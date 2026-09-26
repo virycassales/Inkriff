@@ -7,7 +7,7 @@ Plataforma de **recomendación bidireccional** entre música **rock/metal** y li
 
 Todo pasa por un **chat conversacional** (LLM + *function calling*). Cada recomendación viene con una **explicación en lenguaje natural** de por qué encaja, nunca con un score solo.
 
-> ⚠️ **Inkriff es un proyecto académico**: es el Trabajo Final del Diplomado en Ciencia de Datos (FES Acatlán, UNAM), presentado como una empresa ficticia de IA, y **no es un producto comercial**. No reproduce ni redistribuye letras de canciones ni texto de libros; solo usa metadatos, tags y sinopsis públicas.
+> ⚠️ **Inkriff es un proyecto académico**: presentado como una empresa ficticia de IA, y **no es un producto comercial**. No reproduce ni redistribuye letras de canciones ni texto de libros; solo usa metadatos, tags y sinopsis públicas.
 
 ---
 
