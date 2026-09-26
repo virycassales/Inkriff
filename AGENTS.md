@@ -72,6 +72,6 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 
 - [ ] Conseguir sinopsis de los 15 libros que no la tienen.
 - [ ] Ampliar los 105 pares de evaluación.
-- [ ] Primera corrida de `Regenerar modelo` y comparar contra `recomendaciones_*_real.csv` (la corrida de Colab que usa el documento de metodología); si coinciden, borrar los `*_real.csv`.
+- [x] Primera corrida de `Regenerar modelo`: reproduce al 100% la corrida de Colab del documento de metodología (MRR combinado 0.160 contra 0.133 sin corregir). Se borraron los `*_real.csv` duplicados.
 - [ ] Reconstruir las pestañas Catálogo y Sugerir y los links de compra (la versión que las tenía no llegó al repo).
 - [ ] Presentación y video final del Diplomado.
