@@ -71,14 +71,3 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 | 4.17 | Gradio 6 cambió el formato del historial del chat | Se normaliza antes de mandarlo al LLM |
 | 4.18 | Volver a correr el modelo puede mover el 4.º decimal de algunas similitudes (ruido de punto flotante en CPU); el orden de las recomendaciones no cambia | `modelo.yml` ya no se dispara al editar su propio archivo; los CSV y el `.npz` del repo son los finales validados |
 | 4.15 | `make notebooks` sobreescribe el notebook 4 ejecutado (con resultados) por uno vacío | Después de regenerar, corre *Actions → Regenerar modelo* |
-
----
-
-## 5. Pendientes
-
-- [ ] Conseguir sinopsis de los 15 libros que no la tienen.
-- [ ] Ampliar los 105 pares de evaluación.
-- [x] Primera corrida de `Regenerar modelo`: reproduce al 100% la corrida de Colab del documento de metodología (MRR combinado 0.160 contra 0.133 sin corregir). Se borraron los `*_real.csv` duplicados.
-- [x] Pestañas Catálogo y Sugerir y links de compra integradas en `scripts/build_chat_app.py` a partir del notebook final.
-- [ ] Si se necesita conservar las sugerencias: descargar `sugerencias_usuarios.csv` al terminar cada sesión de Colab.
-- [ ] Presentación y video final del Diplomado.
