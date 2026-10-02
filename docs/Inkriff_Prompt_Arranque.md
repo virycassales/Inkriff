@@ -1,26 +1,5 @@
 # Prompt de Arranque — Inkriff
 
-## Para qué sirve este documento
-
-El PDF que compartiste ("InverAI - Prompt Arranque") es el mensaje inicial que el profe le da a un
-asistente de código (Claude Code, Cursor, etc.) ANTES de escribir una sola línea: le explica el objetivo,
-la arquitectura, el stack y los límites, para que todo lo que construya después sea consistente — en vez
-de ir programando pedacitos sueltos sin un plan compartido.
-
-Aquí está el equivalente para Inkriff. Lo vas a usar así: cuando lleguemos a la fase de construir el
-pipeline/interfaz real (más adelante en la lista de tareas), pegas el bloque de abajo como primer mensaje
-en tu asistente de código (o me lo compartes aquí mismo) para que arranque con todo el contexto de una vez,
-en vez de que tengamos que explicarlo de nuevo cada vez.
-
-Una diferencia a propósito frente al de InverAI: el suyo describe una plataforma de producción completa
-(monorepo, Angular, Docker, un orquestador con 6 agentes especializados). Para nuestro Trabajo Final ya
-decidimos un stack mucho más ligero y 100% en free tier (Gradio sobre Hugging Face Spaces, sin
-frontend/backend separados, sin base de datos relacional) — así que este prompt está ajustado a ESE
-alcance, no al de InverAI. Si en algún momento tu profe pide igualar la complejidad de InverAI, avísame y
-lo ajustamos, pero por ahora mantenerlo simple es lo que nos conviene.
-
----
-
 ## Prompt (copiar y pegar tal cual)
 
 Eres arquitecto full-stack senior en sistemas de recomendación y aplicaciones de IA. Construye "Inkriff":
