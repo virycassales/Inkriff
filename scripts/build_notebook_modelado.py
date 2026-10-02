@@ -7,6 +7,8 @@ multilingues (necesita descargar un modelo -> requiere Colab, este sandbox no
 tiene salida a huggingface.co)."""
 import json
 
+from descarga_datos import celda_descarga
+
 
 def md(text):
     return {"cell_type": "markdown", "metadata": {}, "source": text.splitlines(keepends=True)}
@@ -54,8 +56,8 @@ libro-banda, ¿en qué lugar queda la banda correcta si ordeno todas las 81 band
 por similitud con ese libro? (y viceversa). Se reporta el rank promedio (comparado
 contra lo que daría el azar), Recall@5, Recall@10 y MRR (mean reciprocal rank).
 
-Sube `bandas_completo.csv`, `libros_con_sinopsis.csv` y `pares_semilla_final.csv`
-antes de correr.
+Usa `bandas_completo.csv`, `libros_con_sinopsis.csv` y `pares_semilla_final.csv`; la celda
+de carga los descarga de GitHub si no están en la carpeta.
 """))
 
 cells.append(code("""!pip -q install scikit-learn sentence-transformers
@@ -68,15 +70,11 @@ import unicodedata
 import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+'''))
 
-try:
-    from google.colab import files
-    print("Sube bandas_completo.csv, libros_con_sinopsis.csv y pares_semilla_final.csv:")
-    files.upload()
-except ImportError:
-    pass
+cells.append(code(celda_descarga(["bandas_completo.csv", "libros_con_sinopsis.csv", "pares_semilla_final.csv"])))
 
-bandas = pd.read_csv("bandas_completo.csv")
+cells.append(code('''bandas = pd.read_csv("bandas_completo.csv")
 libros = pd.read_csv("libros_con_sinopsis.csv")
 pares = pd.read_csv("pares_semilla_final.csv")
 print(f"bandas: {bandas.shape} | libros: {libros.shape} | pares: {pares.shape}")

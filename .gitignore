@@ -29,3 +29,7 @@ sugerencias_usuarios.csv
 notebooks/figuras/
 notebooks/figuras_inkriff.zip
 figuras_inkriff.zip
+
+# copias locales que hace la celda de carga al correr notebooks desde notebooks/
+notebooks/*.csv
+notebooks/*.npz

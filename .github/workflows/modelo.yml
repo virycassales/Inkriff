@@ -52,12 +52,28 @@ jobs:
           assert dims == 384, f'Se esperaban 384 dimensiones y salieron {dims}'
           "
 
-      - name: Copiar resultados al repo
+      - name: Copiar resultados al repo (solo si cambia el orden de las recomendaciones)
         run: |
-          cp _corrida/recomendaciones_banda_a_libro.csv _corrida/recomendaciones_libro_a_banda.csv \
-             _corrida/embeddings_referencia.npz data/processed/
+          # Re-correr el modelo puede mover el 4.º decimal de algunas similitudes (ruido de punto
+          # flotante, trampa 4.18). Si el ORDEN de las recomendaciones no cambia, se conservan los
+          # archivos finales validados y solo se actualiza el notebook ejecutado.
+          python - <<'PY'
+          import pandas as pd, sys
+          mismo = True
+          for f, cols in [("recomendaciones_banda_a_libro.csv", ["banda", "rank", "libro_recomendado"]),
+                          ("recomendaciones_libro_a_banda.csv", ["libro", "rank", "banda_recomendada"])]:
+              a = pd.read_csv(f"data/processed/{f}")[cols].values.tolist()
+              b = pd.read_csv(f"_corrida/{f}")[cols].values.tolist()
+              mismo &= (a == b)
+          open("_corrida/MISMO_ORDEN", "w").write("1" if mismo else "0")
+          print("Mismo orden de recomendaciones:", mismo)
+          PY
+          if [ "$(cat _corrida/MISMO_ORDEN)" = "0" ]; then
+            cp _corrida/recomendaciones_banda_a_libro.csv _corrida/recomendaciones_libro_a_banda.csv \
+               _corrida/embeddings_referencia.npz data/processed/
+            make sync-app
+          fi
           cp _corrida/inkriff_modelado_similitud.ipynb notebooks/   # con resultados visibles
-          make sync-app
           rm -rf _corrida
 
       - name: Commit si hubo cambios

@@ -11,6 +11,8 @@ comparten exactamente la misma logica:
 """
 import json
 
+from descarga_datos import celda_descarga
+
 CORE_LOGIC = '''import pandas as pd
 import gradio as gr
 
@@ -140,7 +142,7 @@ en una interfaz simple: eliges un libro y te recomienda bandas, o eliges una ban
 recomienda libros. **No vuelve a calcular ninguna similitud ni llama a ninguna API** — solo
 lee los CSVs de recomendaciones que ya generó ese notebook, así que corre en segundos.
 
-Sube estos 4 archivos antes de correr: `recomendaciones_banda_a_libro.csv`,
+Usa estos 4 archivos (la celda de carga los descarga de GitHub si no están): `recomendaciones_banda_a_libro.csv`,
 `recomendaciones_libro_a_banda.csv`, `bandas_completo.csv` (para el enlace de Spotify) y
 `libros_con_sinopsis.csv` (para mostrar un extracto de la sinopsis del libro recomendado).
 
@@ -152,13 +154,8 @@ versión final del chat.
 cells.append(code('''!pip -q install gradio
 '''))
 
-cells.append(code('''try:
-    from google.colab import files
-    print("Sube recomendaciones_banda_a_libro.csv, recomendaciones_libro_a_banda.csv, bandas_completo.csv y libros_con_sinopsis.csv:")
-    files.upload()
-except ImportError:
-    pass
-'''))
+cells.append(code(celda_descarga(["recomendaciones_banda_a_libro.csv", "recomendaciones_libro_a_banda.csv",
+                                   "bandas_completo.csv", "libros_con_sinopsis.csv"])))
 
 cells.append(md("## Interfaz\n"))
 cells.append(code(CORE_LOGIC))

@@ -6,6 +6,8 @@ sinopsis de libros (necesaria para Zipf/nube de palabras/TF-IDF), porque la
 extraccion original solo trajo titulo/autor/anio."""
 import json
 
+from descarga_datos import celda_descarga
+
 
 def md(text):
     return {"cell_type": "markdown", "metadata": {}, "source": text.splitlines(keepends=True)}
@@ -32,8 +34,8 @@ Este notebook toma los 3 CSVs que ya generamos en la fase de extraccion:
 - `pares_semilla_final.csv` (105 pares libro<->banda curados a mano — el ancla de
   entrenamiento supervisado del dual encoder)
 
-**Antes de correr**, sube estos 3 archivos a la sesion de Colab (icono de carpeta
-en el panel izquierdo -> arrastra los archivos, o usa la celda de carga de abajo).
+**No hace falta subir archivos:** la celda de carga descarga estos 3 archivos de GitHub
+si no están en la carpeta.
 
 El notebook tiene 3 partes:
 
@@ -73,14 +75,9 @@ plt.rcParams["figure.dpi"] = 100
 cells.append(md("""## 0. Cargar los datos
 """))
 
-cells.append(code('''try:
-    from google.colab import files
-    print("Sube bandas_completo.csv, libros.csv y pares_semilla_final.csv:")
-    files.upload()
-except ImportError:
-    pass  # no estamos en Colab; se asume que los CSVs ya estan en el directorio actual
+cells.append(code(celda_descarga(["bandas_completo.csv", "libros.csv", "pares_semilla_final.csv"])))
 
-bandas = pd.read_csv("bandas_completo.csv")
+cells.append(code('''bandas = pd.read_csv("bandas_completo.csv")
 libros = pd.read_csv("libros.csv")
 pares = pd.read_csv("pares_semilla_final.csv")
 

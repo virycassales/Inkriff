@@ -208,9 +208,7 @@ La app es **Gradio** y no tiene hosting permanente: se corre en Google Colab (co
 ### Opción A: Google Colab con link público (Gradio)
 
 1. Abre [`notebooks/inkriff_chat_recomendador.ipynb`](notebooks/inkriff_chat_recomendador.ipynb) en Colab.
-2. Cuando la celda de carga lo pida, sube estos archivos de `app/`:
-   `bandas_completo.csv`, `libros_con_sinopsis.csv`, `recomendaciones_banda_a_libro.csv`, `recomendaciones_libro_a_banda.csv`, `embeddings_referencia.npz`, `portadas_libros.csv` y `fotos_bandas.csv`.
-   Los dos últimos son opcionales: si no los subes, el notebook vuelve a buscar las imágenes (~1 min).
+2. Corre las celdas en orden. **No hay que subir archivos:** la celda de carga descarga de GitHub los CSV, los embeddings y las URLs de portadas y fotos.
 3. Pega tu `OPENAI_API_KEY` y/o `GROQ_API_KEY` cuando te las pida. No quedan guardadas en el notebook.
 4. Corre la celda del chat y luego `demo.launch(share=True, ...)`. Gradio te da un link `https://….gradio.live` que **cualquiera puede abrir mientras la sesión de Colab siga activa** (máximo ~1 semana).
 
@@ -241,7 +239,7 @@ cd app; python app.py
 ### Opción C: Reproducir el pipeline completo
 
 1. Abre los notebooks de `notebooks/` en Colab, **en el orden de la tabla de [Componentes](#pipeline-notebooks-notebooks)**.
-2. En cada uno, sube a la sesión los CSVs que lee con `pd.read_csv` (están en `data/raw/` y `data/processed/`). Los notebooks los buscan en la carpeta actual.
+2. No hay que subir archivos: cada notebook tiene una celda de carga (`scripts/descarga_datos.py`) que copia los datos del repo si lo corres desde `notebooks/`, o los descarga de GitHub si lo corres en Colab.
 3. El notebook 4 (modelado) también se puede correr **en GitHub**, sin Colab: pestaña *Actions → Regenerar modelo → Run workflow* (`.github/workflows/modelo.yml`). El workflow verifica que los embeddings tengan 384 dims y hace commit de `recomendaciones_*.csv`, `embeddings_referencia.npz` y el notebook con resultados.
 
 > Volver a correr el modelo puede mover el 4.º decimal de algunas similitudes (ruido de punto flotante); el orden de las recomendaciones no cambia. Los archivos del repo son los finales validados.

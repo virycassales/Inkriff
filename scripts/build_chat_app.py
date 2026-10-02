@@ -26,6 +26,8 @@ Produce dos artefactos que comparten la misma logica:
 """
 import json
 
+from descarga_datos import celda_descarga
+
 CORE_LOGIC = r'''import ast
 import base64
 import csv
@@ -2131,13 +2133,11 @@ Cuando el chat te recomienda bandas (porque mencionaste un libro), o cuando le p
 - Las recomendaciones de **libros** (en el chat y en el catálogo) ahora traen links de compra directos a Amazon México, Gandhi, El Sótano, Sanborns y Porrúa.
 - **Sugerir**: un formulario sin necesidad de cuenta para que cualquiera proponga una banda o libro nuevo; se guarda para revisión.
 
-**Antes de correr, sube:**
+**Archivos que usa** (no hace falta subirlos: la celda de carga los descarga de GitHub si no están en la carpeta):
 - `bandas_completo.csv`, `libros_con_sinopsis.csv` (del universo entrenado)
 - `recomendaciones_banda_a_libro.csv`, `recomendaciones_libro_a_banda.csv` (del recomendador ya evaluado)
-- `portadas_libros.csv` y `fotos_bandas.csv` (opcionales: si no lo subes, el notebook lo genera solo la primera vez, ~1 min)
-- `embeddings_referencia.npz` (nuevo — lo genera la sección 3.2, recién agregada, de
-  `inkriff_modelado_similitud.ipynb`; **tienes que volver a correr ese notebook una vez**
-  para generarlo antes de poder usar este chat)
+- `portadas_libros.csv` y `fotos_bandas.csv` (URLs de imágenes ya buscadas; si faltan, el notebook las busca la primera vez, ~1 min)
+- `embeddings_referencia.npz` (lo genera `inkriff_modelado_similitud.ipynb`; ya está en el repo)
 
 **Y necesitas una API key de LLM** (ver la celda de configuración abajo): la app usa OpenAI como proveedor principal (`OPENAI_API_KEY`, de pago) y cae automáticamente a Groq (gratis, `GROQ_API_KEY` en https://console.groq.com/keys) como respaldo si algo falla con OpenAI — se configuran ambas para un resultado más robusto.
 '''))
@@ -2145,13 +2145,9 @@ Cuando el chat te recomienda bandas (porque mencionaste un libro), o cuando le p
 cells.append(code(r'''!pip -q install gradio openai sentence-transformers
 '''))
 
-cells.append(code(r'''try:
-    from google.colab import files
-    print("Sube bandas_completo.csv, libros_con_sinopsis.csv, recomendaciones_banda_a_libro.csv, recomendaciones_libro_a_banda.csv y embeddings_referencia.npz (y portadas_libros.csv / fotos_bandas.csv si ya los tienes):")
-    files.upload()
-except ImportError:
-    pass
-'''))
+cells.append(code(celda_descarga(["bandas_completo.csv", "libros_con_sinopsis.csv", "recomendaciones_banda_a_libro.csv",
+                                   "recomendaciones_libro_a_banda.csv", "embeddings_referencia.npz",
+                                   "portadas_libros.csv", "fotos_bandas.csv"])))
 
 cells.append(md(r'''## 0. Tu API key de LLM
 
@@ -2208,7 +2204,7 @@ cells.append(code(r'''demo.launch(share=True, theme=TEMA_INKRIFF, css=CSS_INKRIF
 
 cells.append(md(r'''## (Opcional) Descarga `portadas_libros.csv` y `fotos_bandas.csv`
 
-Después de correr el chat por primera vez, descarga estos archivos y súbelos junto con los demás CSV a la siguiente sesión de Colab, así ya no se vuelven a buscar. Si alguna imagen salió equivocada,
+Si se agregan bandas o libros al catálogo, después de correr el chat descarga estos archivos y reemplaza los de `app/` en el repo, así ya no se vuelven a buscar. Si alguna imagen salió equivocada,
 pega la URL correcta en `PORTADAS_MANUALES` / `FOTOS_MANUALES` (en la celda del Chat) o edita el CSV.'''))
 
 cells.append(code(r'''import pandas as pd
