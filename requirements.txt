@@ -1,6 +1,6 @@
 # Dependencias para correr la app y los notebooks localmente.
-# La app sola (Hugging Face Spaces) usa app/requirements.txt.
-gradio>=4.0
+# app/requirements.txt tiene solo lo que necesita la app de chat.
+gradio==6.28.0
 pandas
 numpy
 requests

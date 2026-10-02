@@ -7,8 +7,7 @@ comparten exactamente la misma logica:
 
 1. inkriff_pipeline_recomendador.ipynb -- para correr en Colab con un link publico
    (gr.Interface(share=True)), consistente con el resto del proyecto.
-2. app.py + requirements.txt -- listos para subir a Hugging Face Spaces, que es el
-   destino de despliegue que ya se documento en el Stack Tecnologico del proyecto.
+2. app.py + requirements.txt -- para correr la interfaz localmente (python app.py).
 """
 import json
 
@@ -146,8 +145,8 @@ Sube estos 4 archivos antes de correr: `recomendaciones_banda_a_libro.csv`,
 `libros_con_sinopsis.csv` (para mostrar un extracto de la sinopsis del libro recomendado).
 
 Al correr la última celda, Gradio genera un **link público temporal** (`share=True`) para
-que puedas abrir la interfaz en el navegador o compartirla — este es el mismo mecanismo que
-se usaría, más adelante, para el despliegue final en Hugging Face Spaces.
+que puedas abrir la interfaz en el navegador o compartirla — el mismo mecanismo que usa la
+versión final del chat.
 """))
 
 cells.append(code('''!pip -q install gradio
@@ -194,8 +193,8 @@ with open("inkriff_pipeline_recomendador.ipynb", "w", encoding="utf-8") as f:
     json.dump(nb, f, ensure_ascii=False, indent=1)
 print("Notebook generado: inkriff_pipeline_recomendador.ipynb")
 
-# ============================== 2. app.py para Hugging Face Spaces ==============================
-APP_PY = '''"""Inkriff -- Recomendador bidireccional musica <-> libros (Hugging Face Spaces).
+# ============================== 2. app.py para correr localmente ===============================
+APP_PY = '''"""Inkriff -- Recomendador bidireccional musica <-> libros (version 1, local).
 
 Consume los CSVs ya generados por inkriff_modelado_similitud.ipynb -- no recalcula
 similitudes ni llama a ninguna API externa en tiempo de ejecucion (salvo el reproductor

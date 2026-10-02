@@ -1,4 +1,4 @@
-"""Inkriff -- Recomendador bidireccional musica <-> libros (Hugging Face Spaces).
+"""Inkriff -- Recomendador bidireccional musica <-> libros (version 1, local).
 
 Consume los CSVs ya generados por inkriff_modelado_similitud.ipynb -- no recalcula
 similitudes ni llama a ninguna API externa en tiempo de ejecucion (salvo el reproductor

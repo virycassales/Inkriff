@@ -29,9 +29,9 @@ El chat tiene **memoria entre turnos** ("¿qué otros libros?", "la del top 3"),
 - [Resultados del modelo](#resultados-del-modelo)
 - [Requisitos previos](#requisitos-previos)
 - [Puesta en marcha](#puesta-en-marcha)
-  - [Opción A: Local (make)](#opción-a-local-make)
-  - [Opción B: Hugging Face Spaces (automático desde GitHub)](#opción-b-hugging-face-spaces-automático-desde-github)
-  - [Opción C: Google Colab (notebooks)](#opción-c-google-colab-notebooks)
+  - [Opción A: Google Colab con link público (Gradio)](#opción-a-google-colab-con-link-público-gradio)
+  - [Opción B: Local (make)](#opción-b-local-make)
+  - [Opción C: Reproducir el pipeline completo](#opción-c-reproducir-el-pipeline-completo)
 - [Configuración de entorno (.env)](#configuración-de-entorno-env)
 - [Herramientas del chat](#herramientas-del-chat)
 - [Estructura del repositorio](#estructura-del-repositorio)
@@ -135,7 +135,7 @@ Se corren **en este orden**. Cada notebook lee los CSVs que dejó el anterior.
 | Detección de entidades | Revisa el mensaje contra el catálogo y una lista de alias en inglés (*A Court of Thorns and Roses*, *SOAD*…) y le dice al LLM qué es banda y qué es libro; si el LLM usa la herramienta equivocada, el código la corrige |
 | Memoria | Cada respuesta guarda un resumen invisible de lo que se mostró; el LLM recibe un historial en texto limpio, sin HTML |
 | Respaldo sin LLM | Si el proveedor falla pero el mensaje menciona algo del catálogo, se muestran las recomendaciones de todas formas |
-| Sugerencias | Se guardan en `sugerencias_usuarios.csv`, dentro del Space. ⚠️ En Hugging Face ese disco se borra al reiniciar, así que las sugerencias no son permanentes |
+| Sugerencias | Se guardan en `sugerencias_usuarios.csv`, en la carpeta donde corre la app. ⚠️ En Colab, ese archivo se pierde al cerrar la sesión: descárgalo antes |
 
 ### Scripts (`scripts/`)
 
@@ -202,7 +202,18 @@ Metodología completa en [`docs/Inkriff_Metodologia_y_Resultados.docx`](docs/Ink
 
 > El único servicio imprescindible es **un LLM** (OpenAI o Groq). Sin API key, la app arranca pero el chat te pide que configures una.
 
-### Opción A: Local (make)
+La app es **Gradio** y no tiene hosting permanente: se corre en Google Colab (con un link público temporal) o en tu computadora.
+
+### Opción A: Google Colab con link público (Gradio)
+
+1. Abre [`notebooks/inkriff_chat_recomendador.ipynb`](notebooks/inkriff_chat_recomendador.ipynb) en Colab.
+2. Cuando la celda de carga lo pida, sube estos archivos de `app/`:
+   `bandas_completo.csv`, `libros_con_sinopsis.csv`, `recomendaciones_banda_a_libro.csv`, `recomendaciones_libro_a_banda.csv`, `embeddings_referencia.npz`, `portadas_libros.csv` y `fotos_bandas.csv`.
+   Los dos últimos son opcionales: si no los subes, el notebook vuelve a buscar las imágenes (~1 min).
+3. Pega tu `OPENAI_API_KEY` y/o `GROQ_API_KEY` cuando te las pida. No quedan guardadas en el notebook.
+4. Corre la celda del chat y luego `demo.launch(share=True, ...)`. Gradio te da un link `https://….gradio.live` que **cualquiera puede abrir mientras la sesión de Colab siga activa** (máximo ~1 semana).
+
+### Opción B: Local (make)
 
 1. **Configura el entorno**
    ```bash
@@ -226,35 +237,13 @@ $env:OPENAI_API_KEY="tu-api-key"
 cd app; python app.py
 ```
 
-### Opción B: Hugging Face Spaces (automático desde GitHub)
-
-La app se publica **gratis** en un Space de Hugging Face (CPU basic: 2 vCPU, 16 GB RAM, suficiente para este proyecto). Tres *workflows* de GitHub Actions lo hacen solos:
-
-| Workflow | Cuándo corre | Qué hace |
-|----------|--------------|----------|
-| `Regenerar modelo` (`modelo.yml`) | Cuando cambian los datos de entrada o el script de modelado, o a mano | Ejecuta el notebook 4 en los servidores de GitHub, verifica que los embeddings tengan 384 dims y hace commit de `recomendaciones_*.csv`, `.npz` y el notebook con resultados |
-| `Precalcular imágenes` (`imagenes.yml`) | Cuando cambian el catálogo o el generador de la app, o a mano | Busca solo las portadas y fotos que falten y hace commit de `app/portadas_libros.csv` y `app/fotos_bandas.csv`, para que el Space no las busque en cada reinicio |
-| `Desplegar en Hugging Face` (`deploy-hf.yml`) | Cuando cambia `app/` o termina alguno de los otros dos | Crea el Space si no existe, guarda las API keys como *secrets* y sube `app/` |
-
-**Configuración (una sola vez)**, en GitHub → *Settings → Secrets and variables → Actions → New repository secret*:
-
-| Secret | Obligatorio | De dónde sale |
-|--------|:-:|---------------|
-| `HF_TOKEN` | ✅ | [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) → *Create new token* → tipo **Write** |
-| `OPENAI_API_KEY` | uno de los dos | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
-| `GROQ_API_KEY` | uno de los dos | [console.groq.com/keys](https://console.groq.com/keys) (gratis) |
-
-El Space queda en `https://huggingface.co/spaces/<tu-usuario-hf>/inkriff`. Para usar otro nombre, crea la *variable* (no secret) `HF_SPACE` con el valor `usuario/nombre`.
-
-Despliegue manual sin Actions: `HF_TOKEN=hf_xxx python scripts/deploy_hf.py`.
-
-### Opción C: Google Colab (notebooks)
-
-Para reproducir el pipeline completo desde cero:
+### Opción C: Reproducir el pipeline completo
 
 1. Abre los notebooks de `notebooks/` en Colab, **en el orden de la tabla de [Componentes](#pipeline-notebooks-notebooks)**.
 2. En cada uno, sube a la sesión los CSVs que lee con `pd.read_csv` (están en `data/raw/` y `data/processed/`). Los notebooks los buscan en la carpeta actual.
-3. El notebook 4 descarga el modelo `paraphrase-multilingual-MiniLM-L12-v2`. **No hace falta correrlo en Colab**: el workflow `Regenerar modelo` lo ejecuta en GitHub (pestaña *Actions → Regenerar modelo → Run workflow*).
+3. El notebook 4 (modelado) también se puede correr **en GitHub**, sin Colab: pestaña *Actions → Regenerar modelo → Run workflow* (`.github/workflows/modelo.yml`). El workflow verifica que los embeddings tengan 384 dims y hace commit de `recomendaciones_*.csv`, `embeddings_referencia.npz` y el notebook con resultados.
+
+> Volver a correr el modelo puede mover el 4.º decimal de algunas similitudes (ruido de punto flotante); el orden de las recomendaciones no cambia. Los archivos del repo son los finales validados.
 
 ---
 
@@ -310,13 +299,12 @@ Inkriff/
 ├── Makefile                  # setup, run, notebooks, app, sync-app, clean
 ├── requirements.txt          # dependencias para notebooks + app
 ├── .env.example              # plantilla de configuración (copiar a .env)
-├── .github/workflows/        # modelo.yml (regenera el modelo) · deploy-hf.yml (publica en HF)
-├── app/                      # ✅ app de chat lista para desplegar
-│   ├── README.md             #    configuración del Space de Hugging Face
+├── .github/workflows/        # modelo.yml: regenera el modelo en GitHub (opcional)
+├── app/                      # ✅ app de chat (local con python app.py; archivos para subir a Colab)
 │   ├── app.py                #    generado por scripts/build_chat_app.py
 │   ├── requirements.txt
 │   ├── embeddings_referencia.npz
-│   ├── portadas_libros.csv   #    URLs de portadas (las genera "Precalcular imágenes")
+│   ├── portadas_libros.csv   #    URLs de portadas (cache: evita volver a buscarlas)
 │   ├── fotos_bandas.csv      #    URLs de fotos de bandas (ídem)
 │   └── *.csv                 #    catálogo + recomendaciones que consume el chat
 ├── notebooks/                # pipeline completo (ver tabla de Componentes)
@@ -376,15 +364,13 @@ Inkriff/
 
 | Síntoma | Causa | Solución |
 |---------|-------|----------|
-| El chat responde "no tengo configurada ninguna API key" | Faltan `OPENAI_API_KEY` y `GROQ_API_KEY` | Define al menos una en `.env` o en los *secrets* del Space |
+| El chat responde "no tengo configurada ninguna API key" | Faltan `OPENAI_API_KEY` y `GROQ_API_KEY` | Define al menos una en `.env` (local) o pégala en la celda de API keys (Colab) |
 | `RateLimitError` / cuota agotada de OpenAI | Crédito agotado | La app cambia sola a Groq si hay `GROQ_API_KEY`; o usa `INKRIFF_LLM_PROVEEDOR=groq` |
 | Groq devuelve `400 Tool choice is none` | Faltaban las herramientas en la última ronda | Ya corregido: `tools` va en todas las rondas (ver `generar_respuesta_completa`) |
 | `FileNotFoundError: *.csv` | La app no encuentra sus datos | Ejecuta la app **desde `app/`**, o corre `make sync-app` |
 | Error de dimensiones al buscar un ítem fuera del catálogo | `embeddings_referencia.npz` no viene del modelo MiniLM (384 dims) | Corre *Actions → Regenerar modelo*; el workflow verifica las 384 dims |
-| El workflow de despliegue termina con el aviso "Falta el secret HF_TOKEN" | No se ha configurado el token | Agrega `HF_TOKEN` en los secrets del repo y vuelve a correrlo |
-| Una portada o foto salió equivocada | La búsqueda por título o nombre trajo otra obra o artista | Agrega la URL correcta en `PORTADAS_MANUALES` / `FOTOS_MANUALES` (en `scripts/build_chat_app.py`), regenera con `make app` y haz push |
-| El Space dice *Building* varios minutos | La primera vez instala torch y descarga el modelo | Es normal (~5-10 min); después arranca rápido |
-| El Space dice *Runtime error* por falta de API key | No se pasaron `OPENAI_API_KEY` / `GROQ_API_KEY` | Agrégalas como secrets en GitHub y vuelve a correr el despliegue |
+| El link `gradio.live` dejó de funcionar | Los links de `share=True` son temporales y mueren al cerrar la sesión de Colab | Vuelve a correr el notebook para obtener un link nuevo |
+| Una portada o foto salió equivocada | La búsqueda por título o nombre trajo otra obra o artista | Agrega la URL correcta en `PORTADAS_MANUALES` / `FOTOS_MANUALES` (en `scripts/build_chat_app.py`) y regenera con `make app`, o edita `app/portadas_libros.csv` / `app/fotos_bandas.csv` |
 | MusicBrainz devuelve 503 | Límite de ~1 req/s | Ya hay reintento con *backoff* exponencial; espera y reintenta |
 | CSV con acentos rotos (`�`) | Exportado desde Excel sin elegir "CSV UTF-8" | Guarda como **CSV UTF-8**; ver `scripts/build_pares_final.py` |
 

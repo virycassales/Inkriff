@@ -1,5 +1,5 @@
 # Regenera el modelo de similitud (notebook 4) en los servidores de GitHub, que sí
-# pueden descargar el modelo de Hugging Face. Reemplaza correr el notebook en Colab.
+# pueden descargar el modelo MiniLM. Alternativa a correr el notebook 4 en Colab.
 name: Regenerar modelo
 
 on:

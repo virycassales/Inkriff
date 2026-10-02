@@ -21,8 +21,8 @@ comentarios en app.py) -- sin eso el chat no puede responder.
 
 Produce dos artefactos que comparten la misma logica:
 1. inkriff_chat_recomendador.ipynb -- para correr en Colab (gr.ChatInterface(share=True)).
-2. app.py + requirements.txt -- listos para Hugging Face Spaces (variables de entorno
-   como Secrets del Space).
+2. app.py + requirements.txt -- para correr la app localmente (python app.py), con las
+   API keys como variables de entorno.
 """
 import json
 
@@ -2237,17 +2237,19 @@ with open("inkriff_chat_recomendador.ipynb", "w", encoding="utf-8") as f:
     json.dump(nb, f, ensure_ascii=False, indent=1)
 print("Notebook generado: inkriff_chat_recomendador.ipynb")
 
-# ============================== 2. app.py para Hugging Face Spaces ==============================
-APP_PY = '''"""Inkriff -- Chat conversacional (Hugging Face Spaces).
+# ============================== 2. app.py para correr localmente ===============================
+APP_PY = '''"""Inkriff -- Chat conversacional (Gradio, version local: python app.py).
 
-Sube junto a este archivo: bandas_completo.csv, libros_con_sinopsis.csv,
-recomendaciones_banda_a_libro.csv, recomendaciones_libro_a_banda.csv y
-embeddings_referencia.npz (este ultimo lo genera inkriff_modelado_similitud.ipynb).
+Necesita en la misma carpeta: bandas_completo.csv, libros_con_sinopsis.csv,
+recomendaciones_banda_a_libro.csv, recomendaciones_libro_a_banda.csv,
+embeddings_referencia.npz (lo genera inkriff_modelado_similitud.ipynb) y, opcionales,
+portadas_libros.csv y fotos_bandas.csv.
 
-Configura en Settings -> Repository secrets del Space: OPENAI_API_KEY (proveedor principal)
-y, opcional pero recomendado, GROQ_API_KEY (gratis, en https://console.groq.com/keys) como
-respaldo automatico si algo falla con OpenAI. Si solo quieres usar la gratuita, define
-INKRIFF_LLM_PROVEEDOR=groq y basta con GROQ_API_KEY.
+Define antes como variables de entorno: OPENAI_API_KEY (proveedor principal) y, opcional
+pero recomendado, GROQ_API_KEY (gratis, en https://console.groq.com/keys) como respaldo
+automatico si algo falla con OpenAI. Si solo quieres usar la gratuita, define
+INKRIFF_LLM_PROVEEDOR=groq y basta con GROQ_API_KEY. Para un link publico, usa el notebook
+en Colab (demo.launch(share=True)).
 """
 ''' + CORE_LOGIC + '''
 
@@ -2261,7 +2263,7 @@ print("Archivo generado: app.py")
 
 with open("requirements.txt", "w", encoding="utf-8") as f:
     f.write(
-        "# torch en version CPU (mas ligera; los Spaces gratuitos no tienen GPU)\n"
+        "# torch en version CPU (mas ligera; la app no necesita GPU)\n"
         "--extra-index-url https://download.pytorch.org/whl/cpu\n"
         "gradio==6.28.0\npandas\nnumpy\nrequests\nopenai\nsentence-transformers\nscikit-learn\n"
     )

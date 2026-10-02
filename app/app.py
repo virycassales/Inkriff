@@ -1,13 +1,15 @@
-"""Inkriff -- Chat conversacional (Hugging Face Spaces).
+"""Inkriff -- Chat conversacional (Gradio, version local: python app.py).
 
-Sube junto a este archivo: bandas_completo.csv, libros_con_sinopsis.csv,
-recomendaciones_banda_a_libro.csv, recomendaciones_libro_a_banda.csv y
-embeddings_referencia.npz (este ultimo lo genera inkriff_modelado_similitud.ipynb).
+Necesita en la misma carpeta: bandas_completo.csv, libros_con_sinopsis.csv,
+recomendaciones_banda_a_libro.csv, recomendaciones_libro_a_banda.csv,
+embeddings_referencia.npz (lo genera inkriff_modelado_similitud.ipynb) y, opcionales,
+portadas_libros.csv y fotos_bandas.csv.
 
-Configura en Settings -> Repository secrets del Space: OPENAI_API_KEY (proveedor principal)
-y, opcional pero recomendado, GROQ_API_KEY (gratis, en https://console.groq.com/keys) como
-respaldo automatico si algo falla con OpenAI. Si solo quieres usar la gratuita, define
-INKRIFF_LLM_PROVEEDOR=groq y basta con GROQ_API_KEY.
+Define antes como variables de entorno: OPENAI_API_KEY (proveedor principal) y, opcional
+pero recomendado, GROQ_API_KEY (gratis, en https://console.groq.com/keys) como respaldo
+automatico si algo falla con OpenAI. Si solo quieres usar la gratuita, define
+INKRIFF_LLM_PROVEEDOR=groq y basta con GROQ_API_KEY. Para un link publico, usa el notebook
+en Colab (demo.launch(share=True)).
 """
 import ast
 import base64

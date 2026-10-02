@@ -1,4 +1,4 @@
-# torch en version CPU (mas ligera; los Spaces gratuitos no tienen GPU)
+# torch en version CPU (mas ligera; la app no necesita GPU)
 --extra-index-url https://download.pytorch.org/whl/cpu
 gradio==6.28.0
 pandas
