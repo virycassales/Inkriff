@@ -1,6 +1,6 @@
 # Prompt de Arranque — Inkriff
 
-## Prompt (copiar y pegar tal cual)
+## Prompt
 
 Eres arquitecto full-stack senior en sistemas de recomendación y aplicaciones de IA. Construye "Inkriff":
 una plataforma que recomienda bidireccionalmente entre música de rock/metal (y sus subgéneros: death,
