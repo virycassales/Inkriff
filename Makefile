@@ -3,7 +3,7 @@
 
 PY ?= python
 
-.PHONY: help setup run notebooks app sync-app clean
+.PHONY: help setup run notebooks figuras app sync-app clean
 
 help:          ## Lista los comandos disponibles
 	@grep -E '^[a-z-]+:.*##' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*## "}{printf "  %-10s %s\n", $$1, $$2}'
@@ -19,6 +19,11 @@ notebooks:     ## Regenera los notebooks desde scripts/ (no se editan a mano)
 	  && $(PY) ../scripts/build_notebook_full.py \
 	  && $(PY) ../scripts/build_notebook_eda.py \
 	  && $(PY) ../scripts/build_notebook_modelado.py
+
+figuras:       ## Ejecuta el notebook de figuras y copia los PNG a docs/figuras/
+	cd notebooks && $(PY) ../scripts/build_notebook_figuras.py \
+	  && jupyter nbconvert --to notebook --execute --inplace inkriff_figuras_documento.ipynb \
+	  && cp figuras/*.png ../docs/figuras/ && rm -rf figuras figuras_inkriff.zip
 
 app:           ## Regenera app/app.py y notebooks/inkriff_chat_recomendador.ipynb
 	cd app && $(PY) ../scripts/build_chat_app.py && mv inkriff_chat_recomendador.ipynb ../notebooks/

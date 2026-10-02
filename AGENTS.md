@@ -70,4 +70,5 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 | 4.16 | El LLM perdía el hilo porque solo veía el HTML de sus respuestas anteriores | Resumen invisible por respuesta + historial en texto limpio |
 | 4.17 | Gradio 6 cambió el formato del historial del chat | Se normaliza antes de mandarlo al LLM |
 | 4.18 | Volver a correr el modelo puede mover el 4.º decimal de algunas similitudes (ruido de punto flotante en CPU); el orden de las recomendaciones no cambia | `modelo.yml` ya no se dispara al editar su propio archivo; los CSV y el `.npz` del repo son los finales validados |
+| 4.19 | Las figuras del documento deben salir de los datos, no pegarse a mano | `notebooks/inkriff_figuras_documento.ipynb` las genera y tiene `assert` con cada cifra citada en el texto; si los datos cambian, falla y dice cuál actualizar |
 | 4.15 | `make notebooks` sobreescribe el notebook 4 ejecutado (con resultados) por uno vacío | Después de regenerar, corre *Actions → Regenerar modelo* |

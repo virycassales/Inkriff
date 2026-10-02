@@ -119,6 +119,7 @@ Se corren **en este orden**. Cada notebook lee los CSVs que dejó el anterior.
 | 4 | `inkriff_modelado_similitud.ipynb` | Compara TF-IDF, embeddings y embeddings con corrección de hubness, evalúa contra los 105 pares y elige el mejor por MRR | `recomendaciones_*.csv`, `embeddings_referencia.npz` |
 | 5 | `inkriff_chat_recomendador.ipynb` | La app de chat en Colab (`share=True`) | — |
 | — | `inkriff_pipeline_recomendador.ipynb` | Versión 1 de la interfaz, con *dropdowns* y sin chat (histórico) | — |
+| — | `inkriff_figuras_documento.ipynb` | Genera las 5 figuras del documento y verifica que las cifras citadas en el texto salen de los datos. Corre en Colab sin subir archivos (los lee de GitHub) | `figuras/*.png` (copia en `docs/figuras/`) |
 
 ### App de chat (`app/`)
 
@@ -180,7 +181,7 @@ Evaluado contra los **105 pares libro↔banda curados a mano**. Para cada par se
 | 🎸 Chelsea Wolfe (gothic metal) | El castillo de Otranto, Carmilla, Drácula, El retrato de Dorian Gray, El vampiro Lestat |
 | 🎸 Emperor (black metal) | Babel, Berserk, El circo de la noche, La compañía negra, Frankenstein |
 
-Metodología completa en [`docs/Inkriff_Metodologia_y_Resultados.docx`](docs/Inkriff_Metodologia_y_Resultados.docx).
+Metodología completa en [`docs/Inkriff_Metodologia_y_Resultados.docx`](docs/Inkriff_Metodologia_y_Resultados.docx). Sus figuras se reproducen con [`notebooks/inkriff_figuras_documento.ipynb`](notebooks/inkriff_figuras_documento.ipynb).
 
 ---
 
@@ -317,7 +318,8 @@ Inkriff/
 └── docs/
     ├── Inkriff_canvas_original.pdf
     ├── Inkriff_Metodologia_y_Resultados.docx
-    └── Inkriff_Prompt_Arranque.md
+    ├── Inkriff_Prompt_Arranque.md
+    └── figuras/              # figuras 1-5 del documento (las genera inkriff_figuras_documento.ipynb)
 ```
 
 ### Diccionario de datos

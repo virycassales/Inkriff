@@ -24,3 +24,8 @@ _corrida/
 
 # sugerencias capturadas localmente por la app
 sugerencias_usuarios.csv
+
+# salidas locales del notebook de figuras (la copia oficial está en docs/figuras/)
+notebooks/figuras/
+notebooks/figuras_inkriff.zip
+figuras_inkriff.zip
