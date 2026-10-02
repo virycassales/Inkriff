@@ -10,7 +10,6 @@ Variables de entorno:
     HF_SPACE        (opcional)    "usuario/nombre"; por defecto "<tu usuario>/inkriff"
     OPENAI_API_KEY  (opcional)    si viene, se guarda como secret del Space
     GROQ_API_KEY    (opcional)    igual, respaldo gratuito
-    INKRIFF_SUGERENCIAS (opcional) "off" para no crear el Dataset de sugerencias
 """
 import os
 import sys
@@ -35,16 +34,7 @@ for nombre in ("OPENAI_API_KEY", "GROQ_API_KEY"):
         api.add_space_secret(repo_id, nombre, valor)
         print(f"Secret {nombre} actualizado en el Space")
 
-# 3. Dataset PRIVADO donde se guardan las sugerencias de la pestaña "Sugerir"
-#    (sin esto la app funciona igual, pero las sugerencias se pierden al reiniciar el Space)
-if os.environ.get("INKRIFF_SUGERENCIAS", "on").lower() != "off":
-    dataset_id = f"{usuario}/inkriff-sugerencias"
-    api.create_repo(dataset_id, repo_type="dataset", private=True, exist_ok=True)
-    api.add_space_variable(repo_id, "INKRIFF_DATASET_ID", dataset_id)
-    api.add_space_secret(repo_id, "HF_TOKEN", token)
-    print(f"Sugerencias -> https://huggingface.co/datasets/{dataset_id} (privado)")
-
-# 4. Subir el contenido de app/
+# 3. Subir el contenido de app/
 sha = os.environ.get("GITHUB_SHA", "local")[:7]
 api.upload_folder(
     folder_path="app",

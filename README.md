@@ -11,10 +11,12 @@ La app tiene cuatro pestañas:
 
 | Pestaña | Qué hace |
 |---------|----------|
-| **Inicio** | Portada con la descripción del proyecto |
+| **Inicio** | Portada con estadísticas y "Parejas destacadas" (las combinaciones libro–banda con mayor afinidad), con botón de compra |
 | **Chat** | El recomendador conversacional, con reproductor de Spotify para las bandas y links de compra para los libros |
-| **Catálogo** | Top 50 bandas (por popularidad en Genius) y top 50 libros (por cuántas bandas del catálogo los recomiendan), con sinopsis, con qué combinan y dónde escucharlos o comprarlos |
+| **Catálogo** | Mosaico de bandas (con foto) y de libros (con portada), con filtros por subgénero o categoría y búsqueda por nombre, estilo o autor. Cada tarjeta dice con qué combina y trae "🎧 Escucha la banda" o links de compra |
 | **Sugerir** | Formulario sin cuenta para proponer una banda o un libro nuevo para el catálogo |
+
+El chat tiene **memoria entre turnos** ("¿qué otros libros?", "la del top 3"), responde preguntas de seguimiento (autor, año, país…) y, si el LLM falla, igual muestra las recomendaciones de lo que mencionaste.
 
 > ⚠️ **Inkriff es un proyecto académico**: presentado como una empresa ficticia de IA, y **no es un producto comercial**. No reproduce ni redistribuye letras de canciones ni texto de libros; solo usa metadatos, tags y sinopsis públicas.
 
@@ -64,7 +66,7 @@ flowchart LR
     subgraph App["③ APP DE CHAT · Gradio"]
         direction TB
         UI[Chat · Catálogo · Sugerir] --> LLM[LLM con function calling<br/>OpenAI → respaldo Groq]
-        LLM --> TOOLS[3 herramientas]
+        LLM --> TOOLS[5 herramientas]
         TOOLS --> SPOT[Reproductor Spotify]
         TOOLS -.fuera del catálogo.-> LIVE[Búsqueda en vivo]
     end
@@ -128,8 +130,12 @@ Se corren **en este orden**. Cada notebook lee los CSVs que dejó el anterior.
 | Búsqueda en vivo | MusicBrainz / Open Library / Google Books con reintento exponencial; embedding al vuelo con el **mismo** modelo y la **misma** corrección de hubness |
 | Spotify | Reproductor embebido: se reescribe el link público a `/embed/`, sin API key |
 | Links de compra | Búsqueda del libro en Amazon México, Gandhi, El Sótano, Sanborns y Porrúa. Son links de **búsqueda**, no del producto exacto (no hay ISBN por tienda) |
-| Catálogo Top 50 | HTML precalculado al arrancar. La popularidad de libros es interna (frecuencia de recomendación); no hay un dato externo de popularidad |
-| Sugerencias | Se guardan en `sugerencias_usuarios.csv` y, si hay Dataset configurado, también en un Dataset **privado** de Hugging Face (sobrevive a reinicios del Space) |
+| Catálogo | Mosaicos HTML generados al arrancar, con filtros. La popularidad de libros es interna (frecuencia de recomendación); no hay un dato externo de popularidad |
+| Portadas y fotos | Portadas de Open Library (respaldo: Google Books) y fotos de bandas del **oEmbed público de Spotify** (sin API key). Se guardan en `app/portadas_libros.csv` y `app/fotos_bandas.csv`; si falta una imagen, se dibuja una portada tipográfica o un monograma de color. Para corregir una imagen: `PORTADAS_MANUALES` / `FOTOS_MANUALES` en `scripts/build_chat_app.py` |
+| Detección de entidades | Revisa el mensaje contra el catálogo y una lista de alias en inglés (*A Court of Thorns and Roses*, *SOAD*…) y le dice al LLM qué es banda y qué es libro; si el LLM usa la herramienta equivocada, el código la corrige |
+| Memoria | Cada respuesta guarda un resumen invisible de lo que se mostró; el LLM recibe un historial en texto limpio, sin HTML |
+| Respaldo sin LLM | Si el proveedor falla pero el mensaje menciona algo del catálogo, se muestran las recomendaciones de todas formas |
+| Sugerencias | Se guardan en `sugerencias_usuarios.csv`, dentro del Space. ⚠️ En Hugging Face ese disco se borra al reiniciar, así que las sugerencias no son permanentes |
 
 ### Scripts (`scripts/`)
 
@@ -222,12 +228,13 @@ cd app; python app.py
 
 ### Opción B: Hugging Face Spaces (automático desde GitHub)
 
-La app se publica **gratis** en un Space de Hugging Face (CPU basic: 2 vCPU, 16 GB RAM, suficiente para este proyecto). Dos *workflows* de GitHub Actions lo hacen solos:
+La app se publica **gratis** en un Space de Hugging Face (CPU basic: 2 vCPU, 16 GB RAM, suficiente para este proyecto). Tres *workflows* de GitHub Actions lo hacen solos:
 
 | Workflow | Cuándo corre | Qué hace |
 |----------|--------------|----------|
 | `Regenerar modelo` (`modelo.yml`) | Cuando cambian los datos de entrada o el script de modelado, o a mano | Ejecuta el notebook 4 en los servidores de GitHub, verifica que los embeddings tengan 384 dims y hace commit de `recomendaciones_*.csv`, `.npz` y el notebook con resultados |
-| `Desplegar en Hugging Face` (`deploy-hf.yml`) | Cuando cambia `app/` o termina `Regenerar modelo` | Crea el Space si no existe, guarda las API keys como *secrets*, crea el Dataset privado `inkriff-sugerencias` y sube `app/` |
+| `Precalcular imágenes` (`imagenes.yml`) | Cuando cambian el catálogo o el generador de la app, o a mano | Busca solo las portadas y fotos que falten y hace commit de `app/portadas_libros.csv` y `app/fotos_bandas.csv`, para que el Space no las busque en cada reinicio |
+| `Desplegar en Hugging Face` (`deploy-hf.yml`) | Cuando cambia `app/` o termina alguno de los otros dos | Crea el Space si no existe, guarda las API keys como *secrets* y sube `app/` |
 
 **Configuración (una sola vez)**, en GitHub → *Settings → Secrets and variables → Actions → New repository secret*:
 
@@ -262,8 +269,8 @@ Copia `.env.example` a `.env`.
 | `INKRIFF_LLM_PROVEEDOR` | `openai` | Pon `groq` para usar solo la opción gratuita |
 | `INKRIFF_LLM_MODELO_OPENAI` | `gpt-4o-mini` | |
 | `INKRIFF_LLM_MODELO_GROQ` | `openai/gpt-oss-20b` | |
-| `INKRIFF_DATASET_ID` | — | Dataset de HF para guardar sugerencias (`usuario/inkriff-sugerencias`); lo configura solo el despliegue |
-| `HF_TOKEN` | — | Solo para escribir en ese Dataset |
+| `INKRIFF_BUSCAR_PORTADAS` | `1` | `0` para no buscar portadas en Open Library / Google Books |
+| `INKRIFF_BUSCAR_FOTOS` | `1` | `0` para no buscar fotos de bandas en Spotify |
 
 > 🔒 `.env` está en `.gitignore`. **Nunca subas API keys al repositorio.**
 
@@ -275,15 +282,21 @@ El LLM decide qué herramienta llamar según lo que escribas y puede encadenar v
 
 | Herramienta | Entrada | Devuelve | Alcance |
 |-------------|---------|----------|---------|
-| `libros_para_banda` | nombre de banda | top-5 libros + categoría + similitud | Cualquier banda (catálogo o en vivo) |
-| `bandas_para_libro` | título de libro | top-5 bandas + subgénero + similitud | Cualquier libro (catálogo o en vivo) |
+| `libros_para_banda` | nombre de banda, `pagina` | 5 libros por página (1 = top 1-5, 2 = top 6-10…) + categoría + similitud | Cualquier banda (catálogo o en vivo) |
+| `bandas_para_libro` | título de libro, `pagina` | 5 bandas por página + subgénero + similitud | Cualquier libro (catálogo o en vivo) |
 | `canciones_de_banda` | nombre de banda | reproductor de Spotify | Solo bandas del catálogo (las únicas con link guardado) |
+| `info_libro` | título de libro | autor, año y sinopsis | Libros del catálogo |
+| `info_banda` | nombre de banda | subgénero, país y canción más conocida | Bandas del catálogo |
+
+Las páginas 2, 3… salen de la **misma** matriz corregida por hubness que generó los CSV; al arrancar, la app verifica que esa matriz reproduce exactamente sus top 5.
 
 Ejemplos de mensajes:
 ```text
 Me gusta mucho Nightwish, ¿qué libro me recomiendas?
 Acabo de terminar Una corte de rosas y espinas, ¿qué banda le queda?
 Ponme algo de la primera banda que me dijiste
+¿Qué otros libros le quedan?
+¿Quién escribió el segundo?
 ```
 
 ---
@@ -303,6 +316,8 @@ Inkriff/
 │   ├── app.py                #    generado por scripts/build_chat_app.py
 │   ├── requirements.txt
 │   ├── embeddings_referencia.npz
+│   ├── portadas_libros.csv   #    URLs de portadas (las genera "Precalcular imágenes")
+│   ├── fotos_bandas.csv      #    URLs de fotos de bandas (ídem)
 │   └── *.csv                 #    catálogo + recomendaciones que consume el chat
 ├── notebooks/                # pipeline completo (ver tabla de Componentes)
 ├── data/
@@ -367,6 +382,7 @@ Inkriff/
 | `FileNotFoundError: *.csv` | La app no encuentra sus datos | Ejecuta la app **desde `app/`**, o corre `make sync-app` |
 | Error de dimensiones al buscar un ítem fuera del catálogo | `embeddings_referencia.npz` no viene del modelo MiniLM (384 dims) | Corre *Actions → Regenerar modelo*; el workflow verifica las 384 dims |
 | El workflow de despliegue termina con el aviso "Falta el secret HF_TOKEN" | No se ha configurado el token | Agrega `HF_TOKEN` en los secrets del repo y vuelve a correrlo |
+| Una portada o foto salió equivocada | La búsqueda por título o nombre trajo otra obra o artista | Agrega la URL correcta en `PORTADAS_MANUALES` / `FOTOS_MANUALES` (en `scripts/build_chat_app.py`), regenera con `make app` y haz push |
 | El Space dice *Building* varios minutos | La primera vez instala torch y descarga el modelo | Es normal (~5-10 min); después arranca rápido |
 | El Space dice *Runtime error* por falta de API key | No se pasaron `OPENAI_API_KEY` / `GROQ_API_KEY` | Agrégalas como secrets en GitHub y vuelve a correr el despliegue |
 | MusicBrainz devuelve 503 | Límite de ~1 req/s | Ya hay reintento con *backoff* exponencial; espera y reintenta |

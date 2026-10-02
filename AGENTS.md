@@ -29,7 +29,9 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 | **D9** | 3 herramientas separadas (`libros_para_banda`, `bandas_para_libro`, `canciones_de_banda`) en vez de una con parámetro `tipo` | Con una sola, el LLM llamaba "bandas" a resultados que eran libros (bug real con Bad Omens) |
 | **D10** | Gradio en un solo proceso, sin backend/frontend separados ni base de datos | Cabe en *free tier* y alcanza para el alcance académico |
 | **D12** | Hosting en Hugging Face Spaces (CPU basic, gratis), **no Vercel** | Vercel solo corre funciones serverless cortas (~250 MB); el chat necesita un proceso persistente y torch + el modelo MiniLM |
-| **D14** | Las sugerencias se guardan en un Dataset **privado** de HF, además del CSV local | El disco del Space se borra al reiniciar; el Dataset persiste y no expone datos de quien sugiere |
+| **D14** | Las sugerencias solo se guardan en un CSV local (versión final del notebook) | Más simple. Implica que en el Space se pierden al reiniciar (ver pendientes) |
+| **D15** | Portadas y fotos se precalculan con `imagenes.yml` y se guardan en `app/` | El Space no las vuelve a buscar en cada reinicio; las fotos salen del oEmbed público de Spotify, sin API key |
+| **D16** | Respaldo sin LLM y corrección de herramientas por código | Si el LLM falla o confunde banda con libro, igual se muestran las recomendaciones correctas |
 | **D13** | El modelo se regenera con GitHub Actions (`modelo.yml`) en vez de Colab | Reproducible, sin subir archivos a mano, y verifica las 384 dims antes de hacer commit |
 | **D11** | Ítems fuera del catálogo: búsqueda en vivo + embedding al vuelo con el **mismo** modelo y la **misma** corrección | Así una búsqueda en vivo es comparable con el catálogo precalculado |
 
@@ -65,6 +67,8 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 | 4.12 | `embeddings_referencia.npz` tiene que tener **384 dims** (MiniLM). Si tiene otra dimensión, la búsqueda en vivo falla | `modelo.yml` lo regenera y falla si las dims no son 384 |
 | 4.13 | La app usa la API de **Gradio 6** (`theme`/`css` en `launch()`) | `sdk_version: 6.28.0` en `app/README.md` y `gradio==6.28.0` en requirements |
 | 4.14 | torch desde PyPI trae CUDA (~2 GB) y alarga el build del Space | `--extra-index-url .../whl/cpu` en `app/requirements.txt` |
+| 4.16 | El LLM perdía el hilo porque solo veía el HTML de sus respuestas anteriores | Resumen invisible por respuesta + historial en texto limpio |
+| 4.17 | Gradio 6 cambió el formato del historial del chat | Se normaliza antes de mandarlo al LLM |
 | 4.15 | `make notebooks` sobreescribe el notebook 4 ejecutado (con resultados) por uno vacío | Después de regenerar, corre *Actions → Regenerar modelo* |
 
 ---
@@ -75,4 +79,5 @@ El prompt de arranque original del proyecto está en [`docs/Inkriff_Prompt_Arran
 - [ ] Ampliar los 105 pares de evaluación.
 - [x] Primera corrida de `Regenerar modelo`: reproduce al 100% la corrida de Colab del documento de metodología (MRR combinado 0.160 contra 0.133 sin corregir). Se borraron los `*_real.csv` duplicados.
 - [x] Pestañas Catálogo y Sugerir y links de compra integradas en `scripts/build_chat_app.py` a partir del notebook final.
+- [ ] Sugerencias permanentes en el Space (hoy se pierden al reiniciar): por ejemplo, un Dataset privado de HF.
 - [ ] Presentación y video final del Diplomado.

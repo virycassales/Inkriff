@@ -10,8 +10,8 @@ on:
       - app/**
       - scripts/deploy_hf.py
       - .github/workflows/deploy-hf.yml
-  workflow_run:                # después de regenerar el modelo
-    workflows: [Regenerar modelo]
+  workflow_run:                # después de regenerar el modelo o las imágenes
+    workflows: [Regenerar modelo, Precalcular imágenes]
     types: [completed]
 
 concurrency:
